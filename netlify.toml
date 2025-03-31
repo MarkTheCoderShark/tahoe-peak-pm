@@ -1,11 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  publish = "."
 
 [[redirects]]
   from = "/google-site-verification.html"
