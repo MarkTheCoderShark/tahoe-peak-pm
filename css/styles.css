@@ -1,0 +1,9 @@
+/* Import Base Styles */
+@import 'base.css';
+
+/* Import Component Styles */
+@import 'header.css';
+@import 'footer.css';
+@import 'hero.css';
+@import 'services.css';
+@import 'animations.css'; 

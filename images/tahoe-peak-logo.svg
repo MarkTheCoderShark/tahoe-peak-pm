@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#FFFFFF">
+        <path d="M200 20 L160 100 L240 100 Z" />
+        <path d="M180 40 L140 120 L220 120 Z" />
+        <path d="M220 40 L180 120 L260 120 Z" />
+        <text x="200" y="160" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold">
+            TAHOE PEAK
+        </text>
+        <text x="200" y="185" text-anchor="middle" font-family="Arial" font-size="20">
+            MANAGEMENT
+        </text>
+    </g>
+</svg> 

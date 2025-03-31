@@ -1,0 +1,299 @@
+/* Residents Hero Section */
+.residents-hero {
+    background: linear-gradient(rgba(31, 77, 72, 0.8), rgba(31, 77, 72, 0.8)), url('../images/tahoe-lake-winter.png');
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.residents-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.residents-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.residents-hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Quick Links Section */
+.quick-links {
+    padding: 6rem 0;
+    background-color: var(--background-color);
+}
+
+.quick-links h2 {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.quick-link-card {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.quick-link-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1.5rem;
+    color: var(--accent-color);
+}
+
+.quick-link-card h3 {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.quick-link-card p {
+    color: var(--text-color);
+    opacity: 0.9;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Resources Section */
+.resources-section {
+    padding: 6rem 0;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.resources-section h2 {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.resource-card {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.resource-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.resource-card ul li {
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.resource-card ul li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+.resource-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+    color: var(--text-color);
+}
+
+/* Emergency Section */
+.emergency-section {
+    padding: 6rem 0;
+    background-color: var(--background-color);
+}
+
+.emergency-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.emergency-content h2 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.emergency-content p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.emergency-phone {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.emergency-phone:hover {
+    color: var(--text-color);
+}
+
+.emergency-note {
+    text-align: left;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.emergency-note h3 {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.emergency-note ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.emergency-note ul li {
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.emergency-note ul li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 6rem 0;
+    text-align: center;
+    background: linear-gradient(rgba(31, 77, 72, 0.9), rgba(31, 77, 72, 0.9)), url('../images/tahoe-lake-winter.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cta-section h2 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.cta-section p {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .quick-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .residents-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .quick-links-grid,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency-content {
+        padding: 2rem;
+    }
+
+    .emergency-phone {
+        font-size: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+} 
