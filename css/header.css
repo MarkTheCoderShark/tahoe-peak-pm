@@ -358,6 +358,11 @@ nav a.active {
         justify-self: end;
         margin-left: 0;
     }
+
+    /* Hide any duplicate mobile menu toggles inside nav */
+    .main-nav .mobile-menu-toggle {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
