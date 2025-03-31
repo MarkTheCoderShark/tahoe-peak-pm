@@ -76,37 +76,39 @@ header {
 
 .header-main {
     background-color: var(--primary-color);
-    padding: 1rem 0;
+    padding: 1.25rem 0;
     transition: var(--transition);
 }
 
 .header-main.scrolled {
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     box-shadow: var(--shadow);
 }
 
 .header-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .logo img {
-    height: 50px;
+    height: 65px;
     transition: var(--transition);
 }
 
 .header-main.scrolled .logo img {
-    height: 40px;
+    height: 55px;
 }
 
 .logo-text {
@@ -124,22 +126,28 @@ header {
 nav {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 nav ul {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 nav a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
     transition: var(--transition);
     position: relative;
+    text-transform: uppercase;
 }
 
 nav a::after {
@@ -167,11 +175,15 @@ nav a.active {
     color: var(--accent-color);
     font-weight: 600;
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: var(--transition);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-left: auto;
 }
 
 .phone-number:hover {
-    opacity: 0.8;
+    color: var(--button-orange);
+    transform: translateY(-1px);
 }
 
 .zero-fees {
@@ -221,9 +233,32 @@ nav a.active {
 }
 
 /* Responsive Header */
+@media (max-width: 1200px) {
+    nav ul {
+        gap: 2rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 992px) {
+    .header-content {
+        padding: 0 1.5rem;
+    }
+
     .mobile-menu-toggle {
         display: block;
+        order: 1;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .phone-number {
+        order: 2;
     }
 
     nav {
@@ -247,20 +282,36 @@ nav a.active {
     nav ul {
         flex-direction: column;
         gap: 1rem;
+        width: 100%;
+        text-align: center;
     }
 
     nav a::after {
         display: none;
     }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .header-main.scrolled .logo img {
+        height: 45px;
+    }
 
     .phone-number {
-        margin-top: 1rem;
+        font-size: 1rem;
     }
 }
 
 /* Add margin to main content to prevent header overlap */
 main {
-    margin-top: 120px; /* Adjusted based on combined header height */
+    margin-top: 120px;
 }
 
 @media (max-width: 768px) {
