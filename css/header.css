@@ -284,6 +284,16 @@ nav a.active {
 }
 
 @media (max-width: 992px) {
+    .zero-fees {
+        display: none;
+        max-height: 0;
+        padding: 0;
+        margin: 0;
+        border: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
     .zero-fees-content {
         display: none;
     }
@@ -373,9 +383,14 @@ nav a.active {
     }
 
     .header-top, 
-    .zero-fees,
-    .zero-fees-content {
+    .zero-fees {
         display: none;
+        max-height: 0;
+        padding: 0;
+        margin: 0;
+        border: none;
+        visibility: hidden;
+        opacity: 0;
     }
 
     .header-main {
