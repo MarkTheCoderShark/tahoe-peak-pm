@@ -261,6 +261,13 @@
     margin-bottom: 1rem;
 }
 
+.feature-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--accent-color);
+    fill: none;
+}
+
 .feature-card h3 {
     color: var(--accent-color);
     font-size: 1.5rem;
@@ -375,11 +382,4 @@
 
 @media (max-width: 768px) {
     .stats-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-    }
-    
-    .stat-card {
-        padding: 2.5rem 2rem;
-    }
-} 
+        grid-template
