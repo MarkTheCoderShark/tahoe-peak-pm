@@ -1,6 +1,6 @@
 /* Header Styles */
 header {
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
     position: fixed;
     width: 100%;
     top: 0;
@@ -9,7 +9,7 @@ header {
 }
 
 .header-top {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     padding: 0.5rem 0;
     color: var(--text-color);
     font-size: 0.9rem;
@@ -28,33 +28,33 @@ header {
     color: var(--text-color);
     text-decoration: none;
     margin-right: 1rem;
-    transition: opacity 0.3s ease;
+    transition: var(--transition);
 }
 
 .contact-info a:hover {
-    opacity: 0.8;
+    color: var(--accent-color);
 }
 
 .social-links a {
     color: var(--text-color);
     text-decoration: none;
     margin-left: 1rem;
-    transition: opacity 0.3s ease;
+    transition: var(--transition);
 }
 
 .social-links a:hover {
-    opacity: 0.8;
+    color: var(--accent-color);
 }
 
 .header-main {
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
     padding: 1rem 0;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .header-main.scrolled {
     padding: 0.5rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .header-content {
@@ -74,7 +74,7 @@ header {
 
 .logo img {
     height: 50px;
-    transition: height 0.3s ease;
+    transition: var(--transition);
 }
 
 .header-main.scrolled .logo img {
@@ -110,7 +110,24 @@ nav a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: var(--transition);
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
 }
 
 nav a:hover,
@@ -168,6 +185,11 @@ nav a.active {
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
+    transition: var(--transition);
+}
+
+.mobile-menu-toggle:hover {
+    color: var(--accent-color);
 }
 
 /* Responsive Header */
@@ -183,11 +205,11 @@ nav a.active {
         width: 80%;
         max-width: 400px;
         height: 100vh;
-        background-color: var(--background-color);
+        background-color: var(--primary-color);
         flex-direction: column;
         padding: 2rem;
-        transition: right 0.3s ease;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        box-shadow: var(--shadow);
     }
 
     nav.active {
@@ -197,6 +219,10 @@ nav a.active {
     nav ul {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    nav a::after {
+        display: none;
     }
 
     .phone-number {
