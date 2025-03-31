@@ -15,11 +15,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Add these styles to match owners page */
+        .agent-referrals-hero {
+            background: linear-gradient(rgba(31, 77, 72, 0.8), rgba(31, 77, 72, 0.8)), url('../images/tahoe-lake-winter.png');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .agent-referrals-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .agent-referrals-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .agent-referrals-hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
         .benefits-section,
-        .referral-steps,
-        .referral-form {
+        .program-details,
+        .partner-section,
+        .testimonials-section {
             padding: 6rem 0;
             background-color: var(--background-color);
+            position: relative;
+        }
+
+        .benefits-section::after,
+        .program-details::after,
+        .partner-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+            opacity: 0.3;
         }
 
         .section-title {
@@ -49,52 +91,74 @@
             padding: 0 2rem;
         }
 
-        .benefit-item {
+        .benefit-card {
             background: var(--light-background);
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
             transition: var(--transition);
             box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .benefit-item:hover {
+        .benefit-card:hover {
             transform: translateY(-5px);
+            border-color: var(--accent-color);
         }
 
-        .benefit-item h3 {
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .benefit-card h3 {
             color: var(--accent-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
             font-weight: 600;
         }
 
-        .benefit-item p {
+        .benefit-card p {
             color: var(--text-color);
             line-height: 1.6;
             opacity: 0.9;
+        }
+
+        .program-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .program-content h2 {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         .steps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            margin-bottom: 4rem;
         }
 
-        .step-item {
+        .step {
             background: var(--light-background);
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
             transition: var(--transition);
             box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .step-item:hover {
+        .step:hover {
             transform: translateY(-5px);
+            border-color: var(--accent-color);
         }
 
         .step-number {
@@ -110,41 +174,70 @@
             font-weight: bold;
         }
 
-        .step-item h3 {
+        .step h3 {
             color: var(--accent-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
             font-weight: 600;
         }
 
-        .step-item p {
+        .step p {
             color: var(--text-color);
             line-height: 1.6;
             opacity: 0.9;
         }
 
-        .referral-form {
-            background: var(--background-color);
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
+        .commission-rates {
             background: var(--light-background);
             padding: 2rem;
             border-radius: 10px;
             box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .commission-rates h3 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .commission-rates ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .commission-rates li {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            opacity: 0.9;
+        }
+
+        .commission-rates li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .partner-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .partner-form {
+            background: var(--light-background);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .form-group {
             margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--accent-color);
-            font-weight: 500;
         }
 
         .form-group input,
@@ -156,6 +249,7 @@
             font-size: 1rem;
             color: var(--text-color);
             background: rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
         }
 
         .form-group input:focus,
@@ -170,7 +264,7 @@
             resize: vertical;
         }
 
-        .submit-btn {
+        .btn-primary {
             background: var(--accent-color);
             color: var(--text-dark);
             padding: 1rem 2rem;
@@ -183,17 +277,68 @@
             width: 100%;
         }
 
-        .submit-btn:hover {
+        .btn-primary:hover {
             background: #FFA726;
             transform: translateY(-2px);
         }
 
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--light-background);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .testimonial-content {
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-content p {
+            color: var(--text-color);
+            line-height: 1.6;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .testimonial-author h4 {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .testimonial-author p {
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
+            .agent-referrals-hero h1 {
+                font-size: 2.5rem;
+            }
+
             .section-title h2 {
                 font-size: 2rem;
             }
 
-            .form-container {
+            .partner-form {
                 padding: 1.5rem;
             }
         }
