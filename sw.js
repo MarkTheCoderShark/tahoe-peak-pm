@@ -2,49 +2,24 @@ const CACHE_NAME = 'tahoe-peak-v1';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/owners.html',
-    '/residents.html',
-    '/rentals.html',
-    '/resources.html',
-    '/real-estate.html',
-    '/agent-referrals.html',
-    '/about.html',
-    '/contact.html',
-    '/pricing.html',
     '/css/base.css',
     '/css/header.css',
     '/css/footer.css',
-    '/css/owners.css',
-    '/css/residents.css',
-    '/css/rentals.css',
-    '/css/resources.css',
-    '/css/real-estate.css',
-    '/css/agent-referrals.css',
-    '/css/about.css',
-    '/css/contact.css',
-    '/css/pricing.css',
-    '/css/404.css',
-    '/css/500.css',
+    '/css/hero.css',
+    '/css/services.css',
+    '/css/user-types.css',
+    '/css/animations.css',
     '/js/main.js',
-    '/images/logo.png',
-    '/images/lake-tahoe-hero.jpg',
-    '/images/icons/icon-72x72.png',
-    '/images/icons/icon-96x96.png',
-    '/images/icons/icon-128x128.png',
-    '/images/icons/icon-144x144.png',
-    '/images/icons/icon-152x152.png',
+    '/images/tahoe-peak-logo.svg',
+    '/images/hero-bg.jpg',
     '/images/icons/icon-192x192.png',
-    '/images/icons/icon-384x384.png',
     '/images/icons/icon-512x512.png'
 ];
 
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
-            .then(cache => {
-                console.log('Opened cache');
-                return cache.addAll(urlsToCache);
-            })
+            .then(cache => cache.addAll(urlsToCache))
     );
 });
 
