@@ -5,6 +5,7 @@
     margin-top: 0;
     min-height: 800px;
     overflow: hidden;
+    background-color: var(--background-color);
 }
 
 .post-featured-image {
@@ -21,6 +22,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    display: block;
 }
 
 .post-featured-image::before {
@@ -30,8 +32,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(22, 28, 45, 0.7), rgba(22, 28, 45, 0.6));
+    background: linear-gradient(rgba(0, 75, 73, 0.7), rgba(0, 75, 73, 0.8));
     z-index: 2;
+    pointer-events: none;
 }
 
 .hero-content {
@@ -46,6 +49,7 @@
     align-items: center;
     justify-content: center;
     min-height: 800px;
+    height: 100vh;
 }
 
 .hero-content h1 {
