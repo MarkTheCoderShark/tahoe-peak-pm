@@ -121,14 +121,14 @@ header {
     align-items: center;
 }
 
-.logo img {
-    height: 80px;
+.header-content .logo img {
+    height: 120px;
     width: auto;
     transition: var(--transition);
 }
 
-.header-main.scrolled .logo img {
-    height: 70px;
+.header-main.scrolled .header-content .logo img {
+    height: 100px;
 }
 
 .logo-text {
@@ -337,7 +337,7 @@ nav a.active {
         font-size: 1.2rem;
     }
 
-    .logo img {
+    .header-content .logo img {
         height: 60px;
     }
 }
@@ -355,7 +355,7 @@ nav a.active {
         padding: 0 0.75rem;
     }
 
-    .logo img {
+    .header-content .logo img {
         height: 50px;
     }
 
