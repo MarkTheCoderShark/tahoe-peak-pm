@@ -1,9 +1,7 @@
 /* Header Styles */
 header {
     background-color: var(--primary-color);
-    position: fixed;
     width: 100%;
-    top: 0;
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
 }
@@ -430,43 +428,27 @@ nav a.active {
     .header-top,
     .zero-fees.hidden {
         display: none !important;
-        height: 0 !important;
-        min-height: 0 !important;
-        max-height: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-        position: absolute !important;
-        overflow: hidden !important;
-        clip: rect(0 0 0 0) !important;
-        -webkit-transform: translateY(-100%) !important;
-        transform: translateY(-100%) !important;
     }
 
     .header-main {
         padding: 0.5rem 0;
         background-color: var(--primary-color);
         border-bottom: none;
-        margin-top: 0 !important;
         position: fixed;
         top: 0;
+        left: 0;
         width: 100%;
         z-index: 1000;
     }
 
     header {
-        position: relative;
+        position: static;
         background: none;
         border-bottom: none;
-        margin-top: 0 !important;
     }
 
     .header-content {
         padding: 0 0.75rem;
-        background-color: var(--primary-color);
     }
 
     .mobile-menu-toggle {
