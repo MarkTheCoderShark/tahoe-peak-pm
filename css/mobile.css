@@ -1,0 +1,194 @@
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Base styles */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Container adjustments */
+    .container {
+        padding: 0 1rem;
+        width: 100%;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+
+    /* Grid layouts */
+    .services-grid,
+    .location-grid,
+    .area-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Cards */
+    .service-card,
+    .location-card,
+    .area-card,
+    .feature-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Buttons */
+    .cta-button {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Sections */
+    section {
+        padding: 2rem 0;
+    }
+
+    .hero {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    /* Navigation */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--primary-color);
+        padding: 2rem;
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .main-nav.active {
+        right: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-section {
+        padding: 1rem 0;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Forms */
+    form {
+        padding: 1rem;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    /* Tables */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Lists */
+    ul, ol {
+        padding-left: 1.5rem;
+    }
+
+    /* Spacing */
+    .mt-1, .mt-2, .mt-3, .mt-4, .mt-5,
+    .mb-1, .mb-2, .mb-3, .mb-4, .mb-5 {
+        margin: 1rem 0;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    section {
+        padding: 1.5rem 0;
+    }
+
+    .hero {
+        padding: 3rem 0.75rem 1.5rem;
+    }
+}
+
+/* Landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .main-nav {
+        padding-top: 4rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-content {
+        padding: 1rem 0;
+    }
+} 
