@@ -23,6 +23,8 @@
     object-fit: cover;
     object-position: center;
     display: block;
+    position: relative;
+    z-index: 1;
 }
 
 .post-featured-image::before {
@@ -46,6 +48,7 @@
     z-index: 3;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 800px;
