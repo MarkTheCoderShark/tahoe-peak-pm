@@ -133,6 +133,19 @@ section {
     opacity: 0.9;
 }
 
+/* Section Separators */
+.section-separator {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--border-color),
+        transparent
+    );
+    margin: 4rem 0;
+    width: 100%;
+}
+
 /* Utility Classes */
 .container {
     max-width: 1200px;
