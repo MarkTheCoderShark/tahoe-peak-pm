@@ -12,6 +12,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize header scroll effect
     initHeaderScroll();
 
+    // Header scroll animations
+    const headerTop = document.querySelector('.header-top');
+    const zeroFees = document.querySelector('.zero-fees');
+    let lastScroll = 0;
+    const scrollThreshold = 100; // Adjust this value to control when the animation triggers
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        // Handle header animations
+        if (currentScroll > scrollThreshold) {
+            headerTop?.classList.add('hidden');
+            zeroFees?.classList.add('hidden');
+        } else {
+            headerTop?.classList.remove('hidden');
+            zeroFees?.classList.remove('hidden');
+        }
+
+        lastScroll = currentScroll;
+    });
+
     // Rental Analysis Popup
     const popup = document.getElementById('rental-analysis-popup');
     const openPopupBtn = document.getElementById('rental-analysis-btn');
