@@ -96,13 +96,13 @@ header {
 
 .header-main {
     background-color: var(--primary-color);
-    padding: 0.5rem 0;
+    padding: 0.25rem 0;
     transition: var(--transition);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-main.scrolled {
-    padding: 0.35rem 0;
+    padding: 0.2rem 0;
     box-shadow: var(--shadow);
 }
 
@@ -113,7 +113,7 @@ header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .logo {
@@ -122,13 +122,13 @@ header {
 }
 
 .header-content .logo img {
-    height: 140px;
+    height: 100px;
     width: auto;
     transition: var(--transition);
 }
 
 .header-main.scrolled .header-content .logo img {
-    height: 120px;
+    height: 90px;
 }
 
 .logo-text {
@@ -152,7 +152,7 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -163,13 +163,13 @@ nav a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 0.5px;
     transition: var(--transition);
     position: relative;
     text-transform: uppercase;
     white-space: nowrap;
-    padding: 0.5rem 0;
+    padding: 0.35rem 0;
 }
 
 nav a::after {
@@ -216,9 +216,9 @@ nav a.active {
     background-color: var(--primary);
     color: white;
     text-align: center;
-    padding: 0.15rem;
+    padding: 0.5rem;
     transition: all 0.3s ease-in-out;
-    max-height: 40px;
+    max-height: 100px;
     overflow: hidden;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -239,23 +239,22 @@ nav a.active {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
-    gap: 0.75rem;
+    gap: 2rem;
 }
 
 .zero-fees-content span {
-    font-size: 0.95rem;
-    letter-spacing: 1px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
 }
 
 .cta-buttons {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .cta-buttons a {
-    font-size: 0.85rem;
-    padding: 0.25rem 0.65rem;
-    line-height: 1;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
 }
 
 /* Mobile Menu */
