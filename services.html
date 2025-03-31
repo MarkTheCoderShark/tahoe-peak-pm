@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Management Services in Lake Tahoe | Tahoe Peak PM</title>
-    <meta name="description" content="Comprehensive property management services in Lake Tahoe. We offer single-family home management, vacation rental management, and portfolio management solutions.">
+    <title>Property Management Services | Lake Tahoe Property Management</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional property management services in Lake Tahoe. Comprehensive solutions for vacation rentals, long-term rentals, and property maintenance.">
+    <meta name="keywords" content="Lake Tahoe property management services, vacation rental management, property maintenance, rental property management">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/services.css">
-    <link rel="stylesheet" href="css/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,11 +32,13 @@
         <div class="header-main">
             <div class="header-content">
                 <a href="/" class="logo">
-                    <img src="images/tahoe-peak-logo.svg" alt="Tahoe Peak Property Management">
+                    <img src="images/tahoe-peak-logo.svg" 
+                         alt="Lake Tahoe Property Management - Tahoe Peak Management Logo" 
+                         width="140" 
+                         height="50"
+                         loading="eager">
                 </a>
-                <button class="mobile-menu-toggle">☰</button>
                 <nav class="main-nav">
-                    <button class="mobile-menu-toggle">☰</button>
                     <ul>
                         <li><a href="owners.html">OWNERS/INVESTORS</a></li>
                         <li><a href="residents.html">RESIDENTS</a></li>
@@ -47,51 +53,86 @@
                 </nav>
             </div>
         </div>
+        <div class="zero-fees">
+            <div class="zero-fees-content">
+                <span>$0 LEASING. $0 RENEWAL. $0 SIGN UP FEES.</span>
+                <div class="cta-buttons">
+                    <a href="/pricing.html" class="btn btn-secondary">EXPLORE OUR PRICING</a>
+                    <a href="/contact.html" class="btn btn-primary">FREE CONSULTATION</a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
+        <section class="page-header">
+            <div class="container">
                 <h1>Property Management Services in Lake Tahoe</h1>
                 <p>Comprehensive property management solutions for all your Lake Tahoe properties</p>
-                <a href="contact.html" class="cta-button">Get Started</a>
             </div>
         </section>
 
-        <section class="services-overview">
+        <section class="services-grid">
             <div class="container">
-                <h2>Our Property Management Services</h2>
-                <div class="services-grid">
-                    <div class="service-card" id="vacation-rentals">
-                        <h3>Vacation Rental Management</h3>
-                        <p>Full-service vacation rental management including marketing, booking, and maintenance.</p>
-                        <a href="short-term-rental-management.html" class="learn-more">Learn More →</a>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <path d="M9 22V12h6v10"/>
+                        </svg>
                     </div>
-                    <div class="service-card" id="long-term-rentals">
-                        <h3>Long-term Rental Management</h3>
-                        <p>Professional management of long-term rental properties with tenant screening and maintenance.</p>
-                        <a href="rentals.html" class="learn-more">Learn More →</a>
+                    <h2>Vacation Rental Management</h2>
+                    <p>Full-service vacation rental management including marketing, booking, and maintenance.</p>
+                    <a href="/vacation-rentals.html" class="btn btn-secondary">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="16" rx="2"/>
+                            <path d="M16 2v4"/>
+                            <path d="M8 2v4"/>
+                            <path d="M3 10h18"/>
+                        </svg>
                     </div>
-                    <div class="service-card" id="maintenance">
-                        <h3>Property Maintenance</h3>
-                        <p>Comprehensive maintenance services for all property types.</p>
-                        <a href="property-maintenance-guide.html" class="learn-more">Learn More →</a>
+                    <h2>Long-term Rental Management</h2>
+                    <p>Professional management of long-term rental properties with tenant screening and maintenance.</p>
+                    <a href="/long-term-rentals.html" class="btn btn-secondary">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
                     </div>
-                    <div class="service-card" id="marketing">
-                        <h3>Marketing & Advertising</h3>
-                        <p>Strategic marketing solutions to maximize your property's visibility and bookings.</p>
-                        <a href="owners.html#marketing-services" class="learn-more">Learn More →</a>
+                    <h2>Property Maintenance</h2>
+                    <p>Comprehensive maintenance services for all property types.</p>
+                    <a href="/maintenance-services.html" class="btn btn-secondary">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2">
+                            <path d="M3 3v18h18"/>
+                            <path d="M18 17V9"/>
+                            <path d="M13 17V5"/>
+                            <path d="M8 17v-3"/>
+                        </svg>
                     </div>
+                    <h2>Marketing & Advertising</h2>
+                    <p>Strategic marketing solutions to maximize your property's visibility and bookings.</p>
+                    <a href="/marketing-services.html" class="btn btn-secondary">Learn More →</a>
                 </div>
             </div>
         </section>
 
-        <section class="location-services">
+        <section class="locations">
             <div class="container">
                 <h2>Services by Location</h2>
                 <div class="location-grid">
                     <div class="location-card">
-                        <h3><a href="south-lake-tahoe.html">South Lake Tahoe</a></h3>
+                        <h3>South Lake Tahoe</h3>
                         <p>Specialized services for Heavenly Valley and Stateline areas</p>
                         <ul>
                             <li>Vacation Rental Management</li>
@@ -99,8 +140,9 @@
                             <li>Marketing Services</li>
                         </ul>
                     </div>
+
                     <div class="location-card">
-                        <h3><a href="north-lake-tahoe.html">North Lake Tahoe</a></h3>
+                        <h3>North Lake Tahoe</h3>
                         <p>Comprehensive services for North Shore properties</p>
                         <ul>
                             <li>Long-term Rentals</li>
@@ -108,8 +150,9 @@
                             <li>Marketing Services</li>
                         </ul>
                     </div>
+
                     <div class="location-card">
-                        <h3><a href="tahoe-city.html">Tahoe City</a></h3>
+                        <h3>Tahoe City</h3>
                         <p>Expert services for Tahoe City properties</p>
                         <ul>
                             <li>Vacation Rentals</li>
@@ -121,19 +164,19 @@
             </div>
         </section>
 
-        <section class="service-features">
+        <section class="why-choose-us">
             <div class="container">
                 <h2>Why Choose Our Services?</h2>
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature">
                         <h3>Local Expertise</h3>
                         <p>Deep knowledge of Lake Tahoe's unique market and regulations</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature">
                         <h3>24/7 Support</h3>
                         <p>Round-the-clock assistance for property owners and tenants</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature">
                         <h3>Transparent Pricing</h3>
                         <p>Clear, competitive pricing with no hidden fees</p>
                     </div>
@@ -146,8 +189,8 @@
                 <h2>Ready to Get Started?</h2>
                 <p>Contact us today to learn more about our property management services</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="cta-button">Contact Us</a>
-                    <a href="pricing.html" class="cta-button secondary">View Pricing</a>
+                    <a href="/contact.html" class="btn btn-primary">Contact Us</a>
+                    <a href="/pricing.html" class="btn btn-secondary">View Pricing</a>
                 </div>
             </div>
         </section>
@@ -158,33 +201,8 @@
             <div class="footer-section">
                 <h3>Contact Us</h3>
                 <div class="footer-contact">
-                    <a href="tel:5309948882">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                        530.994.8882
-                    </a>
-                    <a href="mailto:laketahoepmg@gmail.com">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        laketahoepmg@gmail.com
-                    </a>
-                </div>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                        </svg>
-                    </a>
+                    <a href="tel:5309948882">530.994.8882</a>
+                    <a href="mailto:laketahoepmg@gmail.com">laketahoepmg@gmail.com</a>
                 </div>
             </div>
             
@@ -203,6 +221,8 @@
                 <h3>Services</h3>
                 <ul class="footer-links">
                     <li><a href="services.html">Property Management</a></li>
+                    <li><a href="guarantees.html">Our Guarantees</a></li>
+                    <li><a href="application-criteria.html">Application Criteria</a></li>
                     <li><a href="real-estate.html">Real Estate</a></li>
                     <li><a href="agent-referrals.html">Agent Referrals</a></li>
                     <li><a href="resources.html">Resources</a></li>
