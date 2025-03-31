@@ -3,25 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lake Tahoe Property Management | South Lake Tahoe & Incline Village Property Management Services</title>
-    <meta name="description" content="Lake Tahoe's premier property management company serving South Lake Tahoe, Incline Village, and surrounding areas. Expert vacation rental management, tenant screening, and property maintenance.">
+    <title>Tahoe Peak Property Management - Lake Tahoe's Premier Property Management Company</title>
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Lake Tahoe Property Management | South Lake Tahoe & Incline Village">
-    <meta property="og:description" content="Lake Tahoe's premier property management company serving South Lake Tahoe, Incline Village, and surrounding areas. Expert vacation rental management, tenant screening, and property maintenance.">
-    <meta property="og:image" content="https://tahoepeak.com/images/tahoe-peak-logo.svg">
-    <meta property="og:url" content="https://tahoepeak.com">
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --background-color: #004B49;
+            --primary-color: #1F4D48;
+            --secondary-color: #FFB74D;
+            --accent-color: #FFB74D;
+            --text-color: #ffffff;
+            --text-dark: #333333;
+            --light-text: #ffffff;
+            --background-light: #f5f5f5;
+            --border-color: rgba(255, 255, 255, 0.15);
+            --light-background: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    </style>
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="images/tahoe-peak-logo.svg">
+    <link rel="preload" as="image" href="images/hero-bg.jpg">
+    <link rel="preload" href="css/base.css" as="style">
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="css/base.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/hero.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/services.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/testimonials.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/contact.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/hero.css">
+        <link rel="stylesheet" href="css/services.css">
+        <link rel="stylesheet" href="css/testimonials.css">
+        <link rel="stylesheet" href="css/contact.css">
+    </noscript>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Tahoe Peak Property Management provides professional property management services in Lake Tahoe. We handle vacation rentals, long-term rentals, and property maintenance.">
+    <meta name="keywords" content="Lake Tahoe property management, vacation rentals, long-term rentals, property maintenance, real estate management">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lake Tahoe Property Management | South Lake Tahoe & Incline Village">
-    <meta name="twitter:description" content="Lake Tahoe's premier property management company serving South Lake Tahoe, Incline Village, and surrounding areas.">
-    <meta name="twitter:image" content="https://tahoepeak.com/images/tahoe-peak-logo.svg">
-    
+    <meta property="og:url" content="https://tahoepeakpm.com/">
+    <meta property="og:title" content="Tahoe Peak Property Management - Lake Tahoe's Premier Property Management Company">
+    <meta property="og:description" content="Professional property management services in Lake Tahoe. We handle vacation rentals, long-term rentals, and property maintenance.">
+    <meta property="og:image" content="https://tahoepeakpm.com/images/hero-bg.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tahoepeakpm.com/">
+    <meta property="twitter:title" content="Tahoe Peak Property Management - Lake Tahoe's Premier Property Management Company">
+    <meta property="twitter:description" content="Professional property management services in Lake Tahoe. We handle vacation rentals, long-term rentals, and property maintenance.">
+    <meta property="twitter:image" content="https://tahoepeakpm.com/images/hero-bg.jpg">
+
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://tahoepeak.com">
-    
+    <link rel="canonical" href="https://tahoepeakpm.com/">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -64,11 +131,8 @@
     }
     </script>
     
-    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/user-types.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,7 +153,7 @@
         <div class="header-main">
             <div class="header-content">
                 <a href="/" class="logo">
-                    <img src="images/tahoe-peak-logo.svg" alt="Tahoe Peak Property Management">
+                    <img src="images/tahoe-peak-logo.svg" alt="Tahoe Peak Property Management - Lake Tahoe's Premier Property Management Company" loading="eager">
                 </a>
                 <button class="mobile-menu-toggle">☰</button>
                 <nav class="main-nav">

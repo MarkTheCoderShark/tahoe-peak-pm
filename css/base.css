@@ -1,12 +1,5 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Critical CSS - Load this inline in the head */
 :root {
-    /* Colors */
     --background-color: #004B49;
     --primary-color: #1F4D48;
     --secondary-color: #FFB74D;
@@ -17,17 +10,6 @@
     --background-light: #f5f5f5;
     --border-color: rgba(255, 255, 255, 0.15);
     --light-background: rgba(255, 255, 255, 0.08);
-
-    /* Transitions */
-    --transition: all 0.3s ease;
-
-    /* Shadows */
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-
-    --button-blue: #2A7B9B;
-    --button-orange: #FFB74D;
-
-    --spacing-unit: 1rem;
 }
 
 body {
@@ -35,7 +17,27 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Deferred CSS - Load this after the page loads */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Transitions */
+:root {
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --button-blue: #2A7B9B;
+    --button-orange: #FFB74D;
+    --spacing-unit: 1rem;
 }
 
 main {
@@ -82,7 +84,7 @@ p {
     font-weight: 600;
     text-decoration: none;
     border-radius: 4px;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     text-align: center;
     min-width: 160px;
 }
@@ -165,31 +167,6 @@ section {
     gap: 2rem;
 }
 
-@media (max-width: 768px) {
-    section {
-        padding: 3rem 0;
-    }
-
-    .section-title h2 {
-        font-size: 2rem;
-    }
-
-    .btn {
-        padding: 0.8rem 1.5rem;
-        min-width: 140px;
-    }
-}
-
-@media (max-width: 480px) {
-    section {
-        padding: 2rem 0;
-    }
-
-    .section-title h2 {
-        font-size: 1.75rem;
-    }
-}
-
 /* Breadcrumb Navigation */
 .breadcrumb {
     background-color: var(--light-background);
@@ -235,12 +212,52 @@ section {
     opacity: 1;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+    section {
+        padding: 3rem 0;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        min-width: 140px;
+    }
+
     .breadcrumb {
         padding: 0.5rem 1rem;
     }
     
     .breadcrumb-item {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 2rem 0;
+    }
+
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
     }
 } 
