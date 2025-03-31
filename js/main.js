@@ -225,4 +225,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     lazyImages.forEach(img => imageObserver.observe(img));
+});
+
+// Header scroll behavior
+const header = document.querySelector('.header-main');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    // Add scrolled class when scrolling down
+    if (currentScroll > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// Mobile menu toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const mainNav = document.querySelector('.main-nav');
+
+if (mobileMenuToggle && mainNav) {
+    mobileMenuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+    });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (mainNav && mainNav.classList.contains('active')) {
+        if (!mainNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+            mainNav.classList.remove('active');
+        }
+    }
+});
+
+// Close mobile menu when clicking a link
+const navLinks = document.querySelectorAll('.main-nav a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (mainNav.classList.contains('active')) {
+            mainNav.classList.remove('active');
+        }
+    });
 }); 

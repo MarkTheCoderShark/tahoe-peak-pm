@@ -1,0 +1,36 @@
+{
+    "name": "tahoe-peak",
+    "version": "1.0.0",
+    "description": "Lake Tahoe's premier property management and real estate services website",
+    "main": "index.js",
+    "scripts": {
+        "start": "live-server --port=3000 --no-browser",
+        "build": "npm run clean && npm run copy && npm run minify",
+        "clean": "rimraf dist",
+        "copy": "copyfiles -u 1 src/**/*.{html,css,js,json,ico,png,jpg,gif,svg} dist/",
+        "minify": "npm run minify:css && npm run minify:js",
+        "minify:css": "cleancss -o dist/css/*.min.css dist/css/*.css",
+        "minify:js": "terser dist/js/*.js -o dist/js/*.min.js -c -m",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "property management",
+        "real estate",
+        "Lake Tahoe",
+        "Tahoe City",
+        "vacation rentals",
+        "property investment"
+    ],
+    "author": "Tahoe Peak Property Management",
+    "license": "MIT",
+    "devDependencies": {
+        "cleancss-cli": "^5.6.3",
+        "copyfiles": "^2.4.1",
+        "live-server": "^1.2.2",
+        "rimraf": "^5.0.5",
+        "terser": "^5.24.0"
+    },
+    "dependencies": {
+        "@googlemaps/js-api-loader": "^1.16.2"
+    }
+} 
