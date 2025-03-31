@@ -284,9 +284,14 @@ nav a.active {
 }
 
 @media (max-width: 992px) {
+    main {
+        margin-top: 80px;
+    }
+
     .zero-fees,
     .zero-fees-content,
-    .header-top {
+    .header-top,
+    .zero-fees.hidden {
         display: none !important;
         height: 0 !important;
         min-height: 0 !important;
@@ -299,6 +304,9 @@ nav a.active {
         pointer-events: none !important;
         position: absolute !important;
         overflow: hidden !important;
+        clip: rect(0 0 0 0) !important;
+        -webkit-transform: translateY(-100%) !important;
+        transform: translateY(-100%) !important;
     }
 
     .header-content {
@@ -398,10 +406,39 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
-    body.menu-active {
-        overflow: hidden;
-        position: fixed;
+    main {
+        margin-top: 60px;
+    }
+    
+    .header-top-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .contact-info, .social-links {
         width: 100%;
+        text-align: center;
+    }
+
+    .zero-fees,
+    .zero-fees-content,
+    .header-top,
+    .zero-fees.hidden {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        max-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        overflow: hidden !important;
+        clip: rect(0 0 0 0) !important;
+        -webkit-transform: translateY(-100%) !important;
+        transform: translateY(-100%) !important;
     }
 
     .header-main {
