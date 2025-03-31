@@ -273,4 +273,7 @@ section {
     a[href]:after {
         content: " (" attr(href) ")";
     }
-} 
+}
+
+/* Import rental analysis styles */
+@import 'rental-analysis.css'; 

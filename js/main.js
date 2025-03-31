@@ -95,11 +95,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (consultationForm) {
         consultationForm.addEventListener('submit', function(e) {
-            // Show success message
-            if (successMessage) {
-                successMessage.classList.remove('hidden');
-                consultationForm.classList.add('hidden');
-            }
+            // Let Netlify handle the form submission
+            // Show success message after a short delay
+            setTimeout(() => {
+                if (successMessage) {
+                    successMessage.classList.remove('hidden');
+                    consultationForm.classList.add('hidden');
+                }
+            }, 1000);
         });
     }
 
@@ -337,4 +340,9 @@ if (window.performance) {
         console.log('Page load time:', pageLoadTime);
         // You can send this data to your analytics service
     });
-} 
+}
+
+// Load rental analysis functionality
+const rentalAnalysisScript = document.createElement('script');
+rentalAnalysisScript.src = 'js/rental-analysis.js';
+document.body.appendChild(rentalAnalysisScript); 
