@@ -5,6 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lake Tahoe Property Management | South Lake Tahoe & Incline Village Property Management Services</title>
     <meta name="description" content="Lake Tahoe's premier property management company serving South Lake Tahoe, Incline Village, and surrounding areas. Expert vacation rental management, tenant screening, and property maintenance.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lake Tahoe Property Management | South Lake Tahoe & Incline Village">
+    <meta property="og:description" content="Lake Tahoe's premier property management company serving South Lake Tahoe, Incline Village, and surrounding areas. Expert vacation rental management, tenant screening, and property maintenance.">
+    <meta property="og:image" content="https://tahoepeak.com/images/tahoe-peak-logo.svg">
+    <meta property="og:url" content="https://tahoepeak.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lake Tahoe Property Management | South Lake Tahoe & Incline Village">
+    <meta name="twitter:description" content="Lake Tahoe's premier property management company serving South Lake Tahoe, Incline Village, and surrounding areas.">
+    <meta name="twitter:image" content="https://tahoepeak.com/images/tahoe-peak-logo.svg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tahoepeak.com">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tahoe Peak Property Management",
+        "image": "https://tahoepeak.com/images/tahoe-peak-logo.svg",
+        "description": "Lake Tahoe's premier property management company serving South Lake Tahoe, Incline Village, and surrounding areas.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Lake Tahoe Blvd",
+            "addressLocality": "Tahoe City",
+            "addressRegion": "CA",
+            "postalCode": "96145",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "39.1724",
+            "longitude": "-120.1378"
+        },
+        "url": "https://tahoepeak.com",
+        "telephone": "+15309948882",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "sameAs": [
+            "https://www.facebook.com/tahoepeakpm",
+            "https://www.instagram.com/tahoepeakpm"
+        ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -60,6 +119,27 @@
         </div>
     </header>
 
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tahoepeak.com"
+        }]
+    }
+    </script>
+
     <main>
         <section class="hero-section">
             <div class="hero-content">
@@ -71,6 +151,43 @@
                 </div>
             </div>
         </section>
+
+        <!-- FAQ Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "What areas do you serve in Lake Tahoe?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We serve South Lake Tahoe, Incline Village, and surrounding areas. Our property management services are available throughout the Lake Tahoe region."
+                }
+            }, {
+                "@type": "Question",
+                "name": "What property management services do you offer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer comprehensive property management services including vacation rental management, tenant screening, property maintenance, financial reporting, and real estate services."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Do you charge any upfront fees?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, we offer $0 leasing, $0 renewal, and $0 sign-up fees. Our pricing is transparent and competitive."
+                }
+            }, {
+                "@type": "Question",
+                "name": "How do I get started with your services?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Getting started is easy! Simply contact us through our website or call us at 530.994.8882 for a free consultation. We'll discuss your needs and create a customized property management plan."
+                }
+            }]
+        }
+        </script>
 
         <section class="user-type-section">
             <div class="user-types">
