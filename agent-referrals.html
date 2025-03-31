@@ -14,81 +14,174 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Add these styles to ensure text visibility */
-        .benefits-section h2,
-        .benefits-section p,
-        .benefits-section .benefit-item h3,
-        .benefits-section .benefit-item p {
-            color: #333;
-        }
-
-        .benefits-section .benefit-item {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-        }
-
-        .benefits-section .benefit-item:hover {
-            background: #e9ecef;
-        }
-
-        .benefits-section .benefit-item h3 {
-            color: #1a365d;
-        }
-
-        .benefits-section .benefit-item p {
-            color: #4a5568;
-        }
-
-        .referral-steps h2,
-        .referral-steps p,
-        .referral-steps .step-item h3,
-        .referral-steps .step-item p {
-            color: #333;
-        }
-
-        .referral-steps .step-item {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-        }
-
-        .referral-steps .step-item:hover {
-            background: #e9ecef;
-        }
-
-        .referral-steps .step-item h3 {
-            color: #1a365d;
-        }
-
-        .referral-steps .step-item p {
-            color: #4a5568;
-        }
-
-        .referral-form h2,
-        .referral-form p,
-        .referral-form label {
-            color: #333;
-        }
-
-        .referral-form input,
-        .referral-form textarea {
+        /* Add these styles to match real-estate page */
+        .benefits-section,
+        .referral-steps,
+        .referral-form {
+            padding: 4rem 0;
             background: #fff;
-            border: 1px solid #e9ecef;
-            color: #333;
         }
 
-        .referral-form input:focus,
-        .referral-form textarea:focus {
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: #1a365d;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-item h3 {
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .benefit-item p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #1a365d;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+
+        .step-item h3 {
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .step-item p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .referral-form {
+            background: #f8f9fa;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a365d;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: #4a5568;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
             border-color: #1a365d;
             box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
         }
 
-        .referral-form button {
-            background: #1a365d;
-            color: #fff;
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
         }
 
-        .referral-form button:hover {
+        .submit-btn {
+            background: #1a365d;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
             background: #2c5282;
+        }
+
+        @media (max-width: 768px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .form-container {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
