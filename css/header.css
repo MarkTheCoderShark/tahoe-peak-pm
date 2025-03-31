@@ -20,31 +20,35 @@ header {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.login-links a {
+.contact-info a {
     color: var(--text-color);
     text-decoration: none;
+    margin-right: 1rem;
     transition: opacity 0.3s ease;
 }
 
-.login-links a:hover {
+.contact-info a:hover {
     opacity: 0.8;
 }
 
-.login-links span {
-    margin: 0 1rem;
-    opacity: 0.5;
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
 }
 
 .header-main {
     background-color: var(--background-color);
     padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
     transition: all 0.3s ease;
 }
 
@@ -77,18 +81,24 @@ header {
     height: 40px;
 }
 
+.logo-text {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
 .logo:hover img {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
-.main-nav {
+nav {
     display: flex;
     align-items: center;
-    gap: 2rem;
 }
 
-.main-nav ul {
+nav ul {
     display: flex;
     gap: 2rem;
     list-style: none;
@@ -96,15 +106,15 @@ header {
     padding: 0;
 }
 
-.main-nav a {
+nav a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
+nav a:hover,
+nav a.active {
     color: var(--accent-color);
 }
 
@@ -166,7 +176,7 @@ header {
         display: block;
     }
 
-    .main-nav {
+    nav {
         position: fixed;
         top: 0;
         right: -100%;
@@ -180,11 +190,11 @@ header {
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .main-nav.active {
+    nav.active {
         right: 0;
     }
 
-    .main-nav ul {
+    nav ul {
         flex-direction: column;
         gap: 1rem;
     }
@@ -196,11 +206,21 @@ header {
 
 /* Add margin to main content to prevent header overlap */
 main {
-    margin-top: 160px; /* Adjust based on header height */
+    margin-top: 120px; /* Adjusted based on combined header height */
 }
 
 @media (max-width: 768px) {
     main {
-        margin-top: 140px;
+        margin-top: 100px;
+    }
+    
+    .header-top-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .contact-info, .social-links {
+        width: 100%;
+        text-align: center;
     }
 } 

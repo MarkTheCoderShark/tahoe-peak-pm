@@ -18,35 +18,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const closePopupBtn = document.querySelector('.close-popup');
     const form = document.getElementById('rental-analysis-form');
 
-    // Open popup
-    openPopupBtn.addEventListener('click', function() {
-        popup.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    });
+    if (popup && openPopupBtn && closePopupBtn && form) {
+        // Open popup
+        openPopupBtn.addEventListener('click', function() {
+            popup.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
 
-    // Close popup
-    closePopupBtn.addEventListener('click', function() {
-        popup.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-
-    // Close popup when clicking outside
-    popup.addEventListener('click', function(e) {
-        if (e.target === popup) {
+        // Close popup
+        closePopupBtn.addEventListener('click', function() {
             popup.style.display = 'none';
             document.body.style.overflow = 'auto';
-        }
-    });
+        });
 
-    // Handle form submission
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Add your form submission logic here
-        alert('Thank you for your request! We will contact you shortly.');
-        popup.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        form.reset();
-    });
+        // Close popup when clicking outside
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your request! We will contact you shortly.');
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            form.reset();
+        });
+    }
 
     // Contact Form Submission
     const consultationForm = document.getElementById('consultation-form');
@@ -108,35 +110,43 @@ function initScrollReveal() {
 
 // Mobile Menu
 function initMobileMenu() {
-    const mobileMenuToggle = document.createElement('button');
-    mobileMenuToggle.className = 'mobile-menu-toggle';
-    mobileMenuToggle.innerHTML = '☰';
-    
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('nav');
-    const headerContent = document.querySelector('.header-content');
     
-    headerContent.insertBefore(mobileMenuToggle, nav);
-    
-    mobileMenuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        mobileMenuToggle.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
-    });
+    if (mobileMenuToggle && nav) {
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            const icon = mobileMenuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target) && nav.classList.contains('active')) {
-            nav.classList.remove('active');
-            mobileMenuToggle.innerHTML = '☰';
-        }
-    });
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target) && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            }
+        });
 
-    // Handle window resize
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && nav.classList.contains('active')) {
-            nav.classList.remove('active');
-            mobileMenuToggle.innerHTML = '☰';
-        }
-    });
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992 && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            }
+        });
+    }
 }
 
 // Smooth Scrolling
@@ -157,29 +167,17 @@ function initSmoothScroll() {
 
 // Header Scroll Effect
 function initHeaderScroll() {
-    const header = document.querySelector('header');
-    let lastScroll = 0;
+    const headerMain = document.querySelector('.header-main');
     
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll <= 0) {
-            header.classList.remove('scroll-up');
-            return;
-        }
-        
-        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-            // Scrolling down
-            header.classList.remove('scroll-up');
-            header.classList.add('scroll-down');
-        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-            // Scrolling up
-            header.classList.remove('scroll-down');
-            header.classList.add('scroll-up');
-        }
-        
-        lastScroll = currentScroll;
-    });
+    if (headerMain) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                headerMain.classList.add('scrolled');
+            } else {
+                headerMain.classList.remove('scrolled');
+            }
+        });
+    }
 }
 
 // Form Validation
@@ -225,50 +223,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     lazyImages.forEach(img => imageObserver.observe(img));
-});
-
-// Header scroll behavior
-const header = document.querySelector('.header-main');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    // Add scrolled class when scrolling down
-    if (currentScroll > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-    
-    lastScroll = currentScroll;
-});
-
-// Mobile menu toggle
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const mainNav = document.querySelector('.main-nav');
-
-if (mobileMenuToggle && mainNav) {
-    mobileMenuToggle.addEventListener('click', () => {
-        mainNav.classList.toggle('active');
-    });
-}
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (mainNav && mainNav.classList.contains('active')) {
-        if (!mainNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-            mainNav.classList.remove('active');
-        }
-    }
-});
-
-// Close mobile menu when clicking a link
-const navLinks = document.querySelectorAll('.main-nav a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (mainNav.classList.contains('active')) {
-            mainNav.classList.remove('active');
-        }
-    });
 }); 
