@@ -286,10 +286,15 @@ nav a.active {
 @media (max-width: 992px) {
     .header-content {
         padding: 0 1rem;
+        grid-template-columns: auto 1fr auto;
     }
 
     .mobile-menu-toggle {
         display: block;
+    }
+
+    .logo {
+        margin: 0 auto;
     }
 
     .main-nav {
