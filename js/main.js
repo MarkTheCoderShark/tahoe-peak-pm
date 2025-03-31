@@ -12,6 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize header scroll effect
     initHeaderScroll();
 
+    // Show zero fees section only on home page
+    const zeroFeesSection = document.querySelector('.zero-fees');
+    if (zeroFeesSection) {
+        // Check if we're on the home page (either / or /index.html)
+        const isHomePage = window.location.pathname === '/' || 
+                          window.location.pathname === '/index.html' ||
+                          window.location.pathname.endsWith('/index.html');
+        
+        if (!isHomePage) {
+            zeroFeesSection.style.display = 'none';
+        }
+    }
+
     // Header scroll animations
     const headerTop = document.querySelector('.header-top');
     const zeroFees = document.querySelector('.zero-fees');
@@ -20,14 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
+        const isHomePage = window.location.pathname === '/' || 
+                          window.location.pathname === '/index.html' ||
+                          window.location.pathname.endsWith('/index.html');
 
-        // Handle header animations
-        if (currentScroll > scrollThreshold) {
-            headerTop?.classList.add('hidden');
-            zeroFees?.classList.add('hidden');
-        } else {
-            headerTop?.classList.remove('hidden');
-            zeroFees?.classList.remove('hidden');
+        // Only handle zero-fees animations on home page
+        if (isHomePage) {
+            if (currentScroll > scrollThreshold) {
+                headerTop?.classList.add('hidden');
+                zeroFees?.classList.add('hidden');
+            } else {
+                headerTop?.classList.remove('hidden');
+                zeroFees?.classList.remove('hidden');
+            }
         }
 
         lastScroll = currentScroll;
