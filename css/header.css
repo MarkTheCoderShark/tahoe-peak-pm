@@ -122,13 +122,13 @@ header {
 }
 
 .logo img {
-    height: 60px;
+    height: 80px;
     width: auto;
     transition: var(--transition);
 }
 
 .header-main.scrolled .logo img {
-    height: 50px;
+    height: 70px;
 }
 
 .logo-text {
@@ -338,7 +338,7 @@ nav a.active {
     }
 
     .logo img {
-        height: 50px;
+        height: 60px;
     }
 }
 
@@ -356,7 +356,7 @@ nav a.active {
     }
 
     .logo img {
-        height: 45px;
+        height: 50px;
     }
 
     .phone-number {
