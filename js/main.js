@@ -51,44 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
 
-    // Rental Analysis Popup
-    const popup = document.getElementById('rental-analysis-popup');
-    const openPopupBtn = document.getElementById('rental-analysis-btn');
-    const closePopupBtn = document.querySelector('.close-popup');
-    const form = document.getElementById('rental-analysis-form');
-
-    if (popup && openPopupBtn && closePopupBtn && form) {
-        // Open popup
-        openPopupBtn.addEventListener('click', function() {
-            popup.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        });
-
-        // Close popup
-        closePopupBtn.addEventListener('click', function() {
-            popup.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-
-        // Close popup when clicking outside
-        popup.addEventListener('click', function(e) {
-            if (e.target === popup) {
-                popup.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Handle form submission
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Add your form submission logic here
-            alert('Thank you for your request! We will contact you shortly.');
-            popup.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            form.reset();
-        });
-    }
-
     // Contact Form Submission
     const consultationForm = document.querySelector('form[name="consultation"]');
     const successMessage = document.getElementById('form-success');
