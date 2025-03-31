@@ -18,4 +18,4 @@ Allow: /images/
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
-Sitemap: https://tahoepeak.com/sitemap.xml 
+Sitemap: https://laketahoepmg.com/sitemap.xml 
