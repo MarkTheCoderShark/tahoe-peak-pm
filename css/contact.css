@@ -345,4 +345,8 @@
     .contact-form h2 {
         font-size: 1.75rem;
     }
+}
+
+.hidden {
+    display: none;
 } 
