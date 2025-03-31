@@ -42,6 +42,10 @@
             font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .about-story,
@@ -51,11 +55,13 @@
             padding: 6rem 0;
             background-color: var(--background-color);
             position: relative;
+            text-align: center;
         }
 
         .about-story::after,
         .mission-section::after,
-        .team-section::after {
+        .team-section::after,
+        .values-section::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -69,6 +75,9 @@
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .section-title h2 {
@@ -82,6 +91,7 @@
             color: var(--text-color);
             font-size: 1.1rem;
             opacity: 0.9;
+            text-align: center;
         }
 
         .story-content {
@@ -92,6 +102,10 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+        }
+
+        .story-text {
+            text-align: left;
         }
 
         .story-text p {
@@ -154,6 +168,7 @@
             color: var(--text-color);
             line-height: 1.6;
             opacity: 0.9;
+            text-align: center;
         }
 
         .team-grid {
@@ -187,6 +202,7 @@
 
         .member-info {
             padding: 1.5rem;
+            text-align: center;
         }
 
         .member-info h3 {
@@ -207,6 +223,7 @@
             color: var(--text-color);
             line-height: 1.6;
             opacity: 0.9;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -220,6 +237,10 @@
 
             .section-title h2 {
                 font-size: 2rem;
+            }
+
+            .story-text {
+                text-align: center;
             }
         }
     </style>
