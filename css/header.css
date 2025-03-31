@@ -122,13 +122,13 @@ header {
 }
 
 .header-content .logo img {
-    height: 80px;
+    height: 160px;
     width: auto;
     transition: var(--transition);
 }
 
 .header-main.scrolled .header-content .logo img {
-    height: 70px;
+    height: 140px;
 }
 
 .logo-text {
@@ -449,7 +449,7 @@ nav a.active {
     }
 
     .header-content .logo img {
-        height: 45px;
+        height: 90px;
     }
 
     .mobile-menu-toggle {
