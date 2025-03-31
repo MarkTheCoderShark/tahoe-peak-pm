@@ -380,14 +380,23 @@ nav a.active {
 
     .header-main {
         padding: 0.5rem 0;
+        background-color: var(--primary-color);
+        border-bottom: none;
+    }
+
+    header {
+        background: none;
+        border-bottom: none;
     }
 
     .header-content {
         padding: 0 0.75rem;
+        background-color: var(--primary-color);
     }
 
     .mobile-menu-toggle {
         padding: 8px;
+        color: var(--text-color);
     }
 
     .header-content .logo img {
