@@ -58,4 +58,9 @@
 
 [build.environment]
   NODE_VERSION = "18"
-  NPM_VERSION = "9" 
+  NPM_VERSION = "9"
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200 
