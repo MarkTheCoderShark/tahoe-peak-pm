@@ -284,6 +284,10 @@ nav a.active {
 }
 
 @media (max-width: 992px) {
+    .zero-fees {
+        display: none;
+    }
+
     .header-content {
         padding: 0 1rem;
         grid-template-columns: auto 1fr auto;
