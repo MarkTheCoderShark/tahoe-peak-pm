@@ -1,7 +1,9 @@
 /* Header Styles */
 header {
     background-color: var(--primary-color);
+    position: fixed;
     width: 100%;
+    top: 0;
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
 }
@@ -434,16 +436,11 @@ nav a.active {
         padding: 0.5rem 0;
         background-color: var(--primary-color);
         border-bottom: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
     }
 
     header {
-        position: static;
-        background: none;
+        position: fixed;
+        background-color: var(--primary-color);
         border-bottom: none;
     }
 
@@ -451,13 +448,13 @@ nav a.active {
         padding: 0 0.75rem;
     }
 
+    .header-content .logo img {
+        height: 50px;
+    }
+
     .mobile-menu-toggle {
         padding: 8px;
         color: var(--text-color);
-    }
-
-    .header-content .logo img {
-        height: 50px;
     }
 
     .phone-number {
