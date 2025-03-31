@@ -10,9 +10,9 @@ header {
 
 .header-top {
     background-color: var(--secondary-color);
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     color: var(--text-color);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .header-top-content {
@@ -20,8 +20,36 @@ header {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+}
+
+.login-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.login-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.login-links a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    transform: translateY(-1px);
+}
+
+.login-links span {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 300;
 }
 
 .contact-info a {

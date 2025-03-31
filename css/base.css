@@ -9,21 +9,21 @@
     /* Colors */
     --background-color: #004B49;
     --primary-color: #004B49;
-    --secondary-color: #006B68;
-    --accent-color: #FFA500;
+    --secondary-color: #005D5A;
+    --accent-color: #FFB74D;
     --text-color: #FFFFFF;
     --light-text: rgba(255, 255, 255, 0.9);
-    --border-color: rgba(255, 255, 255, 0.1);
-    --light-background: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.15);
+    --light-background: rgba(255, 255, 255, 0.08);
 
     /* Transitions */
     --transition: all 0.3s ease;
 
     /* Shadows */
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
     --button-blue: #2A7B9B;
-    --button-orange: #F5A623;
+    --button-orange: #FFB74D;
 }
 
 body {
