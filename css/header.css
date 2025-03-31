@@ -37,12 +37,14 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    width: 100%;
 }
 
 .login-links {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-left: auto;
 }
 
 .login-links a {
@@ -111,7 +113,7 @@ header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .logo {
@@ -145,11 +147,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 1rem;
 }
 
 nav ul {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -196,10 +199,11 @@ nav a.active {
     text-decoration: none;
     transition: var(--transition);
     font-size: 1.1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     white-space: nowrap;
+    margin-left: 1rem;
 }
 
 .phone-number:hover {
