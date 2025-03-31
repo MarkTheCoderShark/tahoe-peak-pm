@@ -7,7 +7,7 @@
         "start": "live-server --port=3000 --no-browser",
         "build": "npm run clean && npm run copy && npm run minify",
         "clean": "rimraf dist",
-        "copy": "copyfiles -u 1 \"**/*.{html,css,js,json,ico,png,jpg,gif,svg}\" dist",
+        "copy": "copyfiles \"**/*.{html,css,js,json,ico,png,jpg,gif,svg}\" dist",
         "minify": "cleancss -o dist/css/*.css css/*.css && terser -o dist/js/*.js js/*.js"
     },
     "keywords": [
