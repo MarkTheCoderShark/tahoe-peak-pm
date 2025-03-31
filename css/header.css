@@ -284,18 +284,21 @@ nav a.active {
 }
 
 @media (max-width: 992px) {
-    .zero-fees {
-        display: none;
-        max-height: 0;
-        padding: 0;
-        margin: 0;
-        border: none;
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    .zero-fees-content {
-        display: none;
+    .zero-fees,
+    .zero-fees-content,
+    .header-top {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        max-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        overflow: hidden !important;
     }
 
     .header-content {
@@ -401,26 +404,17 @@ nav a.active {
         width: 100%;
     }
 
-    .header-top, 
-    .zero-fees {
-        display: none;
-        max-height: 0;
-        padding: 0;
-        margin: 0;
-        border: none;
-        visibility: hidden;
-        opacity: 0;
-    }
-
     .header-main {
         padding: 0.5rem 0;
         background-color: var(--primary-color);
         border-bottom: none;
+        margin-top: 0 !important;
     }
 
     header {
         background: none;
         border-bottom: none;
+        margin-top: 0 !important;
     }
 
     .header-content {
