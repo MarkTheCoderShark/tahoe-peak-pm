@@ -259,13 +259,18 @@
     justify-content: center;
     background: rgba(255, 255, 255, 0.05);
     margin-bottom: 1rem;
+    padding: 1.25rem;
+    box-sizing: border-box;
 }
 
 .feature-icon svg {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     stroke: var(--accent-color);
     fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .feature-card h3 {
@@ -382,4 +387,11 @@
 
 @media (max-width: 768px) {
     .stats-grid {
-        grid-template
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .stat-card {
+        padding: 2.5rem 2rem;
+    }
+} 
