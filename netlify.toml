@@ -8,12 +8,6 @@
   status = 200
 
 [[redirects]]
-  from = "https://laketahoepmg.com/*"
-  to = "https://tahoe-peak-pm.netlify.app/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "https://www.laketahoepmg.com/*"
   to = "https://laketahoepmg.com/:splat"
   status = 301
