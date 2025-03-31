@@ -349,4 +349,19 @@
 
 .hidden {
     display: none;
+}
+
+.form-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-success.hidden {
+    display: none;
 } 
