@@ -412,7 +412,7 @@ nav a.active {
 
 @media (max-width: 768px) {
     main {
-        margin-top: 60px;
+        margin-top: 60px !important;
     }
     
     .header-top-content {
@@ -451,9 +451,14 @@ nav a.active {
         background-color: var(--primary-color);
         border-bottom: none;
         margin-top: 0 !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
     }
 
     header {
+        position: relative;
         background: none;
         border-bottom: none;
         margin-top: 0 !important;
@@ -511,7 +516,7 @@ main {
 
 @media (max-width: 768px) {
     main {
-        margin-top: 100px;
+        margin-top: 60px !important;
     }
     
     .header-top-content {
