@@ -21,8 +21,8 @@
         .mission-section,
         .team-section,
         .values-section {
-            padding: 4rem 0;
-            background: #fff;
+            padding: 6rem 0;
+            background-color: var(--background-color);
         }
 
         .section-title {
@@ -31,16 +31,16 @@
         }
 
         .section-title h2 {
-            color: #1a365d;
+            color: var(--accent-color);
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
         }
 
         .section-title p {
-            color: #4a5568;
+            color: var(--text-color);
             font-size: 1.1rem;
-            font-family: 'Montserrat', sans-serif;
+            opacity: 0.9;
         }
 
         .story-content {
@@ -48,19 +48,22 @@
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .story-text p {
-            color: #4a5568;
+            color: var(--text-color);
             margin-bottom: 1.5rem;
             line-height: 1.6;
-            font-family: 'Montserrat', sans-serif;
+            opacity: 0.9;
         }
 
         .story-image img {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
         }
 
         .mission-content,
@@ -68,16 +71,19 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .mission-card,
         .value-card {
-            background: #f8f9fa;
+            background: var(--light-background);
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
         }
 
         .mission-card:hover,
@@ -88,35 +94,44 @@
         .mission-card i,
         .value-card i {
             font-size: 2.5rem;
-            color: #1a365d;
+            color: var(--accent-color);
             margin-bottom: 1rem;
         }
 
         .mission-card h3,
         .value-card h3 {
-            color: #1a365d;
+            color: var(--accent-color);
             margin-bottom: 1rem;
-            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
         .mission-card p,
         .value-card p {
-            color: #4a5568;
+            color: var(--text-color);
             line-height: 1.6;
-            font-family: 'Montserrat', sans-serif;
+            opacity: 0.9;
         }
 
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .team-member {
-            background: #f8f9fa;
-            border-radius: 8px;
+            background: var(--light-background);
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
         }
 
         .member-image img {
@@ -130,22 +145,23 @@
         }
 
         .member-info h3 {
-            color: #1a365d;
+            color: var(--accent-color);
             margin-bottom: 0.5rem;
-            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
         .member-info .position {
-            color: #2c5282;
+            color: var(--text-color);
             font-weight: 500;
             margin-bottom: 1rem;
-            font-family: 'Montserrat', sans-serif;
+            opacity: 0.9;
         }
 
         .member-info .bio {
-            color: #4a5568;
+            color: var(--text-color);
             line-height: 1.6;
-            font-family: 'Montserrat', sans-serif;
+            opacity: 0.9;
         }
 
         @media (max-width: 768px) {

@@ -18,8 +18,8 @@
         .benefits-section,
         .referral-steps,
         .referral-form {
-            padding: 4rem 0;
-            background: #fff;
+            padding: 6rem 0;
+            background-color: var(--background-color);
         }
 
         .section-title {
@@ -28,31 +28,34 @@
         }
 
         .section-title h2 {
-            color: #1a365d;
+            color: var(--accent-color);
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
         }
 
         .section-title p {
-            color: #4a5568;
+            color: var(--text-color);
             font-size: 1.1rem;
-            font-family: 'Montserrat', sans-serif;
+            opacity: 0.9;
         }
 
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .benefit-item {
-            background: #f8f9fa;
+            background: var(--light-background);
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
         }
 
         .benefit-item:hover {
@@ -60,31 +63,34 @@
         }
 
         .benefit-item h3 {
-            color: #1a365d;
+            color: var(--accent-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
-            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
         }
 
         .benefit-item p {
-            color: #4a5568;
+            color: var(--text-color);
             line-height: 1.6;
-            font-family: 'Montserrat', sans-serif;
+            opacity: 0.9;
         }
 
         .steps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .step-item {
-            background: #f8f9fa;
+            background: var(--light-background);
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
         }
 
         .step-item:hover {
@@ -94,41 +100,40 @@
         .step-number {
             width: 40px;
             height: 40px;
-            background: #1a365d;
-            color: #fff;
+            background: var(--accent-color);
+            color: var(--text-dark);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem;
             font-weight: bold;
-            font-family: 'Montserrat', sans-serif;
         }
 
         .step-item h3 {
-            color: #1a365d;
+            color: var(--accent-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
-            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
         }
 
         .step-item p {
-            color: #4a5568;
+            color: var(--text-color);
             line-height: 1.6;
-            font-family: 'Montserrat', sans-serif;
+            opacity: 0.9;
         }
 
         .referral-form {
-            background: #f8f9fa;
+            background: var(--background-color);
         }
 
         .form-container {
             max-width: 600px;
             margin: 0 auto;
-            background: #fff;
+            background: var(--light-background);
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
         }
 
         .form-group {
@@ -138,27 +143,26 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #1a365d;
+            color: var(--accent-color);
             font-weight: 500;
-            font-family: 'Montserrat', sans-serif;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 0.75rem;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--border-color);
             border-radius: 4px;
             font-size: 1rem;
-            color: #4a5568;
-            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #1a365d;
-            box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.1);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(255, 183, 77, 0.1);
         }
 
         .form-group textarea {
@@ -167,21 +171,21 @@
         }
 
         .submit-btn {
-            background: #1a365d;
-            color: #fff;
+            background: var(--accent-color);
+            color: var(--text-dark);
             padding: 1rem 2rem;
             border: none;
             border-radius: 4px;
             font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: var(--transition);
             width: 100%;
-            font-family: 'Montserrat', sans-serif;
         }
 
         .submit-btn:hover {
-            background: #2c5282;
+            background: #FFA726;
+            transform: translateY(-2px);
         }
 
         @media (max-width: 768px) {
