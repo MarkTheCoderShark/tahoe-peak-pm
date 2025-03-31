@@ -24,11 +24,25 @@
             padding: 8rem 2rem;
             text-align: center;
             color: var(--text-color);
+            position: relative;
+        }
+
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+            opacity: 0.3;
         }
 
         .about-hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .about-hero h1 {
@@ -36,6 +50,7 @@
             margin-bottom: 1.5rem;
             color: var(--accent-color);
             font-weight: 700;
+            text-align: center;
         }
 
         .about-hero p {
@@ -46,6 +61,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
 
         .about-story,
@@ -281,8 +297,8 @@
     </header>
 
     <main>
-        <section class="hero" style="background-image: url('images/lake-tahoe-hero.jpg');">
-            <div class="hero-content">
+        <section class="about-hero">
+            <div class="about-hero-content">
                 <h1>About Lake Tahoe Property Management</h1>
                 <p>Your trusted partner for property management services in South Lake Tahoe, Incline Village, and surrounding areas since 2010</p>
             </div>
