@@ -1468,7 +1468,7 @@ main {
 
 .service-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     border-color: var(--accent-color);
 }
 
