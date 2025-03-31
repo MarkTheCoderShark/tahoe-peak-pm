@@ -284,24 +284,30 @@ nav a.active {
 }
 
 @media (max-width: 992px) {
-    .zero-fees {
+    .zero-fees-content {
         display: none;
     }
 
     .header-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
         padding: 0 1rem;
-        grid-template-columns: auto 1fr auto;
     }
 
     .mobile-menu-toggle {
         display: block;
+        order: 1;
+        justify-self: start;
     }
 
     .logo {
-        margin: 0 auto;
+        order: 2;
+        justify-self: center;
     }
 
     .main-nav {
+        display: none;
         position: fixed;
         top: 0;
         right: -100%;
@@ -315,6 +321,7 @@ nav a.active {
     }
 
     .main-nav.active {
+        display: block;
         right: 0;
     }
 
@@ -331,10 +338,9 @@ nav a.active {
     }
 
     .phone-number {
-        display: block;
-        margin-top: 1rem;
-        text-align: center;
-        font-size: 1.2rem;
+        order: 3;
+        justify-self: end;
+        margin-left: 0;
     }
 
     .header-content .logo img {
@@ -343,7 +349,9 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
-    .header-top {
+    .header-top, 
+    .zero-fees,
+    .zero-fees-content {
         display: none;
     }
 

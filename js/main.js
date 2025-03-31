@@ -124,10 +124,12 @@ function initScrollReveal() {
 function initMobileMenu() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('nav');
+    const body = document.body;
     
     if (mobileMenuToggle && nav) {
-        mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.addEventListener('click', function() {
             nav.classList.toggle('active');
+            body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
             const icon = mobileMenuToggle.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars');
@@ -136,9 +138,10 @@ function initMobileMenu() {
         });
 
         // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
+        document.addEventListener('click', function(e) {
             if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target) && nav.classList.contains('active')) {
                 nav.classList.remove('active');
+                body.style.overflow = '';
                 const icon = mobileMenuToggle.querySelector('i');
                 if (icon) {
                     icon.classList.add('fa-bars');
@@ -151,6 +154,7 @@ function initMobileMenu() {
         window.addEventListener('resize', () => {
             if (window.innerWidth > 992 && nav.classList.contains('active')) {
                 nav.classList.remove('active');
+                body.style.overflow = '';
                 const icon = mobileMenuToggle.querySelector('i');
                 if (icon) {
                     icon.classList.add('fa-bars');
