@@ -5,6 +5,9 @@ footer {
     padding: 4rem 0 2rem;
     margin-top: 4rem;
     border-top: 1px solid var(--border-color);
+    position: relative;
+    z-index: 1;
+    width: 100%;
 }
 
 .footer-content {
@@ -14,6 +17,8 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-unit);
+    position: relative;
+    z-index: 2;
 }
 
 .footer-section h3 {

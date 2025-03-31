@@ -111,7 +111,13 @@
 
 .why-choose-us {
     padding: 4rem 0;
-    background-color: var(--background-light);
+    background-color: var(--background-color);
+}
+
+.why-choose-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .why-choose-us h2 {
@@ -119,33 +125,41 @@
     color: var(--text-color);
     font-size: 2.5rem;
     margin-bottom: 3rem;
+    font-weight: 700;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .feature {
     text-align: center;
-    padding: 2rem;
-    background: var(--background-color);
+    padding: 2.5rem;
+    background: var(--light-background);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
 }
 
 .feature h3 {
-    color: var(--text-color);
+    color: var(--accent-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .feature p {
     color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
     opacity: 0.9;
 }
 

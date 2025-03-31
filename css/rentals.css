@@ -6,6 +6,7 @@
     padding: 8rem 2rem;
     text-align: center;
     color: var(--text-color);
+    margin-bottom: 2rem;
 }
 
 .rentals-hero-content {
@@ -214,6 +215,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    margin-bottom: 2rem;
 }
 
 .application-content {
