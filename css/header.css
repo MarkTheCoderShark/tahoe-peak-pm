@@ -78,6 +78,7 @@ header {
     background-color: var(--primary-color);
     padding: 1.25rem 0;
     transition: var(--transition);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-main.scrolled {
@@ -89,17 +90,16 @@ header {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    flex-shrink: 0;
 }
 
 .logo img {
@@ -127,12 +127,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
 }
 
 nav ul {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -143,11 +142,13 @@ nav a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 0.5px;
     transition: var(--transition);
     position: relative;
     text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.5rem 0;
 }
 
 nav a::after {
@@ -155,7 +156,7 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -4px;
+    bottom: 0;
     left: 0;
     background-color: var(--accent-color);
     transition: var(--transition);
@@ -177,13 +178,16 @@ nav a.active {
     text-decoration: none;
     transition: var(--transition);
     font-size: 1.1rem;
-    flex-shrink: 0;
-    margin-left: auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    white-space: nowrap;
 }
 
 .phone-number:hover {
     color: var(--button-orange);
     transform: translateY(-1px);
+    border-color: var(--button-orange);
 }
 
 .zero-fees {
@@ -234,31 +238,28 @@ nav a.active {
 
 /* Responsive Header */
 @media (max-width: 1200px) {
+    .header-content {
+        gap: 2rem;
+    }
+
     nav ul {
         gap: 2rem;
     }
 
     nav a {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 992px) {
     .header-content {
+        grid-template-columns: auto auto auto;
         padding: 0 1.5rem;
+        gap: 1rem;
     }
 
     .mobile-menu-toggle {
         display: block;
-        order: 1;
-    }
-
-    .logo {
-        order: 0;
-    }
-
-    .phone-number {
-        order: 2;
     }
 
     nav {
@@ -306,6 +307,7 @@ nav a.active {
 
     .phone-number {
         font-size: 1rem;
+        padding: 0.4rem 0.8rem;
     }
 }
 
