@@ -74,6 +74,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentYear = new Date().getFullYear();
         copyrightElement.innerHTML = `&copy; ${currentYear} Tahoe Peak Property Management. All rights reserved.`;
     }
+
+    // Agent Referral Form Handling
+    const agentReferralForm = document.querySelector('.partner-form');
+    const agentReferralSuccess = document.querySelector('.form-success');
+
+    if (agentReferralForm) {
+        agentReferralForm.addEventListener('submit', function(e) {
+            // The form will be handled by Netlify Forms
+            // We just need to show the success message
+            setTimeout(function() {
+                agentReferralForm.classList.add('hidden');
+                agentReferralSuccess.classList.remove('hidden');
+            }, 1000);
+        });
+    }
 });
 
 // Scroll Reveal Animation

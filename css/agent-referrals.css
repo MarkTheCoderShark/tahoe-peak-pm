@@ -260,4 +260,42 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+}
+
+/* Form Success Message */
+.form-success {
+    background: var(--light-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.form-success h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.form-success p {
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* Honeypot Field */
+.hidden {
+    display: none;
+}
+
+/* Form Validation Styles */
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #ff4444;
+}
+
+.form-group input:valid,
+.form-group textarea:valid {
+    border-color: #00C851;
 } 

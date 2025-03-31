@@ -472,27 +472,35 @@
                     <p>Join our network of successful real estate professionals in the Tahoe area</p>
                 </div>
                 <div class="partner-content">
-                    <form class="partner-form">
+                    <form class="partner-form" name="agent-referral" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="agent-referral" />
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
                         <div class="form-group">
-                            <input type="text" placeholder="Full Name" required>
+                            <input type="text" name="full-name" placeholder="Full Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Real Estate License Number" required>
+                            <input type="text" name="license-number" placeholder="Real Estate License Number" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Company Name" required>
+                            <input type="text" name="company" placeholder="Company Name" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Tell us about your experience and why you'd like to partner with us" required></textarea>
+                            <textarea name="message" placeholder="Tell us about your experience and why you'd like to partner with us" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit Application</button>
                     </form>
+                    <div class="form-success hidden">
+                        <h3>Thank You!</h3>
+                        <p>Your application has been submitted successfully. We'll review it and get back to you soon.</p>
+                    </div>
                 </div>
             </div>
         </section>
