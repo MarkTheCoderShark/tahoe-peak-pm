@@ -9,13 +9,7 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
-# Specific instructions for major search engines
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
+# Crawl-delay for all bots
 Crawl-delay: 2
 
 # Location of the sitemap file
