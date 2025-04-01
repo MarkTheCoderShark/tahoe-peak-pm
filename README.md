@@ -144,4 +144,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 For any questions or concerns, please contact:
 - Email: laketahoepmg@gmail.com
 - Phone: (530) 555-0123
-- Address: 123 Lake Tahoe Blvd, Tahoe City, CA 96145 
+- Address: 123 Lake Tahoe Blvd, Tahoe City, CA 96

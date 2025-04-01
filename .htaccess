@@ -12,13 +12,13 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [L,R=301]
 
-# Redirect hyphenated URLs to HTML files (must come before the .html extension removal)
-RewriteRule ^tahoe-city-property-management/?$ tahoe-city.html [L,R=301]
-RewriteRule ^south-lake-tahoe-property-management/?$ south-lake-tahoe.html [L,R=301]
-RewriteRule ^north-lake-tahoe-property-management/?$ north-lake-tahoe.html [L,R=301]
-RewriteRule ^kings-beach-property-management/?$ kings-beach.html [L,R=301]
-RewriteRule ^incline-village-property-management/?$ incline-village.html [L,R=301]
-RewriteRule ^truckee-property-management/?$ truckee.html [L,R=301]
+# Redirect property management URLs (must come before the .html extension removal)
+RewriteRule ^tahoe-city-property-management/?$ tahoe-city.html [L,R=301,NC]
+RewriteRule ^south-lake-tahoe-property-management/?$ south-lake-tahoe.html [L,R=301,NC]
+RewriteRule ^north-lake-tahoe-property-management/?$ north-lake-tahoe.html [L,R=301,NC]
+RewriteRule ^kings-beach-property-management/?$ kings-beach.html [L,R=301,NC]
+RewriteRule ^incline-village-property-management/?$ incline-village.html [L,R=301,NC]
+RewriteRule ^truckee-property-management/?$ truckee.html [L,R=301,NC]
 
 # Remove .html extension
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -28,73 +28,36 @@ RewriteRule ^(.*)$ $1.html [L]
 # Set default character set
 AddDefaultCharset UTF-8
 
-# Enable compression with fallback
+# Enable GZIP compression
 <IfModule mod_deflate.c>
-    # Compress HTML, CSS, JavaScript, Text, XML and fonts
-    AddOutputFilterByType DEFLATE application/javascript
-    AddOutputFilterByType DEFLATE application/rss+xml
-    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
-    AddOutputFilterByType DEFLATE application/x-font
-    AddOutputFilterByType DEFLATE application/x-font-opentype
-    AddOutputFilterByType DEFLATE application/x-font-truetype
-    AddOutputFilterByType DEFLATE application/x-font-ttf
-    AddOutputFilterByType DEFLATE application/x-javascript
-    AddOutputFilterByType DEFLATE application/xhtml+xml
-    AddOutputFilterByType DEFLATE application/xml
-    AddOutputFilterByType DEFLATE font/opentype
-    AddOutputFilterByType DEFLATE font/ttf
-    AddOutputFilterByType DEFLATE font/otf
-    AddOutputFilterByType DEFLATE image/svg+xml
-    AddOutputFilterByType DEFLATE image/x-icon
-    AddOutputFilterByType DEFLATE text/css
-    AddOutputFilterByType DEFLATE text/html
-    AddOutputFilterByType DEFLATE text/javascript
     AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
     AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
 
-# Set browser caching with fallback
+# Set browser caching
 <IfModule mod_expires.c>
     ExpiresActive On
-    ExpiresDefault "access plus 1 month"
-    
-    # Images
+    ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year"
-    
-    # Video
-    ExpiresByType video/mp4 "access plus 1 year"
-    ExpiresByType video/webm "access plus 1 year"
-    ExpiresByType video/ogg "access plus 1 year"
-    
-    # CSS, JavaScript
     ExpiresByType text/css "access plus 1 month"
-    ExpiresByType text/javascript "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
-    
-    # Others
-    ExpiresByType application/pdf "access plus 1 month"
-    ExpiresByType application/x-shockwave-flash "access plus 1 month"
 </IfModule>
 
-# Security headers with fallback
+# Security headers
 <IfModule mod_headers.c>
-    # Basic security headers
     Header set X-Content-Type-Options "nosniff"
     Header set X-XSS-Protection "1; mode=block"
     Header set X-Frame-Options "SAMEORIGIN"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
-    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-    
-    # Additional security headers
-    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
-    Header set Content-Security-Policy "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;"
-    Header set X-Download-Options "noopen"
-    Header set X-Permitted-Cross-Domain-Policies "none"
 </IfModule>
 
 # Prevent directory listing
