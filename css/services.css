@@ -15,7 +15,7 @@
     width: 300px;
     min-width: 300px;
     max-width: 300px;
-    height: 450px;
+    height: 500px;
     background: white;
     border: none;
     border-radius: 15px;
@@ -77,11 +77,11 @@
 
 .service-card p {
     color: #4A5568;
-    margin-bottom: 0;
+    margin-bottom: 4rem;
     line-height: 1.7;
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
-    flex-grow: 1;
+    flex-grow: 0;
     padding: 0 0.5rem;
     min-height: 7rem;
 }
@@ -99,7 +99,7 @@
     font-size: 1.1rem;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    bottom: 2rem;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -294,9 +294,9 @@
         width: 100%;
         max-width: 350px;
         height: auto;
-        min-height: 450px;
+        min-height: 500px;
         margin: 1rem 0;
-        padding-bottom: 6rem;
+        padding-bottom: 7rem;
     }
 
     .service-card h2 {
@@ -307,12 +307,12 @@
 
     .service-card p {
         font-size: 1rem;
-        margin-bottom: 0;
+        margin-bottom: 3rem;
         min-height: auto;
     }
 
     .service-card .btn {
-        bottom: 2rem;
+        bottom: 2.5rem;
     }
 }
 
@@ -851,7 +851,7 @@
     width: 300px;
     min-width: 300px;
     max-width: 300px;
-    height: 450px;
+    height: 500px;
     background: white;
     border: none;
     border-radius: 15px;
@@ -913,11 +913,11 @@
 
 .service-card p {
     color: #4A5568;
-    margin-bottom: 0;
+    margin-bottom: 4rem;
     line-height: 1.7;
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
-    flex-grow: 1;
+    flex-grow: 0;
     padding: 0 0.5rem;
     min-height: 7rem;
 }
@@ -935,7 +935,7 @@
     font-size: 1.1rem;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    bottom: 2rem;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -1216,7 +1216,7 @@ main {
     width: 300px;
     min-width: 300px;
     max-width: 300px;
-    height: 450px;
+    height: 500px;
     background: white;
     border: none;
     border-radius: 15px;
@@ -1278,11 +1278,11 @@ main {
 
 .service-card p {
     color: #4A5568;
-    margin-bottom: 0;
+    margin-bottom: 4rem;
     line-height: 1.7;
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
-    flex-grow: 1;
+    flex-grow: 0;
     padding: 0 0.5rem;
     min-height: 7rem;
 }
@@ -1300,7 +1300,7 @@ main {
     font-size: 1.1rem;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    bottom: 2rem;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -1578,7 +1578,7 @@ main {
     width: 300px;
     min-width: 300px;
     max-width: 300px;
-    height: 450px;
+    height: 500px;
     background: white;
     border: none;
     border-radius: 15px;
@@ -1623,9 +1623,9 @@ main {
         width: 100%;
         max-width: 350px;
         height: auto;
-        min-height: 450px;
+        min-height: 500px;
         margin: 1rem 0;
-        padding-bottom: 6rem;
+        padding-bottom: 7rem;
     }
 
     .service-card h2 {
@@ -1636,12 +1636,12 @@ main {
 
     .service-card p {
         font-size: 1rem;
-        margin-bottom: 0;
+        margin-bottom: 3rem;
         min-height: auto;
     }
 
     .service-card .btn {
-        bottom: 2rem;
+        bottom: 2.5rem;
     }
 }
 
