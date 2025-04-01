@@ -1544,155 +1544,98 @@ main {
 
 /* Services Section */
 .services-section {
-    padding: 4rem 0;
-    background-color: transparent;
-}
-
-.services-section-wrapper {
-    padding: 4rem 2rem;
-    position: relative;
-    background: transparent;
-}
-
-.services-section-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    background: transparent;
-    border: none;
-    backdrop-filter: none;
+    padding: 6rem 0;
+    background-color: var(--background-color);
 }
 
 .services-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2.5rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
 .service-card {
-    flex: 1;
-    width: 300px;
-    min-width: 300px;
-    max-width: 300px;
-    height: 500px;
-    background: white;
-    border: none;
-    border-radius: 15px;
-    padding: 2.5rem;
+    background: var(--light-background);
+    padding: 2rem;
+    border-radius: 10px;
     text-align: center;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0.5rem;
-    position: relative;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    background: white;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-color);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .services-grid {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .service-card {
-        flex: 0 1 calc(50% - 2rem);
-        margin: 1rem;
-    }
+.service-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    color: var(--accent-color);
 }
 
-@media (max-width: 768px) {
-    .services-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .service-card {
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-        min-height: 500px;
-        margin: 1rem 0;
-        padding-bottom: 7rem;
-    }
-
-    .service-card h2 {
-        font-size: 1.4rem;
-        margin-bottom: 1.2rem;
-        min-height: auto;
-    }
-
-    .service-card p {
-        font-size: 1rem;
-        margin-bottom: 3rem;
-        min-height: auto;
-    }
-
-    .service-card .btn {
-        bottom: 2.5rem;
-    }
+.service-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
 }
 
-.page-header {
-    background: linear-gradient(rgba(0, 75, 73, 0.9), rgba(0, 75, 73, 0.9)), url('../images/tahoe-lake-winter.png');
-    background-size: cover;
-    background-position: center;
-    padding: 6rem 2rem;
-    text-align: center;
-    margin-bottom: 4rem;
-    position: relative;
+.service-card h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
-.page-header .container {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.page-header h1 {
-    font-size: 3.5rem;
+.service-card p {
+    color: var(--text-color);
     margin-bottom: 1.5rem;
-    color: var(--text-color);
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: none;
-    line-height: 1.2;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
-.page-header p {
-    font-size: 1.4rem;
-    color: var(--text-color);
-    opacity: 0.9;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-family: 'Open Sans', sans-serif;
+.learn-more {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+}
+
+.learn-more:hover {
+    color: white;
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.2);
+}
+
+.learn-more::after {
+    content: "→";
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.learn-more:hover::after {
+    transform: translateX(4px);
 }
 
 @media (max-width: 768px) {
-    .page-header {
-        padding: 4rem 1.5rem;
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 
-    .page-header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .page-header p {
-        font-size: 1.2rem;
+    .learn-more {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.95rem;
     }
 } 
