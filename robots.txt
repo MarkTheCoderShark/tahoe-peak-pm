@@ -1,44 +1,22 @@
 User-agent: *
 Allow: /
-Allow: /owners.html
-Allow: /residents.html
-Allow: /rentals.html
-Allow: /resources.html
-Allow: /real-estate.html
-Allow: /agent-referrals.html
-Allow: /about.html
-Allow: /contact.html
-Allow: /pricing.html
-Allow: /privacy.html
-Allow: /terms.html
-Allow: /sitemap.xml
+Allow: /blog/
 Allow: /css/
 Allow: /js/
 Allow: /images/
+Allow: /sitemap.xml
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
-# Specific instructions for Google
+# Specific instructions for major search engines
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
 
-# Specific instructions for Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 2
-
-# Specific instructions for Google Images
-User-agent: Googlebot-Image
-Allow: /images/
-
-# Block certain bots that might overload the server
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: MJ12bot
-Disallow: /
 
 # Location of the sitemap file
 Sitemap: https://laketahoepmg.com/sitemap.xml 
