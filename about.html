@@ -197,35 +197,47 @@
         }
 
         .team-member {
-            background: var(--light-background);
+            background: transparent;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: visible;
+            box-shadow: none;
+            border: none;
             transition: var(--transition);
+            text-align: center;
+            padding: 1rem;
         }
 
         .team-member:hover {
             transform: translateY(-5px);
-            border-color: var(--accent-color);
+            border-color: transparent;
+        }
+
+        .member-image {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            background-color: var(--light-background);
         }
 
         .member-image img {
             width: 100%;
-            height: 300px;
-            object-fit: contain;
-            background-color: var(--light-background);
+            height: 100%;
+            object-fit: cover;
+            background-color: transparent;
         }
 
         .member-info {
-            padding: 1.5rem;
+            padding: 0;
             text-align: center;
         }
 
         .member-info h3 {
             color: var(--accent-color);
             margin-bottom: 0.5rem;
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 600;
         }
 
@@ -234,6 +246,7 @@
             font-weight: 500;
             margin-bottom: 1rem;
             opacity: 0.9;
+            font-size: 1.1rem;
         }
 
         .member-info .bio {
@@ -241,6 +254,9 @@
             line-height: 1.6;
             opacity: 0.9;
             text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 1rem;
         }
 
         @media (max-width: 768px) {
