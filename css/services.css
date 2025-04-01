@@ -1,50 +1,47 @@
 /* Service Cards */
 .services-grid {
-    padding: 4rem 0;
-    background-color: var(--background-color);
-}
-
-.services-grid .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
+    background: transparent;
 }
 
 .service-card {
     flex: 1;
-    min-width: 250px;
+    width: 300px;
+    min-width: 300px;
     max-width: 300px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 300px;
+    background: white;
+    border: none;
     border-radius: 15px;
-    padding: 2.5rem;
+    padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
     margin: 0.5rem;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--accent-color);
+    background: white;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .service-icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 1.5rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    padding: 0.8rem;
+    background: rgba(0, 75, 73, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -65,22 +62,23 @@
 }
 
 .service-card h2 {
-    color: var(--accent-color);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
     font-weight: 600;
 }
 
 .service-card p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .service-card .btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border: 1px solid var(--accent-color);
     border-radius: 8px;
     color: var(--accent-color);
@@ -88,12 +86,12 @@
     transition: all 0.3s ease;
     font-weight: 500;
     background: transparent;
-    margin-top: auto;
+    font-size: 0.9rem;
 }
 
 .service-card .btn:hover {
     background: var(--accent-color);
-    color: var(--background-color);
+    color: white;
     transform: translateY(-2px);
 }
 
@@ -784,46 +782,70 @@
 .services-section-wrapper {
     padding: 4rem 2rem;
     position: relative;
+    background: transparent;
 }
 
 .services-section-inner {
     max-width: 1400px;
     margin: 0 auto;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
 }
 
-.services-grid .container {
+.services-grid {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 2rem;
+    background: transparent;
 }
 
 .service-card {
-    flex: 0 1 calc(25% - 1.125rem); /* 25% width minus gap spacing */
-    min-width: 250px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
+    flex: 1;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;
+    background: white;
+    border: none;
+    border-radius: 15px;
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 1.5rem;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    padding: 0.8rem;
+    background: rgba(0, 75, 73, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: rgba(255, 165, 0, 0.1);
+    transform: scale(1.1);
 }
 
 .service-icon svg {
@@ -835,125 +857,36 @@
 
 .service-card h2 {
     color: var(--primary-color);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
     font-weight: 600;
 }
 
 .service-card p {
     color: #666;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+    font-size: 0.95rem;
     flex-grow: 1;
 }
 
 .service-card .btn {
-    margin-top: auto;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    background: transparent;
+    font-size: 0.9rem;
 }
 
-@media (max-width: 1200px) {
-    .services-grid .container {
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    .service-card {
-        flex: 0 1 calc(50% - 1rem);
-    }
-}
-
-@media (max-width: 768px) {
-    .service-card {
-        flex: 0 1 100%;
-        max-width: 400px;
-    }
-}
-
-.page-header {
-    background: linear-gradient(rgba(0, 75, 73, 0.9), rgba(0, 75, 73, 0.9)), url('../images/tahoe-lake-winter.png');
-    background-size: cover;
-    background-position: center;
-    padding: 6rem 0;
-    text-align: center;
-    margin-bottom: 0;
+.service-card .btn:hover {
+    background: var(--accent-color);
     color: white;
-}
-
-.page-header .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.page-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.page-header p {
-    font-size: 1.5rem;
-    opacity: 0.9;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-/* Services Grid Section */
-.services-grid {
-    padding: 6rem 0;
-    background-color: white;
-}
-
-.services-grid .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-.service-card {
-    background: white;
-    border-radius: 12px;
-    padding: 2.5rem;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eaeaea;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-}
-
-.service-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 2rem;
-}
-
-.service-icon svg {
-    width: 100%;
-    height: 100%;
-    stroke: var(--accent-color);
-    stroke-width: 1.5;
-}
-
-.service-card h2 {
-    color: var(--primary-color);
-    font-size: 1.75rem;
-    margin-bottom: 1.25rem;
-    font-weight: 600;
-}
-
-.service-card p {
-    color: #666;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+    transform: translateY(-2px);
 }
 
 /* Locations Section */
@@ -1221,18 +1154,20 @@ main {
 
 .service-card {
     flex: 1;
-    min-width: 250px;
+    width: 300px;
+    min-width: 300px;
     max-width: 300px;
+    height: 300px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 2.5rem;
+    padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     margin: 0.5rem;
@@ -1246,10 +1181,10 @@ main {
 }
 
 .service-icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 1.5rem;
-    padding: 1rem;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    padding: 0.8rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     display: flex;
@@ -1272,21 +1207,22 @@ main {
 
 .service-card h2 {
     color: var(--accent-color);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
     font-weight: 600;
 }
 
 .service-card p {
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .service-card .btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border: 1px solid var(--accent-color);
     border-radius: 8px;
     color: var(--accent-color);
@@ -1294,7 +1230,7 @@ main {
     transition: all 0.3s ease;
     font-weight: 500;
     background: transparent;
-    margin-top: auto;
+    font-size: 0.9rem;
 }
 
 .service-card .btn:hover {
@@ -1542,6 +1478,7 @@ main {
 .services-section-wrapper {
     padding: 4rem 2rem;
     position: relative;
+    background: transparent;
 }
 
 .services-section-inner {
@@ -1560,31 +1497,32 @@ main {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
+    background: transparent;
 }
 
 .service-card {
     flex: 1;
-    min-width: 250px;
+    width: 300px;
+    min-width: 300px;
     max-width: 300px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 300px;
+    background: white;
+    border: none;
     border-radius: 15px;
-    padding: 2.5rem;
+    padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
     margin: 0.5rem;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--accent-color);
+    background: white;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -1592,10 +1530,11 @@ main {
 @media (max-width: 1200px) {
     .services-grid {
         flex-wrap: wrap;
+        justify-content: center;
     }
     
     .service-card {
-        flex: 1 1 calc(50% - 2rem);
+        flex: 0 1 300px;
         margin: 1rem;
     }
 }
@@ -1607,8 +1546,9 @@ main {
     }
     
     .service-card {
-        flex: 0 1 100%;
-        max-width: 400px;
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
         margin: 1rem 0;
     }
 } 
