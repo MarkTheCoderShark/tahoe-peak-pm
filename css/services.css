@@ -15,7 +15,7 @@
     width: 300px;
     min-width: 300px;
     max-width: 300px;
-    height: 350px;
+    height: 420px;
     background: white;
     border: none;
     border-radius: 15px;
@@ -69,16 +69,21 @@
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.3;
+    min-height: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-card p {
     color: #4A5568;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
     line-height: 1.7;
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
     flex-grow: 1;
     padding: 0 0.5rem;
+    min-height: 7rem;
 }
 
 .service-card .btn {
@@ -95,6 +100,9 @@
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 .service-card .btn:hover {
@@ -280,6 +288,32 @@
 
     .btn {
         width: 100%;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 420px;
+        margin: 1rem 0;
+        padding-bottom: 5rem;
+    }
+
+    .service-card h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+        min-height: auto;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+        min-height: auto;
+    }
+
+    .service-card .btn {
+        position: absolute;
+        bottom: 2rem;
     }
 }
 
@@ -818,7 +852,7 @@
     width: 300px;
     min-width: 300px;
     max-width: 300px;
-    height: 350px;
+    height: 420px;
     background: white;
     border: none;
     border-radius: 15px;
@@ -872,16 +906,21 @@
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.3;
+    min-height: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-card p {
     color: #4A5568;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
     line-height: 1.7;
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
     flex-grow: 1;
     padding: 0 0.5rem;
+    min-height: 7rem;
 }
 
 .service-card .btn {
@@ -898,6 +937,9 @@
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 .service-card .btn:hover {
@@ -1175,7 +1217,7 @@ main {
     width: 300px;
     min-width: 300px;
     max-width: 300px;
-    height: 350px;
+    height: 420px;
     background: white;
     border: none;
     border-radius: 15px;
@@ -1229,16 +1271,21 @@ main {
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.3;
+    min-height: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-card p {
     color: #4A5568;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
     line-height: 1.7;
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
     flex-grow: 1;
     padding: 0 0.5rem;
+    min-height: 7rem;
 }
 
 .service-card .btn {
@@ -1255,6 +1302,9 @@ main {
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 .service-card .btn:hover {
@@ -1529,7 +1579,7 @@ main {
     width: 300px;
     min-width: 300px;
     max-width: 300px;
-    height: 350px;
+    height: 420px;
     background: white;
     border: none;
     border-radius: 15px;
@@ -1574,24 +1624,26 @@ main {
         width: 100%;
         max-width: 350px;
         height: auto;
-        min-height: 350px;
+        min-height: 420px;
         margin: 1rem 0;
+        padding-bottom: 5rem;
     }
 
     .service-card h2 {
         font-size: 1.4rem;
         margin-bottom: 1.2rem;
+        min-height: auto;
     }
 
     .service-card p {
         font-size: 1rem;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
+        min-height: auto;
     }
 
     .service-card .btn {
-        position: relative;
-        bottom: auto;
-        margin-top: 1.5rem;
+        position: absolute;
+        bottom: 2rem;
     }
 }
 
