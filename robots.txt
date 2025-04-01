@@ -2,14 +2,30 @@
 User-agent: *
 Allow: /
 Allow: /blog/
+Allow: /services/
+Allow: /rentals/
+Allow: /about/
+Allow: /contact/
+Allow: /property-investment-guide.html
+Allow: /short-term-rental-management.html
+Allow: /property-maintenance-guide.html
+Allow: /sitemap.xml
+
+# Block admin and utility pages
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Block search result pages
+Disallow: /*?q=
+Disallow: /*?s=
+Disallow: /*?search=
+
+# Allow crawling of images and resources
+Allow: /images/
 Allow: /css/
 Allow: /js/
-Allow: /images/
-
-# Block sensitive directories
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
 
 # Sitemap location
 Sitemap: https://laketahoepmg.com/sitemap.xml
