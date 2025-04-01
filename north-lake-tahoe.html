@@ -59,79 +59,165 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/services.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header will be included here -->
+    <header>
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="login-links">
+                    <a href="#">OWNER LOGIN</a>
+                    <span>|</span>
+                    <a href="#">RESIDENT LOGIN</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <img src="images/tahoe-peak-logo.svg" 
+                         alt="Lake Tahoe Property Management - Tahoe Peak Management Logo" 
+                         width="140" 
+                         height="50"
+                         loading="eager">
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="owners.html">OWNERS/INVESTORS</a></li>
+                        <li><a href="residents.html">RESIDENTS</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                        <li><a href="real-estate.html">REAL ESTATE</a></li>
+                        <li><a href="agent-referrals.html">AGENT REFERRALS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="pricing.html">PRICING</a></li>
+                    </ul>
+                    <a href="tel:5309948882" class="phone-number">530.994.8882</a>
+                </nav>
+            </div>
+        </div>
+        <div class="zero-fees">
+            <div class="zero-fees-content">
+                <span>$0 LEASING. $0 RENEWAL. $0 SIGN UP FEES.</span>
+                <div class="cta-buttons">
+                    <a href="/pricing.html" class="btn btn-secondary">EXPLORE OUR PRICING</a>
+                    <a href="/contact.html" class="btn btn-primary">FREE CONSULTATION</a>
+                </div>
+            </div>
+        </div>
+    </header>
     
     <main>
-        <section class="hero-section">
+        <section class="hero">
             <div class="hero-content">
                 <h1>North Lake Tahoe Property Management Services</h1>
                 <p>Expert property management services in North Lake Tahoe, Tahoe City, and Incline Village areas</p>
                 <div class="hero-buttons">
-                    <a href="/contact.html" class="btn btn-primary">Get Started</a>
-                    <a href="/pricing.html" class="btn btn-secondary">View Pricing</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    <a href="pricing.html" class="btn btn-secondary">View Pricing</a>
                 </div>
             </div>
         </section>
 
-        <section class="location-specific-content">
+        <section class="services-section">
             <div class="container">
                 <h2>Why Choose Us for North Lake Tahoe Property Management?</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
                         <h3>Local Expertise</h3>
                         <p>Deep knowledge of North Lake Tahoe's unique market, including Tahoe City and Incline Village areas.</p>
+                        <a href="about.html" class="btn btn-secondary">Learn More →</a>
                     </div>
-                    <div class="benefit-card">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
                         <h3>Vacation Rental Specialists</h3>
                         <p>Expert management of vacation rentals in North Lake Tahoe's prime locations.</p>
+                        <a href="services.html#vacation-rentals" class="btn btn-secondary">Learn More →</a>
                     </div>
-                    <div class="benefit-card">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
                         <h3>Year-Round Service</h3>
                         <p>Full-service property management for both summer and winter seasons.</p>
+                        <a href="services.html#maintenance" class="btn btn-secondary">Learn More →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="area-highlights">
+        <section class="locations">
             <div class="container">
                 <h2>Popular Areas We Serve in North Lake Tahoe</h2>
-                <div class="areas-grid">
-                    <div class="area-card">
-                        <h3>Tahoe City</h3>
+                <div class="location-grid">
+                    <div class="location-card">
+                        <h3><a href="tahoe-city.html">Tahoe City</a></h3>
                         <p>Premium vacation rental management in the heart of North Lake Tahoe</p>
                     </div>
-                    <div class="area-card">
-                        <h3>Incline Village</h3>
+                    <div class="location-card">
+                        <h3><a href="incline-village.html">Incline Village</a></h3>
                         <p>Property management services for luxury properties and vacation homes</p>
                     </div>
-                    <div class="area-card">
-                        <h3>Kings Beach</h3>
+                    <div class="location-card">
+                        <h3><a href="kings-beach.html">Kings Beach</a></h3>
                         <p>Specialized management for beachfront properties</p>
+                    </div>
+                    <div class="location-card">
+                        <h3><a href="south-lake-tahoe.html">South Lake Tahoe</a></h3>
+                        <p>Comprehensive property management services in South Lake Tahoe</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="local-market-insights">
+        <section class="services-section">
             <div class="container">
                 <h2>North Lake Tahoe Market Insights</h2>
-                <div class="market-stats">
-                    <div class="stat-card">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2v20M2 12h20"/>
+                            </svg>
+                        </div>
                         <h3>High Season</h3>
                         <p>December - March (Winter)</p>
                         <p>June - August (Summer)</p>
                     </div>
-                    <div class="stat-card">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 20V10"/>
+                                <path d="M18 20V4"/>
+                                <path d="M6 20v-4"/>
+                            </svg>
+                        </div>
                         <h3>Average Occupancy</h3>
                         <p>85% Year-Round</p>
                     </div>
-                    <div class="stat-card">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            </svg>
+                        </div>
                         <h3>Property Types</h3>
                         <p>Luxury Homes</p>
                         <p>Lakefront Properties</p>
@@ -143,19 +229,87 @@
 
         <section class="cta-section">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Maximize Your North Lake Tahoe Property's Potential?</h2>
-                    <p>Get started with our professional property management services today.</p>
-                    <div class="cta-buttons">
-                        <a href="/contact.html" class="btn btn-primary">Schedule a Consultation</a>
-                        <a href="/pricing.html" class="btn btn-secondary">View Our Pricing</a>
-                    </div>
+                <h2>Ready to Maximize Your North Lake Tahoe Property's Potential?</h2>
+                <p>Get started with our professional property management services today.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                    <a href="pricing.html" class="btn btn-secondary">View Our Pricing</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer will be included here -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="footer-contact">
+                    <a href="tel:5309948882">530.994.8882</a>
+                    <a href="mailto:laketahoepmg@gmail.com">laketahoepmg@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="owners.html">For Property Owners</a></li>
+                    <li><a href="residents.html">For Residents</a></li>
+                    <li><a href="rentals.html">Available Rentals</a></li>
+                    <li><a href="pricing.html">Our Pricing</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Property Management</a></li>
+                    <li><a href="guarantees.html">Our Guarantees</a></li>
+                    <li><a href="application-criteria.html">Application Criteria</a></li>
+                    <li><a href="real-estate.html">Real Estate</a></li>
+                    <li><a href="agent-referrals.html">Agent Referrals</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Areas We Serve</h3>
+                <ul class="footer-links">
+                    <li><a href="south-lake-tahoe.html">South Lake Tahoe</a></li>
+                    <li><a href="north-lake-tahoe.html">North Lake Tahoe</a></li>
+                    <li><a href="tahoe-city.html">Tahoe City</a></li>
+                    <li><a href="kings-beach.html">Kings Beach</a></li>
+                    <li><a href="incline-village.html">Incline Village</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Tahoe Peak Management. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/tahoepeakpm" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/tahoepeakpm" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/tahoe-peak-property-management" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
