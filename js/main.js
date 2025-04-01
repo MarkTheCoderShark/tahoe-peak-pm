@@ -69,10 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Update copyright year
-    const copyrightElement = document.querySelector('.footer-bottom p');
-    if (copyrightElement) {
-        const currentYear = new Date().getFullYear();
-        copyrightElement.innerHTML = `&copy; ${currentYear} Tahoe Peak Property Management. All rights reserved.`;
+    const copyrightElements = document.querySelectorAll('.footer-bottom p');
+    if (copyrightElements.length > 0) {
+        copyrightElements.forEach(element => {
+            // Replace year but keep the rest of the text
+            const text = element.innerHTML;
+            const updatedText = text.replace(/\d{4}/, '2025');
+            element.innerHTML = updatedText;
+        });
     }
 
     // Agent Referral Form Handling

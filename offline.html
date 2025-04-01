@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="You are currently offline. Lake Tahoe Property Management provides professional property management services across Lake Tahoe.">
+    <title>Offline | Lake Tahoe Property Management</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <style>
+        .offline-container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        h1 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        .cached-pages {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .cached-pages h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .cached-pages ul {
+            list-style: none;
+            padding: 0;
+        }
+        .cached-pages li {
+            margin-bottom: 0.5rem;
+        }
+        .cached-pages a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .cached-pages a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">📶</div>
+        <h1>You're Offline</h1>
+        <p>It looks like you're currently offline. You'll need an internet connection to access all features of Lake Tahoe Property Management's website.</p>
+        <p>Please check your connection and try again.</p>
+        <a href="/" class="button">Try Again</a>
+        
+        <div class="cached-pages">
+            <h2>Available Offline Pages</h2>
+            <p>These pages have been cached and may be available:</p>
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact.html">Contact Information</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Check if we're back online
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+        
+        // Try to load the homepage if we go back online
+        const retryButton = document.querySelector('.button');
+        retryButton.addEventListener('click', (e) => {
+            if (navigator.onLine) {
+                return true; // Allow default navigation
+            } else {
+                e.preventDefault();
+                alert('Still offline. Please check your internet connection.');
+                return false;
+            }
+        });
+    </script>
+</body>
+</html> 

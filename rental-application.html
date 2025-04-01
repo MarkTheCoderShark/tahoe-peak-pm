@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Application | Lake Tahoe Property Management</title>
+    <meta name="description" content="Complete your rental application for Lake Tahoe properties. Professional property management services in South Lake Tahoe and Incline Village.">
+    <link rel="canonical" href="https://laketahoepmg.com/rental-application.html">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .application-section {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .application-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .application-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .application-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .application-form {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .form-section {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2rem;
+        }
+        
+        .form-section:last-child {
+            border-bottom: none;
+        }
+        
+        .form-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
+        }
+        
+        .required {
+            color: #dc3545;
+            margin-left: 0.25rem;
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+        }
+        
+        .form-note {
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: #dc3545;
+        }
+        
+        .form-group.error .error-message {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .application-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-links">
+                    <a href="owners.html">Owner Portal</a>
+                    <a href="residents.html">Resident Portal</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Lake Tahoe Property Management Logo">
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="owners.html">Owners/Investors</a></li>
+                        <li><a href="residents.html">Residents</a></li>
+                        <li><a href="rentals.html">Rentals</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="real-estate.html">Real Estate</a></li>
+                        <li><a href="agent-referrals.html">Agent Referrals</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="application-section">
+            <div class="container">
+                <div class="application-container">
+                    <div class="application-header">
+                        <h1>Rental Application</h1>
+                        <p>Please complete all required fields to submit your application</p>
+                    </div>
+                    
+                    <form class="application-form" name="rental-application" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="rental-application" />
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        
+                        <div class="form-section">
+                            <h2>Personal Information</h2>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="first-name">First Name<span class="required">*</span></label>
+                                    <input type="text" id="first-name" name="first-name" required>
+                                    <div class="error-message">Please enter your first name</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name<span class="required">*</span></label>
+                                    <input type="text" id="last-name" name="last-name" required>
+                                    <div class="error-message">Please enter your last name</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address<span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required>
+                                    <div class="error-message">Please enter a valid email address</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number<span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                    <div class="error-message">Please enter a valid phone number</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth<span class="required">*</span></label>
+                                    <input type="date" id="dob" name="dob" required>
+                                    <div class="error-message">Please enter your date of birth</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ssn">Social Security Number<span class="required">*</span></label>
+                                    <input type="text" id="ssn" name="ssn" required pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" placeholder="XXX-XX-XXXX">
+                                    <div class="error-message">Please enter a valid SSN (XXX-XX-XXXX)</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h2>Current Address</h2>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="street">Street Address<span class="required">*</span></label>
+                                    <input type="text" id="street" name="street" required>
+                                    <div class="error-message">Please enter your street address</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City<span class="required">*</span></label>
+                                    <input type="text" id="city" name="city" required>
+                                    <div class="error-message">Please enter your city</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State<span class="required">*</span></label>
+                                    <input type="text" id="state" name="state" required>
+                                    <div class="error-message">Please enter your state</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">ZIP Code<span class="required">*</span></label>
+                                    <input type="text" id="zip" name="zip" required pattern="[0-9]{5}" maxlength="5">
+                                    <div class="error-message">Please enter a valid ZIP code</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h2>Employment Information</h2>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="employer">Current Employer<span class="required">*</span></label>
+                                    <input type="text" id="employer" name="employer" required>
+                                    <div class="error-message">Please enter your current employer</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="position">Position<span class="required">*</span></label>
+                                    <input type="text" id="position" name="position" required>
+                                    <div class="error-message">Please enter your position</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="employment-length">Length of Employment<span class="required">*</span></label>
+                                    <input type="text" id="employment-length" name="employment-length" required>
+                                    <div class="error-message">Please enter your length of employment</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="monthly-income">Monthly Income<span class="required">*</span></label>
+                                    <input type="number" id="monthly-income" name="monthly-income" required min="0">
+                                    <div class="error-message">Please enter your monthly income</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h2>Property Information</h2>
+                            <div class="form-group">
+                                <label for="property-interest">Property of Interest</label>
+                                <select id="property-interest" name="property-interest">
+                                    <option value="">Select a property</option>
+                                    <option value="luxury-lake-view">Luxury Lake View Home</option>
+                                    <option value="modern-mountain-condo">Modern Mountain Condo</option>
+                                    <option value="cozy-tahoe-cabin">Cozy Tahoe Cabin</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="move-in-date">Desired Move-in Date</label>
+                                <input type="date" id="move-in-date" name="move-in-date">
+                            </div>
+                            <div class="form-group">
+                                <label for="lease-term">Preferred Lease Term</label>
+                                <select id="lease-term" name="lease-term">
+                                    <option value="">Select lease term</option>
+                                    <option value="6">6 months</option>
+                                    <option value="12">12 months</option>
+                                    <option value="24">24 months</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h2>Additional Information</h2>
+                            <div class="form-group">
+                                <label for="pets">Do you have any pets?</label>
+                                <select id="pets" name="pets">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pet-details">If yes, please provide details about your pets</label>
+                                <textarea id="pet-details" name="pet-details"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="additional-info">Additional Information</label>
+                                <textarea id="additional-info" name="additional-info" placeholder="Any other information you'd like us to know"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h2>Terms and Conditions</h2>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" required>
+                                    I agree to the <a href="terms.html">Terms of Service</a> and authorize a credit check<span class="required">*</span>
+                                </label>
+                                <div class="error-message">You must agree to the terms and conditions</div>
+                            </div>
+                            <div class="form-note">
+                                <p>By submitting this application, you authorize Lake Tahoe Property Management to verify all information provided, including but not limited to credit history, employment, and rental history.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                            <button type="reset" class="btn btn-secondary">Reset Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Lake Tahoe Blvd</p>
+                    <p>South Lake Tahoe, CA 96150</p>
+                    <p>Phone: (530) 994-8882</p>
+                    <p>Email: info@laketahoepmg.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="owners.html">For Property Owners</a></li>
+                        <li><a href="residents.html">For Residents</a></li>
+                        <li><a href="rentals.html">Available Rentals</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/laketahoepmg" class="social-link" aria-label="Facebook">Facebook</a>
+                        <a href="https://www.instagram.com/laketahoepmg" class="social-link" aria-label="Instagram">Instagram</a>
+                        <a href="https://www.linkedin.com/company/tahoe-peak-management" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lake Tahoe Property Management. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form validation
+            const form = document.querySelector('.application-form');
+            const formGroups = form.querySelectorAll('.form-group');
+            
+            formGroups.forEach(group => {
+                const input = group.querySelector('input, select, textarea');
+                if (input && input.hasAttribute('required')) {
+                    input.addEventListener('blur', function() {
+                        validateField(this);
+                    });
+                }
+            });
+            
+            form.addEventListener('submit', function(e) {
+                let isValid = true;
+                formGroups.forEach(group => {
+                    const input = group.querySelector('input, select, textarea');
+                    if (input && input.hasAttribute('required')) {
+                        if (!validateField(input)) {
+                            isValid = false;
+                        }
+                    }
+                });
+                
+                if (!isValid) {
+                    e.preventDefault();
+                    alert('Please correct the errors before submitting the form.');
+                }
+            });
+            
+            function validateField(input) {
+                const group = input.closest('.form-group');
+                const errorMessage = group.querySelector('.error-message');
+                
+                if (!input.value.trim()) {
+                    group.classList.add('error');
+                    return false;
+                }
+                
+                if (input.type === 'email' && !isValidEmail(input.value)) {
+                    group.classList.add('error');
+                    return false;
+                }
+                
+                if (input.type === 'tel' && !isValidPhone(input.value)) {
+                    group.classList.add('error');
+                    return false;
+                }
+                
+                if (input.id === 'ssn' && !isValidSSN(input.value)) {
+                    group.classList.add('error');
+                    return false;
+                }
+                
+                if (input.id === 'zip' && !isValidZIP(input.value)) {
+                    group.classList.add('error');
+                    return false;
+                }
+                
+                group.classList.remove('error');
+                return true;
+            }
+            
+            function isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+            
+            function isValidPhone(phone) {
+                return /^\+?[\d\s-()]{10,}$/.test(phone);
+            }
+            
+            function isValidSSN(ssn) {
+                return /^\d{3}-\d{2}-\d{4}$/.test(ssn);
+            }
+            
+            function isValidZIP(zip) {
+                return /^\d{5}$/.test(zip);
+            }
+            
+            // Format SSN input
+            const ssnInput = document.getElementById('ssn');
+            if (ssnInput) {
+                ssnInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 0) {
+                        value = value.match(new RegExp('.{1,3}', 'g')).join('-');
+                    }
+                    e.target.value = value;
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
