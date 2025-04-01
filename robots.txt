@@ -1,21 +1,18 @@
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
-Allow: /owners.html
-Allow: /residents.html
-Allow: /rentals.html
-Allow: /resources.html
-Allow: /real-estate.html
-Allow: /agent-referrals.html
-Allow: /about.html
-Allow: /contact.html
-Allow: /pricing.html
-Allow: /privacy.html
-Allow: /terms.html
-Allow: /sitemap.xml
+Allow: /blog/
 Allow: /css/
 Allow: /js/
 Allow: /images/
+
+# Block sensitive directories
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
-Sitemap: https://laketahoepmg.com/sitemap.xml 
+
+# Sitemap location
+Sitemap: https://laketahoepmg.com/sitemap.xml
+
+# Crawl-delay for major search engines
+Crawl-delay: 10 
