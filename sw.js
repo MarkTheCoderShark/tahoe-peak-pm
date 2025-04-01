@@ -1,12 +1,10 @@
-const CACHE_NAME = 'tahoe-peak-v2';
+const CACHE_NAME = 'tahoe-peak-v1';
 const RUNTIME_CACHE = 'runtime-cache';
 
 // Assets to cache on install
 const urlsToCache = [
     '/',
     '/index.html',
-    '/offline.html',
-    '/404.html',
     '/css/base.css',
     '/css/header.css',
     '/css/footer.css',
@@ -16,7 +14,6 @@ const urlsToCache = [
     '/css/animations.css',
     '/js/main.js',
     '/images/tahoe-peak-logo.svg',
-    '/images/logo.png',
     '/images/hero-bg.jpg',
     '/images/icons/icon-192x192.png',
     '/images/icons/icon-512x512.png',

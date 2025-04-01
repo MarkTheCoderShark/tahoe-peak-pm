@@ -1,16 +1,21 @@
 User-agent: *
 Allow: /
-Allow: /blog/
+Allow: /owners.html
+Allow: /residents.html
+Allow: /rentals.html
+Allow: /resources.html
+Allow: /real-estate.html
+Allow: /agent-referrals.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /pricing.html
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /sitemap.xml
 Allow: /css/
 Allow: /js/
 Allow: /images/
-Allow: /sitemap.xml
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
-
-# Crawl-delay for all bots
-Crawl-delay: 2
-
-# Location of the sitemap file
 Sitemap: https://laketahoepmg.com/sitemap.xml 
