@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Application | Lake Tahoe Property Management</title>
-    <meta name="description" content="Complete your rental application for Lake Tahoe properties. Professional property management services in South Lake Tahoe and Incline Village.">
+    <title>Preliminary Rental Application | Lake Tahoe Property Management</title>
+    <meta name="description" content="Submit a preliminary rental application to request a property viewing in Lake Tahoe. Professional property management services in South Lake Tahoe and Incline Village.">
     <link rel="canonical" href="https://laketahoepmg.com/rental-application.html">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
@@ -159,6 +159,25 @@
                 padding: 1rem;
             }
         }
+        
+        .preliminary-notice {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .preliminary-notice p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .preliminary-notice strong {
+            color: #533f03;
+        }
     </style>
 </head>
 <body>
@@ -197,8 +216,12 @@
             <div class="container">
                 <div class="application-container">
                     <div class="application-header">
-                        <h1>Rental Application</h1>
-                        <p>Please complete all required fields to submit your application</p>
+                        <h1>Preliminary Rental Application</h1>
+                        <p>Complete this form to request a property viewing</p>
+                    </div>
+                    
+                    <div class="preliminary-notice">
+                        <p><strong>This is a preliminary application only.</strong> By submitting this form, you are requesting to view the selected property. A full rental application will be required after viewing the property and deciding to proceed with the rental process.</p>
                     </div>
                     
                     <form class="application-form" name="rental-application" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
