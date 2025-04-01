@@ -1,15 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Create popup elements
-    const popupOverlay = document.createElement('div');
-    popupOverlay.className = 'popup-overlay';
-    
-    const popupContent = document.createElement('div');
-    popupContent.className = 'popup-content';
-    
-    // Add close button
-    const closeButton = document.createElement('button');
-    closeButton.className = 'close-popup';
-    closeButton.innerHTML = '&times;';
+    // Get the existing popup and form elements
+    const popupOverlay = document.getElementById('rental-analysis-popup');
+    const form = document.getElementById('rental-analysis-form');
+    const closeButton = popupOverlay.querySelector('.close-popup');
     
     // Add success message
     const successMessage = document.createElement('div');
@@ -18,28 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
         <h3>Thank You!</h3>
         <p>We've received your request for a free rental analysis. We'll contact you shortly to discuss your property.</p>
     `;
+    popupOverlay.querySelector('.popup-content').appendChild(successMessage);
     
-    // Load form content
-    fetch('rental-analysis-form.html')
-        .then(response => response.text())
-        .then(html => {
-            popupContent.innerHTML = html;
-            popupContent.insertBefore(closeButton, popupContent.firstChild);
-            popupContent.appendChild(successMessage);
-            popupOverlay.appendChild(popupContent);
-            document.body.appendChild(popupOverlay);
-            
-            // Add event listeners
-            const form = popupContent.querySelector('form');
-            form.addEventListener('submit', handleSubmit);
-            
-            closeButton.addEventListener('click', closePopup);
-            popupOverlay.addEventListener('click', (e) => {
-                if (e.target === popupOverlay) {
-                    closePopup();
-                }
-            });
-        });
+    // Add event listeners
+    form.addEventListener('submit', handleSubmit);
+    
+    closeButton.addEventListener('click', closePopup);
+    popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+            closePopup();
+        }
+    });
     
     // Add click event to all "Get Free Analysis" buttons
     document.querySelectorAll('[data-action="open-rental-analysis"]').forEach(button => {
