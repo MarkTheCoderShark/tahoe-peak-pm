@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page not found - Tahoe Peak Property Management. Return to our Lake Tahoe property management and real estate services.">
-    <title>404 - Page Not Found | Tahoe Peak Property Management</title>
+    <meta name="description" content="Page not found - Lake Tahoe Property Management. Find Lake Tahoe vacation rentals, property management services, and real estate resources on our main site.">
+    <meta name="robots" content="noindex,follow">
+    <title>404 - Page Not Found | Lake Tahoe Property Management</title>
+    <link rel="canonical" href="https://laketahoepmg.com/">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/404.css">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="images/logo.png" as="image">
 </head>
 <body>
     <header class="header">
@@ -22,7 +26,7 @@
         <div class="header-main">
             <div class="container">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="Tahoe Peak Property Management Logo">
+                    <img src="images/logo.png" alt="Lake Tahoe Property Management Logo">
                 </a>
                 <nav class="main-nav">
                     <ul>
@@ -46,11 +50,33 @@
                 <div class="error-content">
                     <h1>404 - Page Not Found</h1>
                     <p>We apologize, but the page you're looking for doesn't exist or has been moved.</p>
+                    
+                    <div class="popular-pages">
+                        <h2>Popular Pages You Might Be Looking For:</h2>
+                        <ul>
+                            <li><a href="short-term-rental-management.html">Vacation Rental Management</a></li>
+                            <li><a href="south-lake-tahoe.html">South Lake Tahoe Services</a></li>
+                            <li><a href="north-lake-tahoe.html">North Lake Tahoe Services</a></li>
+                            <li><a href="contact.html">Contact Our Team</a></li>
+                            <li><a href="blog/">Property Management Blog</a></li>
+                        </ul>
+                    </div>
+                    
                     <div class="error-actions">
                         <a href="index.html" class="btn btn-primary">Return to Homepage</a>
                         <a href="contact.html" class="btn btn-secondary">Contact Us</a>
                     </div>
                 </div>
+            </div>
+        </section>
+        
+        <section class="search-section">
+            <div class="container">
+                <h2>Search Our Site</h2>
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="What are you looking for?" aria-label="Search">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
             </div>
         </section>
     </main>
@@ -62,8 +88,8 @@
                     <h3>Contact Us</h3>
                     <p>123 Lake Tahoe Blvd</p>
                     <p>Tahoe City, CA 96145</p>
-                    <p>Phone: (530) 555-0123</p>
-                    <p>Email: info@tahoepeak.com</p>
+                    <p>Phone: (530) 994-8882</p>
+                    <p>Email: info@laketahoepmg.com</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -77,16 +103,27 @@
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="https://www.facebook.com/laketahoepmg" class="social-link" aria-label="Facebook">Facebook</a>
+                        <a href="https://www.instagram.com/laketahoepmg" class="social-link" aria-label="Instagram">Instagram</a>
+                        <a href="https://www.linkedin.com/company/tahoe-peak-management" class="social-link" aria-label="LinkedIn">LinkedIn</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Tahoe Peak Property Management. All rights reserved.</p>
+                <p>&copy; 2025 Lake Tahoe Property Management. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    
+    <!-- Add tracking script for 404 errors to analyze and fix broken links -->
+    <script>
+        // Record 404 errors for analysis
+        if (typeof gtag === 'function') {
+            gtag('event', 'page_not_found', {
+                'event_category': 'Error',
+                'event_label': document.referrer || 'Direct Navigation'
+            });
+        }
+    </script>
 </body>
 </html> 

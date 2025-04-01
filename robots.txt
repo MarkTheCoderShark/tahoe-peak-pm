@@ -18,4 +18,27 @@ Allow: /images/
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
+
+# Specific instructions for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific instructions for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Specific instructions for Google Images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Block certain bots that might overload the server
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+# Location of the sitemap file
 Sitemap: https://laketahoepmg.com/sitemap.xml 
