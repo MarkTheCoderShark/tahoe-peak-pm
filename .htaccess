@@ -66,4 +66,12 @@ ErrorDocument 500 /500.html
 <FilesMatch "\.(env|config|json|lock|sql)$">
     Order allow,deny
     Deny from all
-</FilesMatch> 
+</FilesMatch>
+
+# Redirect hyphenated URLs to HTML files
+RewriteRule ^tahoe-city-property-management/?$ tahoe-city.html [L,R=301]
+RewriteRule ^south-lake-tahoe-property-management/?$ south-lake-tahoe.html [L,R=301]
+RewriteRule ^north-lake-tahoe-property-management/?$ north-lake-tahoe.html [L,R=301]
+RewriteRule ^kings-beach-property-management/?$ kings-beach.html [L,R=301]
+RewriteRule ^incline-village-property-management/?$ incline-village.html [L,R=301]
+RewriteRule ^truckee-property-management/?$ truckee.html [L,R=301] 
