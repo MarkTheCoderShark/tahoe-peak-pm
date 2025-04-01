@@ -117,47 +117,14 @@
     </script>
     
     <!-- Critical CSS -->
-    <style>
-        :root {
-            --background-color: #004B49;
-            --primary-color: #1F4D48;
-            --secondary-color: #FFB74D;
-            --accent-color: #FFB74D;
-            --text-color: #ffffff;
-            --text-dark: #333333;
-            --light-text: #ffffff;
-            --background-light: #f5f5f5;
-            --border-color: rgba(255, 255, 255, 0.15);
-            --light-background: rgba(255, 255, 255, 0.08);
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        main {
-            min-height: 100vh;
-            position: relative;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-    </style>
-
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Preload Critical Assets -->
     <link rel="preload" as="image" href="images/tahoe-peak-logo.svg" alt="Lake Tahoe Property Management Logo - Tahoe Peak Management">
     <link rel="preload" as="image" href="images/hero-bg.jpg" alt="Beautiful Lake Tahoe landscape with mountains and crystal clear water">
@@ -193,11 +160,7 @@
         <div class="header-main">
             <div class="header-content">
                 <a href="/" class="logo">
-                    <img src="images/tahoe-peak-logo.svg" 
-                         alt="Lake Tahoe Property Management Logo - Tahoe Peak Management" 
-                         width="140" 
-                         height="50"
-                         loading="eager">
+                    <img src="images/tahoe-peak-logo.svg" alt="Tahoe Peak Property Management">
                 </a>
                 <button class="mobile-menu-toggle">☰</button>
                 <nav class="main-nav">
@@ -210,7 +173,7 @@
                         <li><a href="real-estate.html">REAL ESTATE</a></li>
                         <li><a href="agent-referrals.html">AGENT REFERRALS</a></li>
                         <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/pricing.html">PRICING</a></li>
                     </ul>
                     <a href="tel:5309948882" class="phone-number">530.994.8882</a>
                 </nav>

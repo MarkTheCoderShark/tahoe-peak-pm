@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .application-section {
             padding: 4rem 0;
@@ -181,31 +185,35 @@
     </style>
 </head>
 <body>
-    <header class="header">
+    <header>
         <div class="header-top">
-            <div class="container">
-                <div class="header-links">
-                    <a href="owners.html">Owner Portal</a>
-                    <a href="residents.html">Resident Portal</a>
+            <div class="header-top-content">
+                <div class="login-links">
+                    <a href="#">OWNER LOGIN</a>
+                    <span>|</span>
+                    <a href="#">RESIDENT LOGIN</a>
                 </div>
             </div>
         </div>
         <div class="header-main">
-            <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="Lake Tahoe Property Management Logo">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <img src="images/tahoe-peak-logo.svg" alt="Tahoe Peak Property Management">
                 </a>
+                <button class="mobile-menu-toggle">☰</button>
                 <nav class="main-nav">
+                    <button class="mobile-menu-toggle">☰</button>
                     <ul>
-                        <li><a href="owners.html">Owners/Investors</a></li>
-                        <li><a href="residents.html">Residents</a></li>
-                        <li><a href="rentals.html">Rentals</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="real-estate.html">Real Estate</a></li>
-                        <li><a href="agent-referrals.html">Agent Referrals</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="owners.html">OWNERS/INVESTORS</a></li>
+                        <li><a href="residents.html">RESIDENTS</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                        <li><a href="real-estate.html">REAL ESTATE</a></li>
+                        <li><a href="agent-referrals.html">AGENT REFERRALS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="/pricing.html">PRICING</a></li>
                     </ul>
+                    <a href="tel:5309948882" class="phone-number">530.994.8882</a>
                 </nav>
             </div>
         </div>
