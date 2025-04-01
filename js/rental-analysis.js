@@ -32,17 +32,38 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleSubmit(e) {
         e.preventDefault();
         
-        // Show success message
-        form.style.display = 'none';
-        successMessage.classList.add('active');
+        // Get form data
+        const formData = new FormData(form);
         
-        // Reset form after 3 seconds
-        setTimeout(() => {
-            form.reset();
-            form.style.display = 'block';
-            successMessage.classList.remove('active');
-            closePopup();
-        }, 3000);
+        // Submit to Netlify
+        fetch('/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show success message
+                form.style.display = 'none';
+                successMessage.classList.add('active');
+                
+                // Reset form after 3 seconds
+                setTimeout(() => {
+                    form.reset();
+                    form.style.display = 'block';
+                    successMessage.classList.remove('active');
+                    closePopup();
+                }, 3000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting the form. Please try again.');
+        });
     }
     
     // Open popup
