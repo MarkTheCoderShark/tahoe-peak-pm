@@ -13,12 +13,18 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [L,R=301]
 
 # Redirect property management URLs (must come before the .html extension removal)
-RewriteRule ^tahoe-city-property-management/?$ tahoe-city.html [L,R=301,NC]
-RewriteRule ^south-lake-tahoe-property-management/?$ south-lake-tahoe.html [L,R=301,NC]
-RewriteRule ^north-lake-tahoe-property-management/?$ north-lake-tahoe.html [L,R=301,NC]
-RewriteRule ^kings-beach-property-management/?$ kings-beach.html [L,R=301,NC]
-RewriteRule ^incline-village-property-management/?$ incline-village.html [L,R=301,NC]
-RewriteRule ^truckee-property-management/?$ truckee.html [L,R=301,NC]
+RewriteCond %{REQUEST_URI} ^/tahoe-city-property-management/?$ [NC]
+RewriteRule ^(.*)$ tahoe-city.html [L,R=301]
+RewriteCond %{REQUEST_URI} ^/south-lake-tahoe-property-management/?$ [NC]
+RewriteRule ^(.*)$ south-lake-tahoe.html [L,R=301]
+RewriteCond %{REQUEST_URI} ^/north-lake-tahoe-property-management/?$ [NC]
+RewriteRule ^(.*)$ north-lake-tahoe.html [L,R=301]
+RewriteCond %{REQUEST_URI} ^/kings-beach-property-management/?$ [NC]
+RewriteRule ^(.*)$ kings-beach.html [L,R=301]
+RewriteCond %{REQUEST_URI} ^/incline-village-property-management/?$ [NC]
+RewriteRule ^(.*)$ incline-village.html [L,R=301]
+RewriteCond %{REQUEST_URI} ^/truckee-property-management/?$ [NC]
+RewriteRule ^(.*)$ truckee.html [L,R=301]
 
 # Remove .html extension
 RewriteCond %{REQUEST_FILENAME} !-d
