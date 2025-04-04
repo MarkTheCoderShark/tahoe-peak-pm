@@ -129,6 +129,8 @@
         <mobile:mobile/>
         <xhtml:link rel="alternate" hreflang="en" href="https://laketahoepmg.com/blog/"/>
     </url>
+    
+    <!-- Market Trends and Analysis -->
     <url>
         <loc>https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025.html</loc>
         <lastmod>2025-04-01</lastmod>
@@ -144,7 +146,147 @@
             <news:keywords>Lake Tahoe, real estate, market trends, property management</news:keywords>
         </news:news>
         <mobile:mobile/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025.html"/>
+    </url>
+    
+    <url>
+        <loc>https://laketahoepmg.com/blog/lake-tahoe-real-estate-sales-guide-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>Lake Tahoe Real Estate Sales Guide 2025</news:title>
+            <news:keywords>real estate sales, market analysis, property investment, Lake Tahoe</news:keywords>
+        </news:news>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Property Management Guides -->
+    <url>
+        <loc>https://laketahoepmg.com/blog/sustainable-property-management-lake-tahoe-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>Sustainable Property Management in Lake Tahoe</news:title>
+            <news:keywords>sustainability, eco-friendly, property management, Lake Tahoe</news:keywords>
+        </news:news>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://laketahoepmg.com/blog/lake-tahoe-seasonal-property-management-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>Seasonal Property Management Guide</news:title>
+            <news:keywords>seasonal maintenance, winter preparation, summer management, Lake Tahoe</news:keywords>
+        </news:news>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Technology and Innovation -->
+    <url>
+        <loc>https://laketahoepmg.com/blog/smart-home-technology-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>Smart Home Technology in Property Management</news:title>
+            <news:keywords>smart home, technology, automation, property management</news:keywords>
+        </news:news>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Property Development -->
+    <url>
+        <loc>https://laketahoepmg.com/blog/adu-development-guide-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>ADU Development Guide for Lake Tahoe Properties</news:title>
+            <news:keywords>ADU development, property expansion, investment, regulations</news:keywords>
+        </news:news>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Location-Specific Guides -->
+    <url>
+        <loc>https://laketahoepmg.com/blog/south-lake-tahoe-property-management-guide.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>South Lake Tahoe Property Management Guide</news:title>
+            <news:keywords>South Lake Tahoe, property management, local guide, regulations</news:keywords>
+        </news:news>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://laketahoepmg.com/blog/north-lake-tahoe-property-management-guide.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>North Lake Tahoe Property Management Guide</news:title>
+            <news:keywords>North Lake Tahoe, property management, local guide, regulations</news:keywords>
+        </news:news>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Vacation Rental Management -->
+    <url>
+        <loc>https://laketahoepmg.com/blog/vacation-rental-regulations-lake-tahoe-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>Lake Tahoe Vacation Rental Regulations Guide 2025</news:title>
+            <news:keywords>vacation rentals, regulations, permits, compliance</news:keywords>
+        </news:news>
+        <mobile:mobile/>
     </url>
 
     <!-- Contact & About -->
