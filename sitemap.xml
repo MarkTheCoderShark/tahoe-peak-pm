@@ -6,7 +6,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://laketahoepmg.com/</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -14,31 +14,31 @@
     <!-- Property Management Areas -->
     <url>
         <loc>https://laketahoepmg.com/south-lake-tahoe-property-management.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/north-lake-tahoe-property-management.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/tahoe-city-property-management.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/kings-beach-property-management.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/incline-village-property-management.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -46,13 +46,13 @@
     <!-- Core Services -->
     <url>
         <loc>https://laketahoepmg.com/services.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/short-term-rental-management.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -60,13 +60,13 @@
     <!-- User Types -->
     <url>
         <loc>https://laketahoepmg.com/owners.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/residents.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -74,19 +74,19 @@
     <!-- Resources -->
     <url>
         <loc>https://laketahoepmg.com/resources.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/property-investment-guide.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/property-maintenance-guide.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -94,15 +94,15 @@
     <!-- Blog Posts -->
     <url>
         <loc>https://laketahoepmg.com/blog/</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Market Trends and Analysis -->
+
+    <!-- Latest Blog Posts (April 4, 2025) -->
     <url>
         <loc>https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <news:news>
@@ -110,15 +110,15 @@
                 <news:name>Tahoe Peak Property Management Blog</news:name>
                 <news:language>en</news:language>
             </news:publication>
-            <news:publication_date>2025-04-01</news:publication_date>
+            <news:publication_date>2025-04-04</news:publication_date>
             <news:title>Lake Tahoe Market Trends 2025</news:title>
             <news:keywords>Lake Tahoe, real estate, market trends, property management</news:keywords>
         </news:news>
     </url>
-    
+
     <url>
-        <loc>https://laketahoepmg.com/blog/lake-tahoe-real-estate-sales-guide-2025.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <loc>https://laketahoepmg.com/blog/lake-tahoe-property-management-partnerships-2025.html</loc>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <news:news>
@@ -126,15 +126,47 @@
                 <news:name>Tahoe Peak Property Management Blog</news:name>
                 <news:language>en</news:language>
             </news:publication>
-            <news:publication_date>2025-04-01</news:publication_date>
-            <news:title>Lake Tahoe Real Estate Sales Guide 2025</news:title>
-            <news:keywords>real estate sales, market analysis, property investment, Lake Tahoe</news:keywords>
+            <news:publication_date>2025-04-04</news:publication_date>
+            <news:title>Lake Tahoe Property Management Partnerships 2025</news:title>
+            <news:keywords>partnerships, collaboration, property management, Lake Tahoe</news:keywords>
         </news:news>
     </url>
 
-    <!-- Property Management Guides -->
     <url>
-        <loc>https://laketahoepmg.com/blog/sustainable-property-management-lake-tahoe-2025.html</loc>
+        <loc>https://laketahoepmg.com/blog/kings-beach-property-management-guide.html</loc>
+        <lastmod>2025-04-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-04</news:publication_date>
+            <news:title>Kings Beach Property Management Guide</news:title>
+            <news:keywords>Kings Beach, property management, local guide, Lake Tahoe</news:keywords>
+        </news:news>
+    </url>
+
+    <url>
+        <loc>https://laketahoepmg.com/blog/tahoe-city-property-management-guide.html</loc>
+        <lastmod>2025-04-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-04</news:publication_date>
+            <news:title>Tahoe City Property Management Guide</news:title>
+            <news:keywords>Tahoe City, property management, local guide, Lake Tahoe</news:keywords>
+        </news:news>
+    </url>
+
+    <!-- Recent Blog Posts (April 1, 2025) -->
+    <url>
+        <loc>https://laketahoepmg.com/blog/lake-tahoe-property-insurance-guide-2025.html</loc>
         <lastmod>2025-04-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -144,8 +176,8 @@
                 <news:language>en</news:language>
             </news:publication>
             <news:publication_date>2025-04-01</news:publication_date>
-            <news:title>Sustainable Property Management in Lake Tahoe</news:title>
-            <news:keywords>sustainability, eco-friendly, property management, Lake Tahoe</news:keywords>
+            <news:title>Lake Tahoe Property Insurance Guide 2025</news:title>
+            <news:keywords>property insurance, risk management, coverage, Lake Tahoe</news:keywords>
         </news:news>
     </url>
 
@@ -165,9 +197,8 @@
         </news:news>
     </url>
 
-    <!-- Technology and Innovation -->
     <url>
-        <loc>https://laketahoepmg.com/blog/smart-home-technology-2025.html</loc>
+        <loc>https://laketahoepmg.com/blog/winter-property-management-lake-tahoe.html</loc>
         <lastmod>2025-04-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -177,47 +208,13 @@
                 <news:language>en</news:language>
             </news:publication>
             <news:publication_date>2025-04-01</news:publication_date>
-            <news:title>Smart Home Technology in Property Management</news:title>
-            <news:keywords>smart home, technology, automation, property management</news:keywords>
-        </news:news>
-    </url>
-
-    <!-- Property Development -->
-    <url>
-        <loc>https://laketahoepmg.com/blog/adu-development-guide-2025.html</loc>
-        <lastmod>2025-04-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <news:news>
-            <news:publication>
-                <news:name>Tahoe Peak Property Management Blog</news:name>
-                <news:language>en</news:language>
-            </news:publication>
-            <news:publication_date>2025-04-01</news:publication_date>
-            <news:title>ADU Development Guide for Lake Tahoe Properties</news:title>
-            <news:keywords>ADU development, property expansion, investment, regulations</news:keywords>
-        </news:news>
-    </url>
-
-    <!-- Location-Specific Guides -->
-    <url>
-        <loc>https://laketahoepmg.com/blog/south-lake-tahoe-property-management-guide.html</loc>
-        <lastmod>2025-04-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <news:news>
-            <news:publication>
-                <news:name>Tahoe Peak Property Management Blog</news:name>
-                <news:language>en</news:language>
-            </news:publication>
-            <news:publication_date>2025-04-01</news:publication_date>
-            <news:title>South Lake Tahoe Property Management Guide</news:title>
-            <news:keywords>South Lake Tahoe, property management, local guide, regulations</news:keywords>
+            <news:title>Winter Property Management in Lake Tahoe</news:title>
+            <news:keywords>winter maintenance, snow removal, winterization, Lake Tahoe</news:keywords>
         </news:news>
     </url>
 
     <url>
-        <loc>https://laketahoepmg.com/blog/north-lake-tahoe-property-management-guide.html</loc>
+        <loc>https://laketahoepmg.com/blog/sustainable-property-management-2025.html</loc>
         <lastmod>2025-04-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -227,14 +224,13 @@
                 <news:language>en</news:language>
             </news:publication>
             <news:publication_date>2025-04-01</news:publication_date>
-            <news:title>North Lake Tahoe Property Management Guide</news:title>
-            <news:keywords>North Lake Tahoe, property management, local guide, regulations</news:keywords>
+            <news:title>Sustainable Property Management 2025</news:title>
+            <news:keywords>sustainability, eco-friendly, green practices, Lake Tahoe</news:keywords>
         </news:news>
     </url>
 
-    <!-- Vacation Rental Management -->
     <url>
-        <loc>https://laketahoepmg.com/blog/vacation-rental-regulations-lake-tahoe-2025.html</loc>
+        <loc>https://laketahoepmg.com/blog/luxury-property-management-lake-tahoe.html</loc>
         <lastmod>2025-04-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -244,21 +240,102 @@
                 <news:language>en</news:language>
             </news:publication>
             <news:publication_date>2025-04-01</news:publication_date>
-            <news:title>Lake Tahoe Vacation Rental Regulations Guide 2025</news:title>
+            <news:title>Luxury Property Management in Lake Tahoe</news:title>
+            <news:keywords>luxury properties, high-end management, premium services, Lake Tahoe</news:keywords>
+        </news:news>
+    </url>
+
+    <url>
+        <loc>https://laketahoepmg.com/blog/investment-opportunities-lake-tahoe-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>Investment Opportunities in Lake Tahoe 2025</news:title>
+            <news:keywords>investment opportunities, real estate, market analysis, Lake Tahoe</news:keywords>
+        </news:news>
+    </url>
+
+    <url>
+        <loc>https://laketahoepmg.com/blog/lake-tahoe-vacation-rental-regulations-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>Lake Tahoe Vacation Rental Regulations 2025</news:title>
             <news:keywords>vacation rentals, regulations, permits, compliance</news:keywords>
+        </news:news>
+    </url>
+
+    <url>
+        <loc>https://laketahoepmg.com/blog/lake-tahoe-property-investment-guide-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>Lake Tahoe Property Investment Guide 2025</news:title>
+            <news:keywords>property investment, market guide, investment strategy, Lake Tahoe</news:keywords>
+        </news:news>
+    </url>
+
+    <url>
+        <loc>https://laketahoepmg.com/blog/lake-tahoe-ca-property-management-guide-2025.html</loc>
+        <lastmod>2025-04-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-04-01</news:publication_date>
+            <news:title>Lake Tahoe CA Property Management Guide 2025</news:title>
+            <news:keywords>California, property management, local regulations, Lake Tahoe</news:keywords>
+        </news:news>
+    </url>
+
+    <!-- Earlier Blog Posts (March 31, 2025) -->
+    <url>
+        <loc>https://laketahoepmg.com/blog/lake-tahoe-property-investment-trends-2025.html</loc>
+        <lastmod>2025-03-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <news:news>
+            <news:publication>
+                <news:name>Tahoe Peak Property Management Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-03-31</news:publication_date>
+            <news:title>Lake Tahoe Property Investment Trends 2025</news:title>
+            <news:keywords>investment trends, market analysis, real estate, Lake Tahoe</news:keywords>
         </news:news>
     </url>
 
     <!-- Contact & About -->
     <url>
         <loc>https://laketahoepmg.com/contact.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/about.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -266,13 +343,13 @@
     <!-- Legal -->
     <url>
         <loc>https://laketahoepmg.com/privacy.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://laketahoepmg.com/terms.html</loc>
-        <lastmod>2025-04-01</lastmod>
+        <lastmod>2025-04-04</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
