@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize header scroll effect
     initHeaderScroll();
+    
+    // Initialize FAQ accordion
+    initFaqAccordion();
 
     // Show zero fees section only on home page
     const zeroFeesSection = document.querySelector('.zero-fees');
@@ -299,8 +302,45 @@ if (window.performance) {
         // You can send this data to your analytics service
     });
 }
+// FAQ Accordion Functionality
+function initFaqAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            
+            question.addEventListener('click', () => {
+                // Toggle active class on the clicked item
+                const isActive = item.classList.contains('active');
+                
+                // Close all items first
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                    const faqAnswer = faqItem.querySelector('.faq-answer');
+                    faqAnswer.style.maxHeight = null;
+                });
+                
+                // If the clicked item wasn't active, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+        
+        // Open the first FAQ item by default
+        if (faqItems.length > 0) {
+            faqItems[0].classList.add('active');
+            const firstAnswer = faqItems[0].querySelector('.faq-answer');
+            firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+        }
+    }
+}
 
 // Load rental analysis functionality
 const rentalAnalysisScript = document.createElement('script');
 rentalAnalysisScript.src = 'js/rental-analysis.js';
+document.body.appendChild(rentalAnalysisScript);
 document.body.appendChild(rentalAnalysisScript); 
