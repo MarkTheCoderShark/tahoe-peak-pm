@@ -6,6 +6,30 @@
     padding: 8rem 2rem;
     text-align: center;
     color: var(--text-color);
+    position: relative;
+}
+
+.owners-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    z-index: 1;
+}
+
+.owners-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(74, 144, 226, 0.15) 0%, transparent 60%);
+    transform: rotate(30deg);
+    z-index: 1;
 }
 
 .owners-hero-content {
