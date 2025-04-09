@@ -1,3 +1,5 @@
+/* Core Rentals Styles */
+
 /* Rentals Hero Section */
 .rentals-hero {
     background: linear-gradient(rgba(31, 77, 72, 0.8), rgba(31, 77, 72, 0.8)), url('../images/tahoe-lake-winter.png');
@@ -6,12 +8,14 @@
     padding: 8rem 2rem;
     text-align: center;
     color: var(--text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .rentals-hero-content {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .rentals-hero h1 {
@@ -29,7 +33,7 @@
 
 /* Search Section */
 .search-section {
-    padding: 3rem 0;
+    padding: 4rem 0;
     background-color: var(--background-color);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -42,7 +46,9 @@
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 2rem;
+    background-color: var(--light-background);
+    border-radius: 10px;
 }
 
 .filter-group {
@@ -66,30 +72,18 @@
     background-color: rgba(255, 255, 255, 0.05);
     color: var(--text-color);
     font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.filter-group select:hover,
-.filter-group select:focus {
-    border-color: var(--accent-color);
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .search-btn {
     padding: 0.75rem 2rem;
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--text-dark);
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
     min-width: 200px;
-}
-
-.search-btn:hover {
-    background-color: var(--accent-color-hover);
-    transform: translateY(-2px);
 }
 
 /* Properties Section */
@@ -101,7 +95,7 @@
 .properties-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -109,13 +103,11 @@
 
 .property-card {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.property-card:hover {
-    transform: translateY(-5px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .property-image {
@@ -128,11 +120,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.property-card:hover .property-image img {
-    transform: scale(1.05);
 }
 
 .property-status {
@@ -142,70 +129,40 @@
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.property-status.available {
-    background-color: rgba(39, 174, 96, 0.9);
-    color: white;
-}
-
-.property-status.coming-soon {
-    background-color: rgba(241, 196, 15, 0.9);
-    color: white;
+    font-weight: 600;
+    z-index: 2;
 }
 
 .property-content {
     padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .property-content h3 {
-    color: var(--text-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
-.property-location {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-color);
-    opacity: 0.9;
-    margin-bottom: 1.5rem;
-}
-
-.property-location svg {
-    width: 20px;
-    height: 20px;
-    color: var(--accent-color);
-}
-
 .property-details {
     display: flex;
-    gap: 1.5rem;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
-}
-
-.detail {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-color);
-    opacity: 0.9;
-}
-
-.detail svg {
-    width: 20px;
-    height: 20px;
-    color: var(--accent-color);
 }
 
 .property-price {
-    color: var(--accent-color);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    margin-top: auto;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--background-color) 100%);
 }
 
 /* Application Section */
@@ -215,7 +172,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .application-content {
@@ -223,20 +180,6 @@
     margin: 0 auto;
     text-align: center;
     padding: 0 2rem;
-}
-
-.application-content h2 {
-    color: var(--accent-color);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.application-content p {
-    color: var(--text-color);
-    font-size: 1.25rem;
-    margin-bottom: 3rem;
-    opacity: 0.9;
 }
 
 .application-steps {
@@ -250,35 +193,21 @@
     text-align: center;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .step-number {
     width: 40px;
     height: 40px;
     background: var(--accent-color);
-    color: var(--text-color);
+    color: var(--text-dark);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
     font-weight: 700;
-    margin: 0 auto 1.5rem;
-}
-
-.step h3 {
-    color: var(--text-color);
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.step p {
-    color: var(--text-color);
-    font-size: 1rem;
-    opacity: 0.9;
-    margin-bottom: 0;
+    margin: 0 auto 1rem;
 }
 
 /* Responsive Design */
@@ -291,9 +220,6 @@
 @media (max-width: 992px) {
     .application-steps {
         grid-template-columns: 1fr;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -301,19 +227,16 @@
     .rentals-hero h1 {
         font-size: 2.5rem;
     }
-
+    
     .properties-grid {
         grid-template-columns: 1fr;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
     }
-
+    
     .filter-group {
         min-width: 100%;
     }
-
+    
     .search-btn {
         width: 100%;
     }
-} 
+}
