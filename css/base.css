@@ -492,8 +492,13 @@ footer a:hover {
     background: linear-gradient(rgba(74, 144, 226, 0.1), rgba(74, 144, 226, 0.05));
     padding: 3rem 2rem;
     margin: 4rem 0;
-    text-align: center;
+    text-align: left;
     position: relative;
+    border-radius: 8px;
+}
+
+.blog-highlight-section + .blog-highlight-section {
+    margin-top: 2rem;
 }
 
 .blog-highlight-section::before,
@@ -520,16 +525,32 @@ footer a:hover {
     bottom: 0;
 }
 
-.blog-highlight-section h2,
-.blog-highlight-section h3 {
+.blog-highlight-section h2 {
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.blog-highlight-section h3 {
+    color: var(--secondary-color);
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
 }
 
 .blog-highlight-section p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.blog-highlight-section ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-highlight-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
 }
 
 .blog-highlight-section .cta-button {
@@ -541,9 +562,20 @@ footer a:hover {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    margin-top: 1rem;
 }
 
 .blog-highlight-section .cta-button:hover {
     background-color: var(--primary-color);
     transform: translateY(-2px);
+}
+
+/* For sections that are centered (like CTAs) */
+.blog-highlight-section.text-center {
+    text-align: center;
+}
+
+.blog-highlight-section.text-center .cta-button {
+    margin-left: auto;
+    margin-right: auto;
 } 
