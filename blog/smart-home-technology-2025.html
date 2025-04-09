@@ -4,50 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Home Technology: Enhancing Your Lake Tahoe Property Value - Tahoe Peak Management</title>
-    <meta name="description" content="Discover how smart home technology can enhance your Lake Tahoe property value, improve energy efficiency, and provide better property management solutions.">
-    <meta name="keywords" content="smart home technology, Lake Tahoe real estate, property management, home automation, energy efficiency">
     
-    <!-- CSS Files -->
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --background-color: #004B49;
+            --primary-color: #1F4D48;
+            --secondary-color: #FFB74D;
+            --accent-color: #FFB74D;
+            --text-color: #ffffff;
+            --text-dark: #333333;
+            --light-text: #ffffff;
+            --background-light: #f5f5f5;
+            --border-color: rgba(255, 255, 255, 0.15);
+            --light-background: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    </style>
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="../images/tahoe-peak-logo.svg">
+    <link rel="preload" href="../css/base.css" as="style">
+    
+    <!-- Deferred CSS -->
     <link rel="stylesheet" href="../css/base.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/header.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/footer.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/blog.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/blog-post.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/header.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/footer.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/animations.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/mobile.css" media="print" onload="this.media='all'">
     
     <!-- Fallback for browsers that don't support onload -->
     <noscript>
         <link rel="stylesheet" href="../css/base.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/blog.css">
         <link rel="stylesheet" href="../css/blog-post.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/animations.css">
         <link rel="stylesheet" href="../css/mobile.css">
     </noscript>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Social Media Meta Tags -->
+    <!-- Meta Tags -->
+    <meta name="description" content="Discover how smart home technology can enhance your Lake Tahoe property value, improve energy efficiency, and provide better property management solutions.">
+    <meta name="keywords" content="smart home technology, Lake Tahoe real estate, property management, home automation, energy efficiency">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://laketahoepmg.com/blog/smart-home-technology-2025">
     <meta property="og:title" content="Smart Home Technology: Enhancing Your Lake Tahoe Property Value">
     <meta property="og:description" content="Discover how smart home technology can enhance your Lake Tahoe property value, improve energy efficiency, and provide better property management solutions.">
     <meta property="og:image" content="https://laketahoepmg.com/images/blog/smart-home-technology.jpg">
 
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://laketahoepmg.com/blog/smart-home-technology-2025">
     <meta property="twitter:title" content="Smart Home Technology: Enhancing Your Lake Tahoe Property Value">
     <meta property="twitter:description" content="Discover how smart home technology can enhance your Lake Tahoe property value, improve energy efficiency, and provide better property management solutions.">
     <meta property="twitter:image" content="https://laketahoepmg.com/images/blog/smart-home-technology.jpg">
 
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://laketahoepmg.com/blog/smart-home-technology-2025">
-    
-    <!-- Schema Markup -->
+
+    <!-- Article Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -81,50 +121,23 @@
                 "width": "140",
                 "height": "50"
             }
-        },
-        "keywords": "smart home technology, Lake Tahoe real estate, property management, home automation, energy efficiency",
-        "articleSection": "Property Technology",
-        "wordCount": "1200"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Lake Tahoe Property Management",
-        "image": "https://laketahoepmg.com/images/tahoe-peak-logo.svg",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Lake Tahoe",
-            "addressLocality": "Lake Tahoe",
-            "addressRegion": "CA",
-            "postalCode": "96150",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 39.0968,
-            "longitude": -120.0324
-        },
-        "url": "https://laketahoepmg.com",
-        "telephone": "+1-530-000-0000",
-        "areaServed": ["Lake Tahoe", "Tahoe City", "Kings Beach", "Incline Village", "Truckee", "Olympic Valley"]
+        }
     }
     </script>
 </head>
 <body>
-    <header class="site-header">
+    <header>
         <div class="header-top">
-            <div class="header-top-content container">
+            <div class="header-top-content">
                 <div class="login-links">
-                    <a href="#" class="login-link">OWNER LOGIN</a>
-                    <span class="separator">|</span>
-                    <a href="#" class="login-link">RESIDENT LOGIN</a>
+                    <a href="#">OWNER LOGIN</a>
+                    <span>|</span>
+                    <a href="#">RESIDENT LOGIN</a>
                 </div>
             </div>
         </div>
         <div class="header-main">
-            <div class="header-content container">
+            <div class="header-content">
                 <a href="../" class="logo">
                     <img src="../images/tahoe-peak-logo.svg"
                          alt="Lake Tahoe Property Management - Tahoe Peak Management Logo"
@@ -132,10 +145,10 @@
                          height="50"
                          loading="eager">
                 </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
+                <button class="mobile-menu-toggle">☰</button>
                 <nav class="main-nav">
-                    <button class="mobile-menu-close" aria-label="Close navigation menu">☰</button>
-                    <ul class="nav-list">
+                    <button class="mobile-menu-toggle">☰</button>
+                    <ul>
                         <li><a href="../owners.html">OWNERS/INVESTORS</a></li>
                         <li><a href="../residents.html">RESIDENTS</a></li>
                         <li><a href="../rentals.html">RENTALS</a></li>
@@ -143,15 +156,15 @@
                         <li><a href="../real-estate.html">REAL ESTATE</a></li>
                         <li><a href="../agent-referrals.html">AGENT REFERRALS</a></li>
                         <li><a href="../about.html">ABOUT</a></li>
-                        <li><a href="../pricing.html">PRICING</a></li>
+                        <li><a href="../pricing.html">Pricing</a></li>
                     </ul>
                     <a href="tel:5309948882" class="phone-number">530.994.8882</a>
                 </nav>
             </div>
         </div>
         <div class="zero-fees">
-            <div class="zero-fees-content container">
-                <span class="promo-text">$0 LEASING. $0 RENEWAL. $0 SIGN UP FEES.</span>
+            <div class="zero-fees-content">
+                <span>$0 LEASING. $0 RENEWAL. $0 SIGN UP FEES.</span>
                 <div class="cta-buttons">
                     <a href="../pricing.html" class="btn btn-secondary">EXPLORE OUR PRICING</a>
                     <a href="../contact.html" class="btn btn-primary">FREE CONSULTATION</a>
@@ -160,175 +173,252 @@
         </div>
     </header>
 
-    <main class="blog-post">
-        <article class="container">
-            <header class="blog-header">
-                <h1 class="blog-title">Smart Home Technology: Enhancing Your Lake Tahoe Property Value</h1>
-                <div class="blog-meta">
-                    <time datetime="2025-02-01" class="publish-date">February 1, 2025</time>
-                    <span class="author">By Mark S.</span>
-                    <span class="category">Property Technology</span>
-                </div>
-                <div class="author-info">
-                    <div class="author-details">
-                        <span class="author-name">Mark S.</span>
-                        <span class="author-title">Property Management Expert</span>
+    <main class="blog-post-main">
+        <article class="blog-post-content">
+            <div class="post-header">
+                <div class="container">
+                    <div class="post-meta">
+                        <span class="post-date">February 1, 2025</span>
+                        <span class="post-category">Property Technology</span>
+                    </div>
+                    <h1>Smart Home Technology: Enhancing Your Lake Tahoe Property Value</h1>
+                    <div class="post-author">
+                        <div class="author-info">
+                            <span class="author-name">Mark S.</span>
+                            <span class="author-title">Property Management Expert</span>
+                        </div>
                     </div>
                 </div>
-            </header>
+            </div>
 
-            <div class="blog-content">
-                <section class="introduction">
+            <div class="container">
+                <div class="post-body">
                     <p>Smart home technology has become an essential feature for modern Lake Tahoe properties, offering enhanced comfort, security, and energy efficiency. In this comprehensive guide, we'll explore the latest smart home innovations and their impact on property values in 2025.</p>
-                </section>
 
-                <nav class="table-of-contents">
-                    <h2>Table of Contents</h2>
-                    <ul class="toc-list">
-                        <li><a href="#smart-home-basics">Smart Home Basics</a></li>
-                        <li><a href="#essential-features">Essential Smart Features</a></li>
-                        <li><a href="#energy-efficiency">Energy Efficiency Solutions</a></li>
-                        <li><a href="#security-systems">Security and Monitoring</a></li>
-                        <li><a href="#property-value">Impact on Property Value</a></li>
-                        <li><a href="#implementation">Implementation Guide</a></li>
-                    </ul>
-                </nav>
+                    <!-- Benefits Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Benefits of Smart Home Technology</h2>
+                        <p>Implementing smart home features offers numerous advantages for Lake Tahoe property owners:</p>
+                        <ul>
+                            <li>Increased property value</li>
+                            <li>Improved energy efficiency</li>
+                            <li>Enhanced security</li>
+                            <li>Better property management</li>
+                            <li>Higher rental appeal</li>
+                        </ul>
+                    </section>
 
-                <h2>Benefits of Smart Home Technology</h2>
-                <p>Implementing smart home features offers numerous advantages for Lake Tahoe property owners:</p>
+                    <!-- Essential Features Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Essential Smart Home Features</h2>
+                        <p>Consider these key smart home technologies for your Lake Tahoe property:</p>
 
-                <ul>
-                    <li>Increased property value</li>
-                    <li>Improved energy efficiency</li>
-                    <li>Enhanced security</li>
-                    <li>Better property management</li>
-                    <li>Higher rental appeal</li>
-                </ul>
+                        <h3>Climate Control</h3>
+                        <ul>
+                            <li>Smart thermostats</li>
+                            <li>Zone heating systems</li>
+                            <li>Remote temperature monitoring</li>
+                            <li>Automated climate schedules</li>
+                        </ul>
 
-                <h2>Essential Smart Home Features</h2>
-                <p>Consider these key smart home technologies for your Lake Tahoe property:</p>
+                        <h3>Security Systems</h3>
+                        <ul>
+                            <li>Smart locks</li>
+                            <li>Video doorbells</li>
+                            <li>Security cameras</li>
+                            <li>Motion sensors</li>
+                        </ul>
 
-                <h3>Climate Control</h3>
-                <ul>
-                    <li>Smart thermostats</li>
-                    <li>Zone heating systems</li>
-                    <li>Remote temperature monitoring</li>
-                    <li>Automated climate schedules</li>
-                </ul>
+                        <h3>Energy Management</h3>
+                        <ul>
+                            <li>Smart lighting</li>
+                            <li>Energy monitoring</li>
+                            <li>Automated blinds</li>
+                            <li>Water leak detection</li>
+                        </ul>
+                    </section>
 
-                <h3>Security Systems</h3>
-                <ul>
-                    <li>Smart locks</li>
-                    <li>Video doorbells</li>
-                    <li>Security cameras</li>
-                    <li>Motion sensors</li>
-                </ul>
+                    <!-- Property Management Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Property Management Applications</h2>
+                        <p>Smart home technology enhances property management in several ways:</p>
 
-                <h3>Energy Management</h3>
-                <ul>
-                    <li>Smart lighting</li>
-                    <li>Energy monitoring</li>
-                    <li>Automated blinds</li>
-                    <li>Water leak detection</li>
-                </ul>
+                        <h3>Remote Monitoring</h3>
+                        <ul>
+                            <li>Property status checks</li>
+                            <li>Maintenance alerts</li>
+                            <li>Energy usage tracking</li>
+                            <li>Security monitoring</li>
+                        </ul>
 
-                <h2>Property Management Applications</h2>
-                <p>Smart home technology enhances property management in several ways:</p>
+                        <h3>Guest Experience</h3>
+                        <ul>
+                            <li>Digital check-in/out</li>
+                            <li>Smart keyless entry</li>
+                            <li>Automated welcome messages</li>
+                            <li>Guest access management</li>
+                        </ul>
+                    </section>
 
-                <h3>Remote Monitoring</h3>
-                <ul>
-                    <li>Property status checks</li>
-                    <li>Maintenance alerts</li>
-                    <li>Energy usage tracking</li>
-                    <li>Security monitoring</li>
-                </ul>
+                    <!-- Implementation Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Implementation Considerations</h2>
+                        <p>When adding smart home technology to your property, consider:</p>
 
-                <h3>Guest Experience</h3>
-                <ul>
-                    <li>Digital check-in/out</li>
-                    <li>Smart keyless entry</li>
-                    <li>Automated welcome messages</li>
-                    <li>Guest access management</li>
-                </ul>
+                        <h3>System Integration</h3>
+                        <ul>
+                            <li>Compatible platforms</li>
+                            <li>Network requirements</li>
+                            <li>Backup systems</li>
+                            <li>User interfaces</li>
+                        </ul>
 
-                <h2>Implementation Considerations</h2>
-                <p>When adding smart home technology to your property, consider:</p>
+                        <h3>Cost and ROI</h3>
+                        <ul>
+                            <li>Installation costs</li>
+                            <li>Energy savings</li>
+                            <li>Property value increase</li>
+                            <li>Maintenance expenses</li>
+                        </ul>
+                    </section>
 
-                <h3>System Integration</h3>
-                <ul>
-                    <li>Compatible platforms</li>
-                    <li>Network requirements</li>
-                    <li>Backup systems</li>
-                    <li>User interfaces</li>
-                </ul>
+                    <!-- Future Trends Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Future Trends</h2>
+                        <p>Looking ahead, we can expect to see:</p>
 
-                <h3>Cost and ROI</h3>
-                <ul>
-                    <li>Installation costs</li>
-                    <li>Energy savings</li>
-                    <li>Property value increase</li>
-                    <li>Maintenance expenses</li>
-                </ul>
+                        <ul>
+                            <li>AI-powered property management</li>
+                            <li>Advanced energy optimization</li>
+                            <li>Integrated sustainability features</li>
+                            <li>Enhanced guest experience technology</li>
+                        </ul>
+                    </section>
 
-                <h2>Future Trends</h2>
-                <p>Looking ahead, we can expect to see:</p>
+                    <!-- Final CTA Section -->
+                    <section class="blog-highlight-section text-center">
+                        <h3>Ready to Upgrade Your Property with Smart Technology?</h3>
+                        <p>Contact Tahoe Peak Management for expert guidance on implementing smart home technology in your Lake Tahoe property.</p>
+                        <a href="../contact.html" class="cta-button">Schedule a Consultation</a>
+                    </section>
+                </div>
 
-                <ul>
-                    <li>AI-powered property management</li>
-                    <li>Advanced energy optimization</li>
-                    <li>Integrated sustainability features</li>
-                    <li>Enhanced guest experience technology</li>
-                </ul>
+                <div class="post-footer">
+                    <div class="post-tags">
+                        <span>Tags:</span>
+                        <a href="#smart-home">Smart Home</a>
+                        <a href="#property-tech">Property Technology</a>
+                        <a href="#lake-tahoe">Lake Tahoe</a>
+                        <a href="#property-value">Property Value</a>
+                        <a href="#energy-efficiency">Energy Efficiency</a>
+                    </div>
 
-                <div class="post-cta">
-                    <h3>Ready to Upgrade Your Property with Smart Technology?</h3>
-                    <p>Contact Tahoe Peak Management for expert guidance on implementing smart home technology in your Lake Tahoe property.</p>
-                    <a href="../contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                    <div class="post-share">
+                        <span>Share this post:</span>
+                        <a href="#" class="share-facebook">Facebook</a>
+                        <a href="#" class="share-twitter">Twitter</a>
+                        <a href="#" class="share-linkedin">LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </article>
+
+        <div class="related-posts">
+            <div class="container">
+                <h2>Related Posts</h2>
+                <div class="related-posts-grid">
+                    <article class="related-post">
+                        <img src="../images/blog/lake-tahoe-market-trends-2025.jpg" alt="Lake Tahoe Market Trends 2025" loading="lazy">
+                        <h3><a href="lake-tahoe-market-trends-2025.html">Lake Tahoe Real Estate Market Trends: What to Expect in 2025</a></h3>
+                    </article>
+                    <article class="related-post">
+                        <img src="../images/blog/property-maintenance-tips.jpg" alt="Lake Tahoe Property Maintenance Tips" loading="lazy">
+                        <h3><a href="property-maintenance-guide-lake-tahoe-2025.html">Essential Property Maintenance Tips for Lake Tahoe Homeowners</a></h3>
+                    </article>
+                    <article class="related-post">
+                        <img src="../images/blog/complete-rental-management-guide.jpg" alt="Tahoe Rental Management Guide" loading="lazy">
+                        <h3><a href="complete-tahoe-rental-management-guide-2025.html">Complete Guide to Tahoe Rental Management (2025)</a></h3>
+                    </article>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-content container">
-            <div class="footer-info">
-                <img src="../images/tahoe-peak-logo.svg" 
-                     alt="Lake Tahoe Property Management - Tahoe Peak Management Logo"
-                     width="140"
-                     height="50"
-                     loading="lazy">
-                <p>Lake Tahoe Property Management</p>
-                <p>Lake Tahoe, CA 96150</p>
-                <p>Phone: <a href="tel:5309948882">530.994.8882</a></p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="footer-contact">
+                    <a href="tel:5309948882">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        530.994.8882
+                    </a>
+                    <a href="mailto:laketahoepmg@gmail.com">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        laketahoepmg@gmail.com
+                    </a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <nav class="footer-nav">
-                <div class="footer-nav-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="../owners.html">Property Management</a></li>
-                        <li><a href="../rentals.html">Vacation Rentals</a></li>
-                        <li><a href="../real-estate.html">Real Estate</a></li>
-                        <li><a href="../agent-referrals.html">Agent Referrals</a></li>
-                    </ul>
-                </div>
-                <div class="footer-nav-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../blog">Blog</a></li>
-                        <li><a href="../resources.html">Property Resources</a></li>
-                        <li><a href="../pricing.html">Pricing</a></li>
-                        <li><a href="../contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </nav>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../owners.html">For Property Owners</a></li>
+                    <li><a href="../residents.html">For Residents</a></li>
+                    <li><a href="../rentals.html">Available Rentals</a></li>
+                    <li><a href="../pricing.html">Our Pricing</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="../services.html">Property Management</a></li>
+                    <li><a href="../guarantees.html">Our Guarantees</a></li>
+                    <li><a href="../application-criteria.html">Application Criteria</a></li>
+                    <li><a href="../real-estate.html">Real Estate</a></li>
+                    <li><a href="../agent-referrals.html">Agent Referrals</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Areas We Serve</h3>
+                <ul class="footer-links">
+                    <li><a href="../south-lake-tahoe-property-management.html">South Lake Tahoe</a></li>
+                    <li><a href="../incline-village-property-management.html">Incline Village</a></li>
+                    <li><a href="../tahoe-city-property-management.html">Tahoe City</a></li>
+                    <li><a href="../kings-beach-property-management.html">Kings Beach</a></li>
+                    <li><a href="../truckee-property-management.html">Truckee</a></li>
+                </ul>
+            </div>
         </div>
+
         <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2025 Lake Tahoe Property Management. All rights reserved.</p>
-            </div>
+            <p>&copy; 2025 Tahoe Peak Property Management. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="../js/navigation.js" defer></script>
+    <script src="../js/main.js"></script>
 </body>
 </html> 
