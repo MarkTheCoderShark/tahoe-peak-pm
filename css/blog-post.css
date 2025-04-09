@@ -77,6 +77,44 @@
     line-height: 1.7;
 }
 
+/* Table of Contents Styles */
+/* Table of Contents Styles */
+.blog-post-container .toc { /* Removed .post-body from selector */
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #e9ecef; /* Subtle border */
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0 3rem 0; /* Spacing around TOC */
+    list-style: none; /* Remove default bullets */
+}
+
+.blog-post-container .toc li { /* Removed .post-body from selector */
+    margin-bottom: 0.75rem;
+    color: #333; /* Ensure dark text */
+}
+
+.blog-post-container .toc li a { /* Removed .post-body from selector */
+    color: var(--primary-color); /* Use primary blue for links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.blog-post-container .toc li a:hover { /* Removed .post-body from selector */
+    color: var(--accent-color); /* Accent blue on hover */
+    text-decoration: underline;
+}
+
+/* Add a title for the TOC */
+.blog-post-container .toc::before { /* Removed .post-body from selector */
+    content: "Table of Contents";
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
 /* Removed Post CTA, Footer, Tags, Share, Related Posts styles */
 
 /* Add styles for links within post body */
@@ -89,6 +127,11 @@
 .post-body a:hover {
     color: var(--primary-color); /* Darker blue on hover */
     text-decoration: underline;
+}
+
+/* Add some top margin to post sections */
+.blog-post-container .post-body .post-section {
+    margin-top: 2rem;
 }
 
 /* Responsive Design */

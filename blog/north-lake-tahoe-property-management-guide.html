@@ -67,6 +67,21 @@
     <link rel="stylesheet" href="../css/blog.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/blog-post.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/animations.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/mobile.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/blog.css">
+        <link rel="stylesheet" href="../css/blog-post.css">
+        <link rel="stylesheet" href="../css/animations.css">
+        <link rel="stylesheet" href="../css/mobile.css">
+    </noscript>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -84,8 +99,12 @@
         </div>
         <div class="header-main">
             <div class="header-content">
-                <a href="/" class="logo">
-                    <img src="../images/tahoe-peak-logo.svg" alt="Tahoe Peak Property Management">
+                <a href="../" class="logo">
+                    <img src="../images/tahoe-peak-logo.svg"
+                         alt="Lake Tahoe Property Management - Tahoe Peak Management Logo"
+                         width="140"
+                         height="50"
+                         loading="eager">
                 </a>
                 <button class="mobile-menu-toggle">☰</button>
                 <nav class="main-nav">
@@ -98,10 +117,19 @@
                         <li><a href="../real-estate.html">REAL ESTATE</a></li>
                         <li><a href="../agent-referrals.html">AGENT REFERRALS</a></li>
                         <li><a href="../about.html">ABOUT</a></li>
-                        <li><a href="../pricing.html">PRICING</a></li>
+                        <li><a href="../pricing.html">Pricing</a></li>
                     </ul>
                     <a href="tel:5309948882" class="phone-number">530.994.8882</a>
                 </nav>
+            </div>
+        </div>
+        <div class="zero-fees">
+            <div class="zero-fees-content">
+                <span>$0 LEASING. $0 RENEWAL. $0 SIGN UP FEES.</span>
+                <div class="cta-buttons">
+                    <a href="../pricing.html" class="btn btn-secondary">EXPLORE OUR PRICING</a>
+                    <a href="../contact.html" class="btn btn-primary">FREE CONSULTATION</a>
+                </div>
             </div>
         </div>
     </header>
@@ -261,12 +289,14 @@
                 <h3>Services</h3>
                 <ul class="footer-links">
                     <li><a href="../services.html">Property Management</a></li>
+                    <li><a href="../guarantees.html">Our Guarantees</a></li>
+                    <li><a href="../application-criteria.html">Application Criteria</a></li>
                     <li><a href="../real-estate.html">Real Estate</a></li>
                     <li><a href="../agent-referrals.html">Agent Referrals</a></li>
                     <li><a href="../resources.html">Resources</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Areas We Serve</h3>
                 <ul class="footer-links">
@@ -278,9 +308,9 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-            <p>&copy; 2024 Tahoe Peak Property Management. All rights reserved.</p>
+            <p>&copy; 2025 Tahoe Peak Property Management. All rights reserved.</p>
         </div>
     </footer>
 
