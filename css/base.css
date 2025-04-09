@@ -442,6 +442,8 @@ nav.scrolled {
 }
 
 .card {
+  position: relative;
+  padding-bottom: 60px; /* Ensure space for the button */
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.05);
@@ -452,6 +454,20 @@ nav.scrolled {
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+.card a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Remove specific links */
+.card p a[href*="maintenance-guide"],
+.card p a[href*="ROI-optimization"],
+.card p a[href*="marketing-strategies"] {
+  display: none;
 }
 
 footer {
