@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Lake Tahoe Property Management | Vacation Rental & Home Management Services</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Professional property management services in North Lake Tahoe, CA. Specializing in vacation rentals, long-term rentals, and homeowner services. Local expertise for North Lake Tahoe properties.">
-    <meta name="keywords" content="North Lake Tahoe property management, North Lake Tahoe vacation rentals, North Lake Tahoe property manager, Tahoe City property management, Incline Village property management">
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="Professional property management services in North Lake Tahoe, CA. Specializing in vacation rentals, long-term rentals, and comprehensive homeowner services with local expertise in Tahoe City, Kings Beach, and Incline Village.">
+    <meta name="keywords" content="North Lake Tahoe property management, North Lake Tahoe vacation rentals, North Lake Tahoe property manager, Tahoe City property management, Kings Beach property management, Incline Village property management, lakefront property management, winter property management, summer rental management">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="North Lake Tahoe Property Management | Premier Vacation Rental & Home Management Services">
-    <meta property="og:description" content="Professional property management services in North Lake Tahoe, CA. Specializing in vacation rentals, long-term rentals, and homeowner services.">
+    <meta property="og:description" content="Professional property management services in North Lake Tahoe, CA. Specializing in vacation rentals, long-term rentals, and comprehensive homeowner services with local expertise.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/north-lake-tahoe">
+    <meta property="og:url" content="https://laketahoepmg.com/north-lake-tahoe">
+    <meta property="og:image" content="https://laketahoepmg.com/images/lake-tahoe-hero.jpg">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -21,8 +22,8 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Lake Tahoe Property Management - North Lake Tahoe",
-        "image": "/images/logo.png",
-        "description": "Professional property management services in North Lake Tahoe, CA. Specializing in vacation rentals, long-term rentals, and homeowner services.",
+        "image": "/images/tahoe-peak-logo.png",
+        "description": "Professional property management services in North Lake Tahoe, CA. Specializing in vacation rentals, long-term rentals, and comprehensive homeowner services with local expertise in Tahoe City, Kings Beach, and Incline Village.",
         "areaServed": {
             "@type": "City",
             "name": "North Lake Tahoe",
@@ -36,8 +37,8 @@
             "latitude": "39.2397",
             "longitude": "-120.0504"
         },
-        "url": "/north-lake-tahoe",
-        "telephone": "+1-XXX-XXX-XXXX",
+        "url": "https://laketahoepmg.com/north-lake-tahoe",
+        "telephone": "+1-530-994-8882",
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": [
@@ -51,7 +52,12 @@
             ],
             "opens": "09:00",
             "closes": "17:00"
-        }
+        },
+        "sameAs": [
+            "https://www.facebook.com/tahoepeakpm",
+            "https://www.instagram.com/tahoepeakpm",
+            "https://www.linkedin.com/company/tahoe-peak-property-management"
+        ]
     }
     </script>
     
@@ -64,6 +70,205 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom page styles -->
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 75, 73, 0.7), rgba(0, 75, 73, 0.8)), url('images/lake-tahoe-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Scroll reveal animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .services-section {
+            padding: 5rem 0;
+        }
+        
+        .services-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .location-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            height: 250px;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 75, 73, 0.8));
+            z-index: 1;
+        }
+        
+        .location-card h3, .location-card p {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .location-card h3 a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .location-card h3 a:hover {
+            color: #FFA726;
+        }
+        
+        .tahoe-city-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 75, 73, 0.7)), url('images/lake-tahoe-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .incline-village-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 75, 73, 0.7)), url('images/tahoe-lake-winter.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .kings-beach-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 75, 73, 0.7)), url('images/vacation-rental.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .south-lake-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 75, 73, 0.7)), url('images/single-family.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .testimonials-section {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 5rem 0;
+            margin: 4rem 0;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        
+        .market-insights-section {
+            padding: 5rem 0;
+        }
+        
+        .market-insights-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .service-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card {
+            height: auto;
+            min-height: 400px;
+            padding-bottom: 5rem;
+        }
+        
+        .service-card p {
+            min-height: auto;
+        }
+        
+        .breadcrumb {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 0.75rem 0;
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-item:not(:last-child)::after {
+            content: "/";
+            margin: 0 0.5rem;
+            opacity: 0.5;
+        }
+        
+        .breadcrumb-item a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .breadcrumb-item.active {
+            color: var(--accent-color);
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .service-card {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .location-card {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -111,52 +316,60 @@
         </div>
     </header>
     
+    <div class="breadcrumb">
+        <ul class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active">North Lake Tahoe Property Management</li>
+        </ul>
+    </div>
+    
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>North Lake Tahoe Property Management Services</h1>
-                <p>Expert property management services in North Lake Tahoe, Tahoe City, and Incline Village areas</p>
+                <h1>North Lake Tahoe Property Management</h1>
+                <p>Expert property management services for vacation rentals and long-term investments in North Lake Tahoe, Tahoe City, Kings Beach, and Incline Village</p>
                 <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get Started</a>
-                    <a href="pricing.html" class="btn btn-secondary">View Pricing</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started Today</a>
+                    <a href="pricing.html" class="btn btn-secondary">View Our Pricing</a>
                 </div>
             </div>
         </section>
 
         <section class="services-section">
             <div class="container">
-                <h2>Why Choose Us for North Lake Tahoe Property Management?</h2>
+                <h2 class="scroll-reveal">Comprehensive North Lake Tahoe Property Management Services</h2>
                 <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
-                        </div>
-                        <h3>Local Expertise</h3>
-                        <p>Deep knowledge of North Lake Tahoe's unique market, including Tahoe City and Incline Village areas.</p>
-                        <a href="about.html" class="btn btn-secondary">Learn More →</a>
-                    </div>
-                    <div class="service-card">
+                    <div class="service-card scroll-reveal">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                                 <polyline points="9 22 9 12 15 12 15 22"/>
                             </svg>
                         </div>
-                        <h3>Vacation Rental Specialists</h3>
-                        <p>Expert management of vacation rentals in North Lake Tahoe's prime locations.</p>
+                        <h3>Vacation Rental Management</h3>
+                        <p>Maximize your North Lake Tahoe vacation rental income with our comprehensive management services, including marketing, guest screening, and 24/7 support.</p>
                         <a href="services.html#vacation-rentals" class="btn btn-secondary">Learn More →</a>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card scroll-reveal">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                             </svg>
                         </div>
-                        <h3>Year-Round Service</h3>
-                        <p>Full-service property management for both summer and winter seasons.</p>
+                        <h3>Long-Term Rental Management</h3>
+                        <p>Reliable long-term rental management for North Lake Tahoe property owners, including tenant screening, maintenance, and rent collection.</p>
+                        <a href="services.html#long-term-rentals" class="btn btn-secondary">Learn More →</a>
+                    </div>
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3>Property Maintenance</h3>
+                        <p>Year-round property maintenance services for North Lake Tahoe homes, including snow removal, landscaping, and emergency repairs.</p>
                         <a href="services.html#maintenance" class="btn btn-secondary">Learn More →</a>
                     </div>
                 </div>
@@ -165,21 +378,21 @@
 
         <section class="locations">
             <div class="container">
-                <h2>Popular Areas We Serve in North Lake Tahoe</h2>
+                <h2 class="scroll-reveal">North Lake Tahoe Areas We Serve</h2>
                 <div class="location-grid">
-                    <div class="location-card">
+                    <div class="location-card tahoe-city-bg scroll-reveal">
                         <h3><a href="tahoe-city.html">Tahoe City</a></h3>
                         <p>Premium vacation rental management in the heart of North Lake Tahoe</p>
                     </div>
-                    <div class="location-card">
+                    <div class="location-card incline-village-bg scroll-reveal">
                         <h3><a href="incline-village.html">Incline Village</a></h3>
                         <p>Property management services for luxury properties and vacation homes</p>
                     </div>
-                    <div class="location-card">
+                    <div class="location-card kings-beach-bg scroll-reveal">
                         <h3><a href="kings-beach.html">Kings Beach</a></h3>
-                        <p>Specialized management for beachfront properties</p>
+                        <p>Specialized management for beachfront properties and lakeside rentals</p>
                     </div>
-                    <div class="location-card">
+                    <div class="location-card south-lake-bg scroll-reveal">
                         <h3><a href="south-lake-tahoe.html">South Lake Tahoe</a></h3>
                         <p>Comprehensive property management services in South Lake Tahoe</p>
                     </div>
@@ -187,21 +400,42 @@
             </div>
         </section>
 
-        <section class="services-section">
+        <section class="testimonials-section">
             <div class="container">
-                <h2>North Lake Tahoe Market Insights</h2>
+                <h2 class="scroll-reveal">What North Lake Tahoe Property Owners Say</h2>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="testimonial-card scroll-reveal">
+                        <p>"Tahoe Peak Management has been handling my lakefront property in Kings Beach for over 3 years. Their local expertise and attention to detail have made owning a vacation rental completely stress-free."</p>
+                        <div class="testimonial-author">- Michael R., Kings Beach Property Owner</div>
+                    </div>
+                    <div class="testimonial-card scroll-reveal">
+                        <p>"As an out-of-state owner, I needed a property management company I could trust. Their team has exceeded my expectations with their communication and care for my Tahoe City cabin."</p>
+                        <div class="testimonial-author">- Jennifer L., Tahoe City Property Owner</div>
+                    </div>
+                    <div class="testimonial-card scroll-reveal">
+                        <p>"The winter maintenance services are exceptional. They handle snow removal promptly and keep my Incline Village property in perfect condition year-round."</p>
+                        <div class="testimonial-author">- David S., Incline Village Property Owner</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="market-insights-section">
+            <div class="container">
+                <h2 class="scroll-reveal">North Lake Tahoe Market Insights</h2>
+                <div class="services-grid">
+                    <div class="service-card scroll-reveal">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M12 2v20M2 12h20"/>
                             </svg>
                         </div>
-                        <h3>High Season</h3>
-                        <p>December - March (Winter)</p>
-                        <p>June - August (Summer)</p>
+                        <h3>Peak Rental Seasons</h3>
+                        <p>Winter: December - March (Ski Season)</p>
+                        <p>Summer: June - August (Lake Activities)</p>
+                        <p>Average occupancy rates of 85% during peak seasons</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card scroll-reveal">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M12 20V10"/>
@@ -209,19 +443,64 @@
                                 <path d="M6 20v-4"/>
                             </svg>
                         </div>
-                        <h3>Average Occupancy</h3>
-                        <p>85% Year-Round</p>
+                        <h3>Property Types</h3>
+                        <p>Luxury Lakefront Homes</p>
+                        <p>Mountain View Cabins</p>
+                        <p>Ski-In/Ski-Out Condos</p>
+                        <p>Year-Round Residential Properties</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card scroll-reveal">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
                             </svg>
                         </div>
-                        <h3>Property Types</h3>
-                        <p>Luxury Homes</p>
-                        <p>Lakefront Properties</p>
-                        <p>Mountain View Estates</p>
+                        <h3>Regulatory Considerations</h3>
+                        <p>Short-term rental permits</p>
+                        <p>HOA restrictions</p>
+                        <p>Local ordinances and regulations</p>
+                        <p>Tax compliance assistance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="container">
+                <h2 class="scroll-reveal">Why Choose Us for North Lake Tahoe Property Management?</h2>
+                <div class="services-grid">
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Local North Lake Tahoe Expertise</h3>
+                        <p>Our team lives and works in North Lake Tahoe, providing unmatched local knowledge of the market, regulations, and seasonal considerations.</p>
+                    </div>
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3>Transparent Pricing</h3>
+                        <p>No hidden fees or surprise costs. Our transparent pricing structure ensures you know exactly what you're paying for.</p>
+                    </div>
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
+                        </div>
+                        <h3>Advanced Technology</h3>
+                        <p>Our property management software provides real-time updates, financial reporting, and maintenance tracking for complete transparency.</p>
                     </div>
                 </div>
             </div>
@@ -229,11 +508,11 @@
 
         <section class="cta-section">
             <div class="container">
-                <h2>Ready to Maximize Your North Lake Tahoe Property's Potential?</h2>
-                <p>Get started with our professional property management services today.</p>
-                <div class="cta-buttons">
+                <h2 class="scroll-reveal">Ready to Maximize Your North Lake Tahoe Property's Potential?</h2>
+                <p class="scroll-reveal">Contact us today for a free property management consultation and rental analysis.</p>
+                <div class="cta-buttons scroll-reveal">
                     <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
-                    <a href="pricing.html" class="btn btn-secondary">View Our Pricing</a>
+                    <a href="rental-analysis-form.html" class="btn btn-secondary">Free Rental Analysis</a>
                 </div>
             </div>
         </section>
@@ -280,6 +559,7 @@
                     <li><a href="tahoe-city.html">Tahoe City</a></li>
                     <li><a href="kings-beach.html">Kings Beach</a></li>
                     <li><a href="incline-village.html">Incline Village</a></li>
+                    <li><a href="truckee.html">Truckee</a></li>
                 </ul>
             </div>
         </div>
@@ -310,7 +590,41 @@
             </div>
         </div>
     </footer>
+<script src="js/main.js"></script>
 
-    <script src="js/main.js"></script>
+<!-- Add structured data for FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas do you serve in North Lake Tahoe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide property management services throughout North Lake Tahoe, including Tahoe City, Kings Beach, Incline Village, and surrounding areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What property management services do you offer in North Lake Tahoe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer comprehensive property management services including vacation rental management, long-term rental management, property maintenance, tenant screening, marketing, and financial reporting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does property management cost in North Lake Tahoe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our property management services feature transparent pricing with $0 leasing fees, $0 renewal fees, and $0 sign-up fees. Contact us for a customized quote based on your specific property needs."
+      }
+    }
+  ]
+}
+</script>
 </body>
-</html> 
+</html>
+</html>
