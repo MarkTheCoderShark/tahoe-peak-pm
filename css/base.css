@@ -1,15 +1,15 @@
 /* Critical CSS - Load this inline in the head */
 :root {
-    --background-color: #004B49;
-    --primary-color: #1F4D48;
-    --secondary-color: #FFB74D;
-    --accent-color: #FFB74D;
+    --background-color: #1a4b8c;
+    --primary-color: #0d3b7d;
+    --secondary-color: #4a90e2;
+    --accent-color: #4a90e2;
     --text-color: #ffffff;
     --text-dark: #333333;
     --light-text: #ffffff;
-    --background-light: rgba(255, 255, 255, 0.03);
-    --border-color: rgba(255, 255, 255, 0.15);
-    --light-background: rgba(255, 255, 255, 0.08);
+    --background-light: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.2);
+    --light-background: rgba(255, 255, 255, 0.12);
 }
 
 body {
@@ -35,8 +35,8 @@ body {
 :root {
     --transition: all 0.3s ease;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --button-blue: #2A7B9B;
-    --button-orange: #FFB74D;
+    --button-blue: #4a90e2;
+    --button-light-blue: #6ba5e9;
     --spacing-unit: 1rem;
 }
 
@@ -95,7 +95,7 @@ p {
 }
 
 .btn-primary:hover {
-    background-color: #FFA726;
+    background-color: var(--button-light-blue);
     transform: translateY(-2px);
 }
 

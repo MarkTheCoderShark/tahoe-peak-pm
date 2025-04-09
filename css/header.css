@@ -207,13 +207,13 @@ nav a.active {
 }
 
 .phone-number:hover {
-    color: var(--button-orange);
+    color: var(--button-light-blue);
     transform: translateY(-1px);
-    border-color: var(--button-orange);
+    border-color: var(--button-light-blue);
 }
 
 .zero-fees {
-    background-color: var(--primary);
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 0.5rem;
@@ -393,7 +393,7 @@ nav a.active {
     }
 
     .main-nav a.active {
-        background: rgba(255, 183, 77, 0.15);
+        background: rgba(74, 144, 226, 0.15);
         border-color: var(--accent-color);
         color: var(--accent-color);
     }

@@ -34,7 +34,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(0, 75, 73, 0.7), rgba(0, 75, 73, 0.8));
+    background: linear-gradient(rgba(26, 75, 140, 0.7), rgba(13, 59, 125, 0.8));
     z-index: 2;
     pointer-events: none;
 }
@@ -92,13 +92,13 @@
 }
 
 .hero-buttons .btn-primary {
-    background-color: #FFB74D;
+    background-color: var(--secondary-color);
     color: #161C2D;
     border: none;
 }
 
 .hero-buttons .btn-primary:hover {
-    background-color: #FFA726;
+    background-color: var(--button-light-blue);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -124,7 +124,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -135,7 +135,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at center, rgba(89, 168, 255, 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at center, rgba(74, 144, 226, 0.15) 0%, transparent 60%);
     transform: rotate(30deg);
     z-index: 1;
 }

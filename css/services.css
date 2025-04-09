@@ -42,7 +42,7 @@
     height: 70px;
     margin: 0 auto 2rem;
     padding: 1.2rem;
-    background: rgba(0, 75, 73, 0.1);
+    background: rgba(26, 75, 140, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -51,7 +51,7 @@
 }
 
 .service-card:hover .service-icon {
-    background: rgba(255, 165, 0, 0.1);
+    background: rgba(74, 144, 226, 0.1);
     transform: scale(1.1);
 }
 
@@ -76,7 +76,7 @@
 }
 
 .service-card p {
-    color: #4A5568;
+    color: #333333;
     margin-bottom: 4rem;
     line-height: 1.7;
     font-size: 1.1rem;
@@ -255,7 +255,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #FFA726;
+    background-color: var(--button-light-blue);
     transform: translateY(-2px);
 }
 
@@ -788,7 +788,7 @@
 
 /* Services Hero Section */
 .services-hero {
-    background: linear-gradient(rgba(0, 75, 73, 0.8), rgba(0, 75, 73, 0.8)), url('../images/services-hero.jpg');
+    background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(13, 59, 125, 0.8)), url('../images/services-hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

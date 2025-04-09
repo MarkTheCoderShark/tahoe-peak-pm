@@ -358,7 +358,7 @@
 }
 
 .stat-card h3 {
-    color: #F7A046;
+    color: var(--secondary-color);
     font-size: 4rem;
     font-weight: 700;
     margin: 0;
@@ -367,7 +367,7 @@
 }
 
 .stat-card p {
-    color: #1F4D48;
+    color: var(--primary-color);
     font-size: 1.2rem;
     margin: 0;
     opacity: 0.9;
