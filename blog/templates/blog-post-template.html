@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[BLOG POST TITLE] - Tahoe Peak Management</title>
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --background-color: #004B49;
+            --primary-color: #1F4D48;
+            --secondary-color: #FFB74D;
+            --accent-color: #FFB74D;
+            --text-color: #ffffff;
+            --text-dark: #333333;
+            --light-text: #ffffff;
+            --background-light: #f5f5f5;
+            --border-color: rgba(255, 255, 255, 0.15);
+            --light-background: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    </style>
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="../images/tahoe-peak-logo.svg">
+    <link rel="preload" href="../css/base.css" as="style">
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="../css/base.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/blog.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/blog-post.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/header.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/footer.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/animations.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/mobile.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/blog.css">
+        <link rel="stylesheet" href="../css/blog-post.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/animations.css">
+        <link rel="stylesheet" href="../css/mobile.css">
+    </noscript>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="[META DESCRIPTION]">
+    <meta name="keywords" content="[META KEYWORDS]">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://laketahoepmg.com/blog/[URL-SLUG].html">
+    <meta property="og:title" content="[BLOG POST TITLE]">
+    <meta property="og:description" content="[META DESCRIPTION]">
+    <meta property="og:image" content="https://laketahoepmg.com/images/blog/[FEATURED-IMAGE].jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://laketahoepmg.com/blog/[URL-SLUG].html">
+    <meta property="twitter:title" content="[BLOG POST TITLE]">
+    <meta property="twitter:description" content="[META DESCRIPTION]">
+    <meta property="twitter:image" content="https://laketahoepmg.com/images/blog/[FEATURED-IMAGE].jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://laketahoepmg.com/blog/[URL-SLUG]">
+
+    <!-- Article Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://laketahoepmg.com/blog/[URL-SLUG].html"
+        },
+        "headline": "[BLOG POST TITLE]",
+        "description": "[META DESCRIPTION]",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://laketahoepmg.com/images/blog/[FEATURED-IMAGE].jpg",
+            "height": "800",
+            "width": "1200"
+        },
+        "datePublished": "[ISO-DATE]",
+        "dateModified": "[ISO-DATE]",
+        "author": {
+            "@type": "Person",
+            "name": "[AUTHOR NAME]",
+            "jobTitle": "[AUTHOR TITLE]",
+            "url": "https://laketahoepmg.com/team/[AUTHOR-SLUG]"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tahoe Peak Management",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://laketahoepmg.com/images/tahoe-peak-logo.svg",
+                "width": "140",
+                "height": "50"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Standard Header Include -->
+    [INCLUDE-HEADER]
+
+    <main class="blog-post-main">
+        <article class="blog-post-content">
+            <div class="post-header">
+                <div class="container">
+                    <div class="post-meta">
+                        <span class="post-date">[POST DATE]</span>
+                        <span class="post-category">[CATEGORY]</span>
+                    </div>
+                    <h1>[BLOG POST TITLE]</h1>
+                    <div class="post-author">
+                        <img src="../images/team/[AUTHOR-IMAGE]" alt="[AUTHOR NAME]" class="author-image">
+                        <div class="author-info">
+                            <span class="author-name">[AUTHOR NAME]</span>
+                            <span class="author-title">[AUTHOR TITLE]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-featured-image">
+                <img src="../images/blog/[FEATURED-IMAGE].jpg" alt="[IMAGE ALT TEXT]" loading="lazy">
+            </div>
+
+            <div class="container">
+                <div class="post-body">
+                    <!-- Introduction Section -->
+                    <section class="section">
+                        <p>[INTRODUCTION PARAGRAPH]</p>
+
+                        <h2>[FIRST SECTION TITLE]</h2>
+                        <p>[SECTION CONTENT]</p>
+
+                        <ul>
+                            <li>[KEY POINT 1]</li>
+                            <li>[KEY POINT 2]</li>
+                            <li>[KEY POINT 3]</li>
+                            <li>[KEY POINT 4]</li>
+                        </ul>
+                    </section>
+
+                    <!-- Main Content Sections -->
+                    <section class="section">
+                        <h2>[SECTION TITLE]</h2>
+                        
+                        <h3>[SUBSECTION 1]</h3>
+                        <p>[SUBSECTION CONTENT]</p>
+                        <ul>
+                            <li>[POINT 1]</li>
+                            <li>[POINT 2]</li>
+                            <li>[POINT 3]</li>
+                            <li>[POINT 4]</li>
+                        </ul>
+
+                        <h3>[SUBSECTION 2]</h3>
+                        <p>[SUBSECTION CONTENT]</p>
+                        <ul>
+                            <li>[POINT 1]</li>
+                            <li>[POINT 2]</li>
+                            <li>[POINT 3]</li>
+                            <li>[POINT 4]</li>
+                        </ul>
+                    </section>
+
+                    <!-- Additional Sections as Needed -->
+                    <section class="section">
+                        <h2>[SECTION TITLE]</h2>
+                        <p>[SECTION CONTENT]</p>
+
+                        <ul>
+                            <li>[POINT 1]</li>
+                            <li>[POINT 2]</li>
+                            <li>[POINT 3]</li>
+                            <li>[POINT 4]</li>
+                        </ul>
+                    </section>
+
+                    <!-- Highlighted Call to Action Section -->
+                    <section class="blog-highlight-section">
+                        <h3>[CTA HEADLINE]</h3>
+                        <p>[CTA DESCRIPTION]</p>
+                        <a href="../contact.html" class="cta-button">[PRIMARY CTA BUTTON]</a>
+                    </section>
+
+                    <!-- Post Footer -->
+                    <div class="post-footer">
+                        <div class="post-tags">
+                            <span>Tags:</span>
+                            <a href="#">[TAG 1]</a>
+                            <a href="#">[TAG 2]</a>
+                            <a href="#">[TAG 3]</a>
+                            <a href="#">[TAG 4]</a>
+                            <a href="#">[TAG 5]</a>
+                        </div>
+
+                        <div class="post-share">
+                            <span>Share this post:</span>
+                            <a href="#" class="share-facebook">Facebook</a>
+                            <a href="#" class="share-twitter">Twitter</a>
+                            <a href="#" class="share-linkedin">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Related Posts -->
+        <div class="related-posts">
+            <div class="container">
+                <h2>Related Posts</h2>
+                <div class="related-posts-grid">
+                    <article class="related-post">
+                        <img src="../images/blog/[RELATED-POST-1-IMAGE].jpg" alt="[RELATED POST 1 TITLE]" loading="lazy">
+                        <h3><a href="[RELATED-POST-1-URL].html">[RELATED POST 1 TITLE]</a></h3>
+                    </article>
+                    <article class="related-post">
+                        <img src="../images/blog/[RELATED-POST-2-IMAGE].jpg" alt="[RELATED POST 2 TITLE]" loading="lazy">
+                        <h3><a href="[RELATED-POST-2-URL].html">[RELATED POST 2 TITLE]</a></h3>
+                    </article>
+                    <article class="related-post">
+                        <img src="../images/blog/[RELATED-POST-3-IMAGE].jpg" alt="[RELATED POST 3 TITLE]" loading="lazy">
+                        <h3><a href="[RELATED-POST-3-URL].html">[RELATED POST 3 TITLE]</a></h3>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Standard Footer Include -->
+    [INCLUDE-FOOTER]
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

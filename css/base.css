@@ -485,4 +485,65 @@ footer a:hover {
 
 .blog-card img {
   display: none;
+}
+
+/* Blog Highlight Section */
+.blog-highlight-section {
+    background: linear-gradient(rgba(74, 144, 226, 0.1), rgba(74, 144, 226, 0.05));
+    padding: 3rem 2rem;
+    margin: 4rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.blog-highlight-section::before,
+.blog-highlight-section::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--secondary-color),
+        transparent
+    );
+}
+
+.blog-highlight-section::before {
+    top: 0;
+}
+
+.blog-highlight-section::after {
+    bottom: 0;
+}
+
+.blog-highlight-section h2,
+.blog-highlight-section h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.blog-highlight-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.blog-highlight-section .cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.blog-highlight-section .cta-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
 } 
