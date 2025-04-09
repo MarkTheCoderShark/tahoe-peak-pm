@@ -1,1 +1,324 @@
- 
+/* Truckee Property Management Page Styles */
+
+/* Hero Section */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 75, 73, 0.8), rgba(0, 75, 73, 0.9)), url('../images/tahoe-lake-winter.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 0;
+    margin-bottom: 0;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-cta {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 3rem 0;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.service-card {
+    background-color: var(--light-background);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--light-text);
+}
+
+.service-card p {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.service-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.service-link:hover {
+    transform: translateX(5px);
+}
+
+/* Benefits List */
+.benefits-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    background-color: var(--light-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    min-width: 30px;
+    text-align: center;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-content strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Areas Grid */
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0 4rem;
+}
+
+.area-item {
+    background-color: var(--light-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.area-item:hover {
+    transform: translateY(-5px);
+    background-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.area-name {
+    font-weight: 600;
+    color: var(--light-text);
+}
+
+/* Enhanced CTA Section */
+.highlight-cta {
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-cta:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 183, 77, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.highlight-cta h2, 
+.highlight-cta p {
+    position: relative;
+    z-index: 2;
+}
+
+.highlight-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-text);
+}
+
+.highlight-cta p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--light-text);
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.primary-cta {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    font-weight: 700;
+    padding: 1.2rem 2.5rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.primary-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #FFA726;
+}
+
+.secondary-cta {
+    background-color: transparent;
+    color: var(--light-text);
+    border: 2px solid var(--light-text);
+    font-weight: 600;
+    padding: 1.2rem 2.5rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.secondary-cta:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .areas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 4rem 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-section .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .primary-cta, .secondary-cta {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+    }
+    
+    .feature-icon {
+        margin-bottom: 1rem;
+    }
+}
