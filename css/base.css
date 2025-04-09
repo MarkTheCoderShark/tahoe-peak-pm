@@ -385,4 +385,15 @@ img {
         flex-direction: column;
         gap: 1rem;
     }
+}
+
+nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Light border */
+    backdrop-filter: blur(10px); /* Optional: adds frosted effect */
+    transition: box-shadow 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav.scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 } 
