@@ -4,58 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADU Development Guide: Maximizing Your Lake Tahoe Property's Potential - Tahoe Peak Management</title>
-    <meta name="description" content="Learn how to maximize your Lake Tahoe property's potential through ADU development, including regulations, design considerations, and financial benefits.">
-    <meta name="keywords" content="ADU development Lake Tahoe, accessory dwelling units, property investment, Lake Tahoe real estate, property development">
     
-    <!-- CSS Files -->
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --background-color: #004B49;
+            --primary-color: #1F4D48;
+            --secondary-color: #FFB74D;
+            --accent-color: #FFB74D;
+            --text-color: #ffffff;
+            --text-dark: #333333;
+            --light-text: #ffffff;
+            --background-light: #f5f5f5;
+            --border-color: rgba(255, 255, 255, 0.15);
+            --light-background: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    </style>
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="../images/tahoe-peak-logo.svg">
+    <link rel="preload" href="../css/base.css" as="style">
+    
+    <!-- Deferred CSS -->
     <link rel="stylesheet" href="../css/base.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/header.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/footer.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/blog.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/blog-post.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/header.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/footer.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/animations.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/mobile.css" media="print" onload="this.media='all'">
     
     <!-- Fallback for browsers that don't support onload -->
     <noscript>
         <link rel="stylesheet" href="../css/base.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/blog.css">
         <link rel="stylesheet" href="../css/blog-post.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/animations.css">
         <link rel="stylesheet" href="../css/mobile.css">
     </noscript>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Social Media Meta Tags -->
+    <!-- Meta Tags -->
+    <meta name="description" content="Learn how to maximize your Lake Tahoe property's potential through ADU development, including regulations, design considerations, and financial benefits.">
+    <meta name="keywords" content="ADU development Lake Tahoe, accessory dwelling units, property investment, Lake Tahoe real estate, property development">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://laketahoepmg.com/blog/adu-development-guide-2025">
+    <meta property="og:url" content="https://laketahoepmg.com/blog/adu-development-guide-2025.html">
     <meta property="og:title" content="ADU Development Guide: Maximizing Your Lake Tahoe Property's Potential">
     <meta property="og:description" content="Learn how to maximize your Lake Tahoe property's potential through ADU development, including regulations, design considerations, and financial benefits.">
     <meta property="og:image" content="https://laketahoepmg.com/images/blog/adu-development-guide.jpg">
 
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://laketahoepmg.com/blog/adu-development-guide-2025">
+    <meta property="twitter:url" content="https://laketahoepmg.com/blog/adu-development-guide-2025.html">
     <meta property="twitter:title" content="ADU Development Guide: Maximizing Your Lake Tahoe Property's Potential">
     <meta property="twitter:description" content="Learn how to maximize your Lake Tahoe property's potential through ADU development, including regulations, design considerations, and financial benefits.">
     <meta property="twitter:image" content="https://laketahoepmg.com/images/blog/adu-development-guide.jpg">
 
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://laketahoepmg.com/blog/adu-development-guide-2025">
-    
-    <!-- Schema Markup -->
+
+    <!-- Article Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://laketahoepmg.com/blog/adu-development-guide-2025.html"
+        },
         "headline": "ADU Development Guide: Maximizing Your Lake Tahoe Property's Potential",
-        "image": "https://laketahoepmg.com/images/blog/adu-development-guide.jpg",
-        "datePublished": "2025-01-25",
-        "dateModified": "2025-01-25",
+        "description": "Learn how to maximize your Lake Tahoe property's potential through ADU development, including regulations, design considerations, and financial benefits.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://laketahoepmg.com/images/blog/adu-development-guide.jpg",
+            "height": "800",
+            "width": "1200"
+        },
+        "datePublished": "2025-02-01T09:00:00+08:00",
+        "dateModified": "2025-02-01T09:00:00+08:00",
         "author": {
             "@type": "Person",
             "name": "Mark S.",
@@ -64,53 +114,30 @@
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Lake Tahoe Property Management",
+            "name": "Tahoe Peak Management",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://laketahoepmg.com/images/tahoe-peak-logo.svg"
+                "url": "https://laketahoepmg.com/images/tahoe-peak-logo.svg",
+                "width": "140",
+                "height": "50"
             }
-        },
-        "description": "Learn how to maximize your Lake Tahoe property's potential through ADU development, including regulations, design considerations, and financial benefits."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Lake Tahoe Property Management",
-        "image": "https://laketahoepmg.com/images/tahoe-peak-logo.svg",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Lake Tahoe",
-            "addressLocality": "Lake Tahoe",
-            "addressRegion": "CA",
-            "postalCode": "96150",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 39.0968,
-            "longitude": -120.0324
-        },
-        "url": "https://laketahoepmg.com",
-        "telephone": "+1-530-000-0000",
-        "areaServed": ["Lake Tahoe", "Tahoe City", "Kings Beach", "Incline Village", "Truckee", "Olympic Valley"]
+        }
     }
     </script>
 </head>
 <body>
-    <header class="site-header">
+    <header>
         <div class="header-top">
-            <div class="header-top-content container">
+            <div class="header-top-content">
                 <div class="login-links">
-                    <a href="#" class="login-link">OWNER LOGIN</a>
-                    <span class="separator">|</span>
-                    <a href="#" class="login-link">RESIDENT LOGIN</a>
+                    <a href="#">OWNER LOGIN</a>
+                    <span>|</span>
+                    <a href="#">RESIDENT LOGIN</a>
                 </div>
             </div>
         </div>
         <div class="header-main">
-            <div class="header-content container">
+            <div class="header-content">
                 <a href="../" class="logo">
                     <img src="../images/tahoe-peak-logo.svg"
                          alt="Lake Tahoe Property Management - Tahoe Peak Management Logo"
@@ -118,10 +145,10 @@
                          height="50"
                          loading="eager">
                 </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
+                <button class="mobile-menu-toggle">☰</button>
                 <nav class="main-nav">
-                    <button class="mobile-menu-close" aria-label="Close navigation menu">☰</button>
-                    <ul class="nav-list">
+                    <button class="mobile-menu-toggle">☰</button>
+                    <ul>
                         <li><a href="../owners.html">OWNERS/INVESTORS</a></li>
                         <li><a href="../residents.html">RESIDENTS</a></li>
                         <li><a href="../rentals.html">RENTALS</a></li>
@@ -129,15 +156,15 @@
                         <li><a href="../real-estate.html">REAL ESTATE</a></li>
                         <li><a href="../agent-referrals.html">AGENT REFERRALS</a></li>
                         <li><a href="../about.html">ABOUT</a></li>
-                        <li><a href="../pricing.html">PRICING</a></li>
+                        <li><a href="../pricing.html">Pricing</a></li>
                     </ul>
                     <a href="tel:5309948882" class="phone-number">530.994.8882</a>
                 </nav>
             </div>
         </div>
         <div class="zero-fees">
-            <div class="zero-fees-content container">
-                <span class="promo-text">$0 LEASING. $0 RENEWAL. $0 SIGN UP FEES.</span>
+            <div class="zero-fees-content">
+                <span>$0 LEASING. $0 RENEWAL. $0 SIGN UP FEES.</span>
                 <div class="cta-buttons">
                     <a href="../pricing.html" class="btn btn-secondary">EXPLORE OUR PRICING</a>
                     <a href="../contact.html" class="btn btn-primary">FREE CONSULTATION</a>
@@ -146,142 +173,137 @@
         </div>
     </header>
 
-    <main class="blog-post">
-        <article class="container">
-            <header class="blog-header">
-                <h1 class="blog-title">ADU Development Guide: Maximizing Your Lake Tahoe Property's Potential</h1>
-                <div class="post-meta">
-                    <time datetime="2025-02-01" class="publish-date">February 1, 2025</time>
-                    <span class="author">By Mark S.</span>
-                    <span class="category">Property Development</span>
-                </div>
-                <div class="author-info">
-                    <div class="author-details">
-                        <span class="author-name">Mark S.</span>
-                        <span class="author-title">Property Management Expert</span>
+    <main class="blog-post-main">
+        <article class="blog-post-content">
+            <div class="post-header">
+                <div class="container">
+                    <div class="post-meta">
+                        <span class="post-date">February 1, 2025</span>
+                        <span class="post-category">Property Development</span>
+                    </div>
+                    <h1>ADU Development Guide: Maximizing Your Lake Tahoe Property's Potential</h1>
+                    <div class="post-author">
+                        <div class="author-info">
+                            <span class="author-name">Mark S.</span>
+                            <span class="author-title">Property Management Expert</span>
+                        </div>
                     </div>
                 </div>
-            </header>
+            </div>
 
-            <div class="blog-content">
-                <section class="introduction">
+            <div class="container">
+                <div class="post-body">
                     <p>Accessory Dwelling Units (ADUs) have become an increasingly popular way to maximize property value and generate additional income in Lake Tahoe. This comprehensive guide explores everything you need to know about ADU development in 2025, from regulations to design considerations and financial benefits.</p>
-                </section>
 
-                <nav class="table-of-contents">
-                    <h2>Table of Contents</h2>
-                    <ul class="toc-list">
-                        <li><a href="#what-is-adu">What is an ADU?</a></li>
-                        <li><a href="#regulations">Lake Tahoe ADU Regulations</a></li>
-                        <li><a href="#design">Design Considerations</a></li>
-                        <li><a href="#benefits">Financial Benefits</a></li>
-                        <li><a href="#process">Development Process</a></li>
-                        <li><a href="#resources">Additional Resources</a></li>
-                    </ul>
-                </nav>
+                    <!-- What is an ADU Section -->
+                    <section class="blog-highlight-section">
+                        <h2>What is an ADU?</h2>
+                        <p>An ADU is a secondary dwelling unit on a single-family residential lot. In Lake Tahoe, ADUs can take several forms:</p>
+                        <ul>
+                            <li>Detached units (granny flats)</li>
+                            <li>Attached units (in-law suites)</li>
+                            <li>Converted garages or basements</li>
+                            <li>Junior ADUs (JADUs)</li>
+                        </ul>
+                    </section>
 
-                <section id="what-is-adu">
-                    <h2>What is an ADU?</h2>
-                    <p>An ADU is a secondary dwelling unit on a single-family residential lot. In Lake Tahoe, ADUs can take several forms:</p>
-                    <ul>
-                        <li>Detached units (granny flats)</li>
-                        <li>Attached units (in-law suites)</li>
-                        <li>Converted garages or basements</li>
-                        <li>Junior ADUs (JADUs)</li>
-                    </ul>
-                </section>
+                    <!-- Lake Tahoe ADU Regulations Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Lake Tahoe ADU Regulations</h2>
+                        <p>Understanding local regulations is crucial for successful ADU development:</p>
 
-                <section id="regulations">
-                    <h2>Lake Tahoe ADU Regulations</h2>
-                    <p>Understanding local regulations is crucial for successful ADU development:</p>
+                        <h3>Zoning Requirements</h3>
+                        <ul>
+                            <li>Lot size requirements</li>
+                            <li>Setback regulations</li>
+                            <li>Height restrictions</li>
+                            <li>Parking requirements</li>
+                        </ul>
 
-                    <h3>Zoning Requirements</h3>
-                    <ul>
-                        <li>Lot size requirements</li>
-                        <li>Setback regulations</li>
-                        <li>Height restrictions</li>
-                        <li>Parking requirements</li>
-                    </ul>
+                        <h3>Building Codes</h3>
+                        <ul>
+                            <li>Minimum square footage</li>
+                            <li>Safety requirements</li>
+                            <li>Energy efficiency standards</li>
+                            <li>Accessibility considerations</li>
+                        </ul>
+                    </section>
 
-                    <h3>Building Codes</h3>
-                    <ul>
-                        <li>Minimum square footage</li>
-                        <li>Safety requirements</li>
-                        <li>Energy efficiency standards</li>
-                        <li>Accessibility considerations</li>
-                    </ul>
-                </section>
+                    <!-- Design Considerations Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Design Considerations</h2>
+                        <p>When planning your ADU, consider these important factors:</p>
 
-                <section id="design">
-                    <h2>Design Considerations</h2>
-                    <p>When planning your ADU, consider these important factors:</p>
+                        <h3>Architectural Style</h3>
+                        <ul>
+                            <li>Matching main house design</li>
+                            <li>Lake Tahoe aesthetic</li>
+                            <li>Natural materials</li>
+                            <li>Energy-efficient features</li>
+                        </ul>
 
-                    <h3>Architectural Style</h3>
-                    <ul>
-                        <li>Matching main house design</li>
-                        <li>Lake Tahoe aesthetic</li>
-                        <li>Natural materials</li>
-                        <li>Energy-efficient features</li>
-                    </ul>
+                        <h3>Functionality</h3>
+                        <ul>
+                            <li>Kitchen and bathroom requirements</li>
+                            <li>Storage solutions</li>
+                            <li>Privacy considerations</li>
+                            <li>Access and circulation</li>
+                        </ul>
+                    </section>
 
-                    <h3>Functionality</h3>
-                    <ul>
-                        <li>Kitchen and bathroom requirements</li>
-                        <li>Storage solutions</li>
-                        <li>Privacy considerations</li>
-                        <li>Access and circulation</li>
-                    </ul>
-                </section>
+                    <!-- Financial Benefits Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Financial Benefits</h2>
+                        <p>Understanding the financial aspects of ADU development:</p>
 
-                <section id="benefits">
-                    <h2>Financial Benefits</h2>
-                    <p>Understanding the financial aspects of ADU development:</p>
+                        <h3>Costs</h3>
+                        <ul>
+                            <li>Construction expenses</li>
+                            <li>Permit fees</li>
+                            <li>Design costs</li>
+                            <li>Utility connections</li>
+                        </ul>
 
-                    <h3>Costs</h3>
-                    <ul>
-                        <li>Construction expenses</li>
-                        <li>Permit fees</li>
-                        <li>Design costs</li>
-                        <li>Utility connections</li>
-                    </ul>
+                        <h3>Return on Investment</h3>
+                        <ul>
+                            <li>Rental income potential</li>
+                            <li>Property value increase</li>
+                            <li>Tax implications</li>
+                            <li>Maintenance costs</li>
+                        </ul>
+                    </section>
 
-                    <h3>Return on Investment</h3>
-                    <ul>
-                        <li>Rental income potential</li>
-                        <li>Property value increase</li>
-                        <li>Tax implications</li>
-                        <li>Maintenance costs</li>
-                    </ul>
-                </section>
+                    <!-- Development Process Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Development Process</h2>
+                        <p>Follow these steps for successful ADU development:</p>
 
-                <section id="process">
-                    <h2>Development Process</h2>
-                    <p>Follow these steps for successful ADU development:</p>
+                        <ol>
+                            <li>Property assessment</li>
+                            <li>Design and planning</li>
+                            <li>Permit acquisition</li>
+                            <li>Construction management</li>
+                            <li>Final inspection</li>
+                            <li>Rental preparation</li>
+                        </ol>
+                    </section>
 
-                    <ol>
-                        <li>Property assessment</li>
-                        <li>Design and planning</li>
-                        <li>Permit acquisition</li>
-                        <li>Construction management</li>
-                        <li>Final inspection</li>
-                        <li>Rental preparation</li>
-                    </ol>
-                </section>
+                    <!-- Additional Resources Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Additional Resources</h2>
+                        <p>For more information, check out these resources:</p>
+                        <ul>
+                            <li><a href="sustainable-property-management-2025.html">Sustainable Property Management: The Future of Lake Tahoe Real Estate</a></li>
+                            <li><a href="lake-tahoe-market-trends-2025.html">Lake Tahoe Real Estate Market Trends: What to Expect in 2025</a></li>
+                            <li><a href="lake-tahoe-property-maintenance-tips.html">Essential Property Maintenance Tips for Lake Tahoe Homeowners</a></li>
+                        </ul>
+                    </section>
 
-                <section id="resources">
-                    <h2>Additional Resources</h2>
-                    <p>For more information, check out these resources:</p>
-                    <ul>
-                        <li><a href="sustainable-property-management-2025.html">Sustainable Property Management: The Future of Lake Tahoe Real Estate</a></li>
-                        <li><a href="lake-tahoe-market-trends-2025.html">Lake Tahoe Real Estate Market Trends: What to Expect in 2025</a></li>
-                        <li><a href="lake-tahoe-property-maintenance-tips.html">Essential Property Maintenance Tips for Lake Tahoe Homeowners</a></li>
-                    </ul>
-                </section>
-
-                <div class="post-cta">
-                    <h3>Ready to Develop Your ADU?</h3>
-                    <p>Contact Tahoe Peak Management for expert guidance on ADU development and property management.</p>
-                    <a href="../contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                    <div class="post-cta">
+                        <h3>Ready to Develop Your ADU?</h3>
+                        <p>Contact Tahoe Peak Management for expert guidance on ADU development and property management.</p>
+                        <a href="../contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                    </div>
                 </div>
             </div>
 
@@ -304,67 +326,97 @@
             </div>
         </article>
 
-        <div class="related-posts">
+        <!-- Related Posts Section -->
+        <section class="related-posts">
             <div class="container">
-                <h2>Related Posts</h2>
+                <h2>Related Articles</h2>
                 <div class="related-posts-grid">
                     <article class="related-post">
-                        <img src="../images/blog/sustainable-property-management.jpg" alt="Sustainable Property Management" loading="lazy">
-                        <h3><a href="sustainable-property-management-2025.html">Sustainable Property Management: The Future of Lake Tahoe Real Estate</a></h3>
+                        <a href="lake-tahoe-property-investment-guide-2025.html">
+                            <img src="../images/blog/investment-guide-thumb.jpg" alt="Lake Tahoe Property Investment Guide 2025" loading="lazy">
+                            <h3>Lake Tahoe Property Investment Guide 2025</h3>
+                            <p>Essential strategies for successful property investment in Lake Tahoe.</p>
+                        </a>
                     </article>
                     <article class="related-post">
-                        <img src="../images/blog/lake-tahoe-market-trends-2025.jpg" alt="Lake Tahoe Market Trends 2025" loading="lazy">
-                        <h3><a href="lake-tahoe-market-trends-2025.html">Lake Tahoe Real Estate Market Trends: What to Expect in 2025</a></h3>
+                        <a href="sustainable-property-management-2025.html">
+                            <img src="../images/blog/sustainable-management-thumb.jpg" alt="Sustainable Property Management 2025" loading="lazy">
+                            <h3>Sustainable Property Management 2025</h3>
+                            <p>Eco-friendly practices for modern property management in Lake Tahoe.</p>
+                        </a>
                     </article>
                     <article class="related-post">
-                        <img src="../images/blog/property-maintenance-tips.jpg" alt="Lake Tahoe Property Maintenance Tips" loading="lazy">
-                        <h3><a href="lake-tahoe-property-maintenance-tips.html">Essential Property Maintenance Tips for Lake Tahoe Homeowners</a></h3>
+                        <a href="lake-tahoe-market-trends-2025.html">
+                            <img src="../images/blog/market-trends-thumb.jpg" alt="Lake Tahoe Market Trends 2025" loading="lazy">
+                            <h3>Lake Tahoe Market Trends 2025</h3>
+                            <p>Latest market insights and investment opportunities in Lake Tahoe.</p>
+                        </a>
                     </article>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-content container">
-            <div class="footer-info">
-                <img src="../images/tahoe-peak-logo.svg" 
-                     alt="Lake Tahoe Property Management - Tahoe Peak Management Logo"
-                     width="140"
-                     height="50"
-                     loading="lazy">
-                <p>Lake Tahoe Property Management</p>
-                <p>Lake Tahoe, CA 96150</p>
-                <p>Phone: <a href="tel:5309948882">530.994.8882</a></p>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p>Tahoe Peak Property Management</p>
+                        <p>123 Lake Tahoe Blvd</p>
+                        <p>South Lake Tahoe, CA 96150</p>
+                        <p>Phone: <a href="tel:5309948882">530.994.8882</a></p>
+                        <p>Email: <a href="mailto:info@laketahoepmg.com">info@laketahoepmg.com</a></p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="../owners.html">Property Owners</a></li>
+                            <li><a href="../residents.html">Residents</a></li>
+                            <li><a href="../rentals.html">Rentals</a></li>
+                            <li><a href="../resources.html">Resources</a></li>
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-services">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="../services/property-management.html">Property Management</a></li>
+                            <li><a href="../services/vacation-rentals.html">Vacation Rentals</a></li>
+                            <li><a href="../services/long-term-rentals.html">Long Term Rentals</a></li>
+                            <li><a href="../services/property-maintenance.html">Property Maintenance</a></li>
+                            <li><a href="../services/real-estate.html">Real Estate Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-areas">
+                        <h3>Areas We Serve</h3>
+                        <ul>
+                            <li><a href="../areas/south-lake-tahoe.html">South Lake Tahoe</a></li>
+                            <li><a href="../areas/tahoe-city.html">Tahoe City</a></li>
+                            <li><a href="../areas/kings-beach.html">Kings Beach</a></li>
+                            <li><a href="../areas/incline-village.html">Incline Village</a></li>
+                            <li><a href="../areas/truckee.html">Truckee</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <nav class="footer-nav">
-                <div class="footer-nav-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="../owners.html">Property Management</a></li>
-                        <li><a href="../rentals.html">Vacation Rentals</a></li>
-                        <li><a href="../real-estate.html">Real Estate</a></li>
-                        <li><a href="../agent-referrals.html">Agent Referrals</a></li>
-                    </ul>
-                </div>
-                <div class="footer-nav-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="../blog">Blog</a></li>
-                        <li><a href="../resources.html">Property Resources</a></li>
-                        <li><a href="../pricing.html">Pricing</a></li>
-                        <li><a href="../contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </nav>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025 Lake Tahoe Property Management. All rights reserved.</p>
+                <p>&copy; 2025 Tahoe Peak Property Management. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><img src="../images/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="social-link"><img src="../images/icons/twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="social-link"><img src="../images/icons/instagram.svg" alt="Instagram"></a>
+                    <a href="#" class="social-link"><img src="../images/icons/linkedin.svg" alt="LinkedIn"></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="../js/navigation.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/blog.js" defer></script>
 </body>
 </html> 
