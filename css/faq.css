@@ -1,9 +1,10 @@
 /* FAQ Section Styles */
 .faq-section {
     padding: 4rem 0;
-    background-color: var(--light-background);
+    background-color: #ffffff;
     border-radius: 10px;
     margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .faq-container {
@@ -18,7 +19,7 @@
 }
 
 .faq-title h2 {
-    color: var(--accent-color);
+    color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -28,6 +29,7 @@
     max-width: 700px;
     margin: 0 auto;
     opacity: 0.9;
+    color: #333333;
 }
 
 .faq-grid {
@@ -37,10 +39,11 @@
 }
 
 .faq-item {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #f5f5f5;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
+    border: 1px solid #eaeaea;
 }
 
 .faq-item:hover {
@@ -54,14 +57,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #eaeaea;
 }
 
 .faq-question h3 {
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0;
-    color: var(--light-text);
+    color: var(--primary-color);
 }
 
 .faq-toggle {
@@ -106,6 +109,7 @@
 .faq-cta p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    color: #333333;
 }
 
 /* Responsive Styles */
