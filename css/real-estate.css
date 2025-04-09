@@ -1,6 +1,6 @@
 /* Real Estate Hero Section */
 .real-estate-hero {
-    background: linear-gradient(rgba(31, 77, 72, 0.8), rgba(31, 77, 72, 0.8)), url('../images/tahoe-lake-winter.png');
+    background: linear-gradient(rgba(0, 0, 51, 0.7), rgba(0, 0, 51, 0.8)), url('../images/tahoe-lake-winter.png');
     background-size: cover;
     background-position: center;
     padding: 8rem 2rem;
@@ -16,7 +16,7 @@
 .real-estate-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    color: var(--accent-color);
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -24,6 +24,7 @@
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    color: #ffffff;
 }
 
 .cta-buttons {
