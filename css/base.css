@@ -481,4 +481,8 @@ footer a {
 
 footer a:hover {
   color: #ffffff;
+}
+
+.blog-card img {
+  display: none;
 } 
