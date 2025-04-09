@@ -1,0 +1,42 @@
+# Location Pages
+/team/tahoe-city-property-management.html /tahoe-city-property-management 301
+/team/tahoe-city-property-management /tahoe-city-property-management 301
+/tahoe-city-property-management.html /tahoe-city-property-management 301
+/truckee-property-management.html /truckee-property-management 301
+/kings-beach-property-management.html /kings-beach-property-management 301
+/incline-village-property-management.html /incline-village-property-management 301
+/north-lake-tahoe-property-management.html /north-lake-tahoe-property-management 301
+
+# Service Pages
+/property-maintenance.html /property-maintenance 301
+/property-investment-guide.html /property-investment-guide 301
+/property-maintenance-guide.html /property-maintenance-guide 301
+/short-term-rental-management.html /short-term-rental-management 301
+/marketing.html /marketing 301
+/pay-rent.html /pay-rent 301
+/repair.html /repair 301
+
+# Team Pages
+/team/mark-johnson /about/team/mark-johnson 301
+
+# Blog Posts
+/blog/*.html /blog/:splat 301
+/blog/lake-tahoe-market-trends-2024 /blog/lake-tahoe-market-trends-2025 301
+/lake-tahoe-market-trends-2024 /blog/lake-tahoe-market-trends-2025 301
+/blog/tenant-screening-best-practices.html /blog/tenant-screening-best-practices 301
+/blog/maximizing-vacation-rental-income.html /blog/maximizing-vacation-rental-income 301
+/blog/lake-tahoe-property-management-guide-2025.html /blog/lake-tahoe-property-management-guide-2025 301
+/blog/lake-tahoe-real-estate-sales-guide-2024 /blog/lake-tahoe-real-estate-sales-guide-2025 301
+/blog/lake-tahoe-real-estate-sales-guide-2025.html /blog/lake-tahoe-real-estate-sales-guide-2025 301
+/blog/why-local-expertise-matters-lake-tahoe-property-management-2025.html /blog/why-local-expertise-matters-lake-tahoe-property-management-2025 301
+/blog/lake-tahoe-property-management-partnerships-2025.html /blog/lake-tahoe-property-management-partnerships-2025 301
+/blog/comprehensive-property-management-services-lake-tahoe-2025.html /blog/comprehensive-property-management-services-lake-tahoe-2025 301
+/blog/incline-village-property-management-guide.html /blog/incline-village-property-management-guide 301
+
+# Root to Blog Redirects
+/lake-tahoe-property-maintenance-best-practices-2025 /blog/lake-tahoe-property-maintenance-best-practices-2025 301
+/lake-tahoe-vacation-rental-regulations-2025 /blog/lake-tahoe-vacation-rental-regulations-2025 301
+/smart-home-technology-2025 /blog/smart-home-technology-2025 301
+/winter-property-management-lake-tahoe /blog/winter-property-management-lake-tahoe 301
+/lake-tahoe-property-investment-trends-2025 /blog/lake-tahoe-property-investment-trends-2025 301
+/lake-tahoe-property-management-fees-guide-2025 /blog/lake-tahoe-property-management-fees-guide-2025 301 
