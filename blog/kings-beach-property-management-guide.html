@@ -8,52 +8,104 @@
     <!-- Critical CSS -->
     <style>
         :root {
-            --primary-blue: #1a4f7c;
-            --secondary-blue: #2c7bb6;
-            --accent-color: #ffd700;
-            --text-color: #333333;
+            --background-color: #004B49;
+            --primary-color: #1F4D48;
+            --secondary-color: #FFB74D;
+            --accent-color: #FFB74D;
+            --text-color: #ffffff;
+            --text-dark: #333333;
             --light-text: #ffffff;
             --background-light: #f5f5f5;
-            --background-dark: #1a4f7c;
-            --border-color: rgba(0, 0, 0, 0.1);
+            --border-color: rgba(255, 255, 255, 0.15);
+            --light-background: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
     </style>
 
-    <!-- SEO Meta Tags -->
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="../images/tahoe-peak-logo.svg">
+    <link rel="preload" href="../css/base.css" as="style">
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="../css/base.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/blog.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/blog-post.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/header.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/footer.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/animations.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/mobile.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/blog.css">
+        <link rel="stylesheet" href="../css/blog-post.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/animations.css">
+        <link rel="stylesheet" href="../css/mobile.css">
+    </noscript>
+
+    <!-- Meta Tags -->
     <meta name="description" content="Comprehensive guide to property management in Kings Beach, North Lake Tahoe. Learn about luxury vacation rentals, estate management, and local regulations for property owners in Kings Beach, CA.">
     <meta name="keywords" content="Kings Beach property management guide, Kings Beach vacation rental management, Kings Beach property regulations, North Lake Tahoe luxury properties">
     
-    <!-- Preload Critical Assets -->
-    <link rel="preload" as="style" href="../css/base.css">
-    <link rel="preload" as="image" href="../images/tahoe-peak-logo.svg">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/blog.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    
-    <!-- Open Graph Tags -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://laketahoepmg.com/blog/kings-beach-property-management-guide.html">
     <meta property="og:title" content="Complete Guide to Property Management in Kings Beach | 2025">
     <meta property="og:description" content="Comprehensive guide to property management in Kings Beach, North Lake Tahoe. Learn about luxury vacation rentals, estate management, and local regulations.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://laketahoepmg.com/blog/kings-beach-property-management-guide">
     <meta property="og:image" content="https://laketahoepmg.com/images/blog/kings-beach-guide.jpg">
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Complete Guide to Property Management in Kings Beach | 2025">
-    <meta name="twitter:description" content="Comprehensive guide to property management in Kings Beach, North Lake Tahoe. Learn about luxury vacation rentals, estate management, and local regulations.">
-    <meta name="twitter:image" content="https://laketahoepmg.com/images/blog/kings-beach-guide.jpg">
-    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://laketahoepmg.com/blog/kings-beach-property-management-guide.html">
+    <meta property="twitter:title" content="Complete Guide to Property Management in Kings Beach | 2025">
+    <meta property="twitter:description" content="Comprehensive guide to property management in Kings Beach, North Lake Tahoe. Learn about luxury vacation rentals, estate management, and local regulations.">
+    <meta property="twitter:image" content="https://laketahoepmg.com/images/blog/kings-beach-guide.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://laketahoepmg.com/blog/kings-beach-property-management-guide">
+
     <!-- Article Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://laketahoepmg.com/blog/kings-beach-property-management-guide.html"
+        },
         "headline": "Complete Guide to Property Management in Kings Beach | 2025",
-        "description": "Complete guide to property management in Kings Beach, Lake Tahoe. Learn about local market dynamics, rental strategies, and property management best practices for this popular lakeside community.",
-        "image": "https://laketahoepmg.com/images/blog/kings-beach-guide.jpg",
+        "description": "Comprehensive guide to property management in Kings Beach, North Lake Tahoe. Learn about luxury vacation rentals, estate management, and local regulations.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://laketahoepmg.com/images/blog/kings-beach-guide.jpg",
+            "height": "800",
+            "width": "1200"
+        },
+        "datePublished": "2025-03-31T09:00:00+08:00",
+        "dateModified": "2025-03-31T09:00:00+08:00",
         "author": {
             "@type": "Person",
             "name": "Mark S.",
@@ -65,21 +117,13 @@
             "name": "Tahoe Peak Management",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://laketahoepmg.com/images/tahoe-peak-logo.svg"
+                "url": "https://laketahoepmg.com/images/tahoe-peak-logo.svg",
+                "width": "140",
+                "height": "50"
             }
-        },
-        "datePublished": "2025-01-01",
-        "dateModified": "2025-01-01",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://laketahoepmg.com/blog/kings-beach-property-management-guide"
         }
     }
     </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -128,188 +172,199 @@
             </div>
         </div>
     </header>
-    
-    <main class="blog-post">
-        <article>
-            <header class="post-header">
-                <h1>Complete Guide to Property Management in Kings Beach | 2025</h1>
-                <div class="post-meta">
-                    <span class="date">March 31, 2024</span>
-                    <span class="read-time">8 min read</span>
-                </div>
-            </header>
 
-            <div class="post-content">
-                <h2>Introduction to Kings Beach Property Management</h2>
-                <p>Kings Beach, with its pristine shoreline and stunning mountain views, offers a unique opportunity for property owners in North Lake Tahoe. Property management in this area requires specialized expertise to navigate its beachfront regulations, seasonal tourism patterns, and diverse property types.</p>
-
-                <h2>Understanding the Kings Beach Market</h2>
-                <h3>Seasonal Trends</h3>
-                <p>Kings Beach experiences distinct seasonal patterns:</p>
-                <ul>
-                    <li><strong>Winter Season (December-March):</strong> Focused on ski tourism and winter sports</li>
-                    <li><strong>Summer Season (June-August):</strong> Emphasizing beach activities and outdoor recreation</li>
-                    <li><strong>Shoulder Seasons:</strong> Spring and fall offer unique opportunities for property maintenance and upgrades</li>
-                </ul>
-
-                <h3>Property Types and Their Management</h3>
-                <p>The Kings Beach market features various premium property types:</p>
-                <ul>
-                    <li>Beachfront homes</li>
-                    <li>Mountain-view estates</li>
-                    <li>Luxury vacation rentals</li>
-                    <li>Residential properties</li>
-                </ul>
-
-                <h2>Key Considerations for Property Management</h2>
-                <h3>Beachfront Regulations</h3>
-                <p>Property management in Kings Beach requires adherence to specific regulations:</p>
-                <ul>
-                    <li>Beachfront property guidelines</li>
-                    <li>Placer County vacation rental ordinances</li>
-                    <li>Environmental protection requirements</li>
-                    <li>Zoning restrictions</li>
-                </ul>
-
-                <h3>Marketing Strategies</h3>
-                <p>Effective marketing is crucial for success in Kings Beach:</p>
-                <ul>
-                    <li>Professional photography showcasing beach and mountain views</li>
-                    <li>Premium listing optimization</li>
-                    <li>Local SEO targeting</li>
-                    <li>Beach-focused social media presence</li>
-                </ul>
-
-                <h2>Property Maintenance and Services</h2>
-                <p>Year-round maintenance is essential in Kings Beach's climate:</p>
-                <ul>
-                    <li>Beachfront property care</li>
-                    <li>Snow removal and winterization</li>
-                    <li>Mountain property maintenance</li>
-                    <li>Regular property inspections</li>
-                </ul>
-
-                <h2>Financial Management</h2>
-                <p>Effective financial management includes:</p>
-                <ul>
-                    <li>Premium pricing strategies</li>
-                    <li>Expense tracking and reporting</li>
-                    <li>Tax documentation</li>
-                    <li>Revenue optimization</li>
-                </ul>
-
-                <h2>Choosing the Right Property Management Company</h2>
-                <p>When selecting a property management company in Kings Beach, consider:</p>
-                <ul>
-                    <li>Beachfront property experience</li>
-                    <li>Local market expertise</li>
-                    <li>Technology integration</li>
-                    <li>Customer service reputation</li>
-                </ul>
-
-                <div class="cta-box">
-                    <h3>Ready to Maximize Your Kings Beach Property's Potential?</h3>
-                    <p>Contact us today for a free consultation about your property management needs.</p>
-                    <a href="/contact.html" class="btn btn-primary">Schedule Consultation</a>
+    <main class="blog-post-main">
+        <article class="blog-post-content">
+            <div class="post-header">
+                <div class="container">
+                    <div class="post-meta">
+                        <span class="post-date">March 31, 2025</span>
+                        <span class="post-category">Property Management</span>
+                    </div>
+                    <h1>Complete Guide to Property Management in Kings Beach | 2025</h1>
+                    <div class="post-author">
+                        <div class="author-info">
+                            <span class="author-name">Mark S.</span>
+                            <span class="author-title">Property Management Expert</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <footer class="post-footer">
-                <div class="share-buttons">
-                    <h3>Share this article</h3>
-                    <div class="social-links">
-                        <a href="#" class="facebook">Share on Facebook</a>
-                        <a href="#" class="twitter">Share on Twitter</a>
-                        <a href="#" class="linkedin">Share on LinkedIn</a>
+            <div class="container">
+                <div class="post-body">
+                    <p>Kings Beach, with its pristine shoreline and stunning mountain views, offers a unique opportunity for property owners in North Lake Tahoe. Property management in this area requires specialized expertise to navigate its beachfront regulations, seasonal tourism patterns, and diverse property types.</p>
+
+                    <!-- Market Overview Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Understanding the Kings Beach Market</h2>
+                        <h3>Seasonal Trends</h3>
+                        <p>Kings Beach experiences distinct seasonal patterns:</p>
+                        <ul>
+                            <li><strong>Winter Season (December-March):</strong> Focused on ski tourism and winter sports</li>
+                            <li><strong>Summer Season (June-August):</strong> Emphasizing beach activities and outdoor recreation</li>
+                            <li><strong>Shoulder Seasons:</strong> Spring and fall offer unique opportunities for property maintenance and upgrades</li>
+                        </ul>
+
+                        <h3>Property Types and Their Management</h3>
+                        <p>The Kings Beach market features various premium property types:</p>
+                        <ul>
+                            <li>Beachfront homes</li>
+                            <li>Mountain-view estates</li>
+                            <li>Luxury vacation rentals</li>
+                            <li>Residential properties</li>
+                        </ul>
+                    </section>
+
+                    <!-- Regulations Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Key Considerations for Property Management</h2>
+                        <h3>Beachfront Regulations</h3>
+                        <p>Property management in Kings Beach requires adherence to specific regulations:</p>
+                        <ul>
+                            <li>Beachfront property guidelines</li>
+                            <li>Placer County vacation rental ordinances</li>
+                            <li>Environmental protection requirements</li>
+                            <li>Zoning restrictions</li>
+                        </ul>
+
+                        <h3>Marketing Strategies</h3>
+                        <p>Effective marketing is crucial for success in Kings Beach:</p>
+                        <ul>
+                            <li>Professional photography showcasing beach and mountain views</li>
+                            <li>Premium listing optimization</li>
+                            <li>Local SEO targeting</li>
+                            <li>Beach-focused social media presence</li>
+                        </ul>
+                    </section>
+
+                    <!-- Maintenance Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Property Maintenance and Services</h2>
+                        <p>Year-round maintenance is essential in Kings Beach's climate:</p>
+                        <ul>
+                            <li>Beachfront property care</li>
+                            <li>Snow removal and winterization</li>
+                            <li>Mountain property maintenance</li>
+                            <li>Regular property inspections</li>
+                        </ul>
+                    </section>
+
+                    <!-- Financial Section -->
+                    <section class="blog-highlight-section">
+                        <h2>Financial Management</h2>
+                        <p>Effective financial management includes:</p>
+                        <ul>
+                            <li>Premium pricing strategies</li>
+                            <li>Expense tracking and reporting</li>
+                            <li>Tax documentation</li>
+                            <li>Revenue optimization</li>
+                        </ul>
+                    </section>
+
+                    <div class="post-cta">
+                        <h3>Ready to Maximize Your Kings Beach Property's Potential?</h3>
+                        <p>Let Tahoe Peak Management help you navigate the unique challenges and opportunities of Kings Beach property management. Our team of experts will ensure your property performs at its best year-round.</p>
+                        <div class="cta-buttons">
+                            <a href="../contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                            <a href="../services/property-management.html" class="btn btn-secondary">Learn About Our Services</a>
+                        </div>
                     </div>
                 </div>
-                <div class="related-posts">
-                    <h3>Related Articles</h3>
-                    <ul>
-                        <li><a href="#">Lake Tahoe Vacation Rental Market Trends 2024</a></li>
-                        <li><a href="#">Property Management Tips for Lake Tahoe Homeowners</a></li>
-                        <li><a href="#">Maximizing Rental Income in Kings Beach</a></li>
-                    </ul>
-                </div>
-            </footer>
+            </div>
         </article>
+
+        <!-- Related Posts Section -->
+        <section class="related-posts">
+            <div class="container">
+                <h2>Related Articles</h2>
+                <div class="related-posts-grid">
+                    <article class="related-post">
+                        <a href="north-lake-tahoe-property-management-guide.html">
+                            <img src="../images/blog/north-lake-thumb.jpg" alt="North Lake Tahoe Property Management Guide" loading="lazy">
+                            <h3>North Lake Tahoe Property Management Guide</h3>
+                            <p>Comprehensive guide to managing properties in North Lake Tahoe.</p>
+                        </a>
+                    </article>
+                    <article class="related-post">
+                        <a href="vacation-rental-regulations-lake-tahoe-2025.html">
+                            <img src="../images/blog/regulations-thumb.jpg" alt="Vacation Rental Regulations 2025" loading="lazy">
+                            <h3>Vacation Rental Regulations 2025</h3>
+                            <p>Latest updates on Lake Tahoe vacation rental regulations.</p>
+                        </a>
+                    </article>
+                    <article class="related-post">
+                        <a href="property-maintenance-guide-lake-tahoe-2025.html">
+                            <img src="../images/blog/maintenance-guide-thumb.jpg" alt="Property Maintenance Guide 2025" loading="lazy">
+                            <h3>Property Maintenance Guide 2025</h3>
+                            <p>Essential maintenance tips for Lake Tahoe property owners.</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <div class="footer-contact">
-                    <a href="tel:5309948882">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                        530.994.8882
-                    </a>
-                    <a href="mailto:laketahoepmg@gmail.com">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        laketahoepmg@gmail.com
-                    </a>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p>Tahoe Peak Property Management</p>
+                        <p>123 Lake Tahoe Blvd</p>
+                        <p>South Lake Tahoe, CA 96150</p>
+                        <p>Phone: <a href="tel:5309948882">530.994.8882</a></p>
+                        <p>Email: <a href="mailto:info@laketahoepmg.com">info@laketahoepmg.com</a></p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="../owners.html">Property Owners</a></li>
+                            <li><a href="../residents.html">Residents</a></li>
+                            <li><a href="../rentals.html">Rentals</a></li>
+                            <li><a href="../resources.html">Resources</a></li>
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-services">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="../services/property-management.html">Property Management</a></li>
+                            <li><a href="../services/vacation-rentals.html">Vacation Rentals</a></li>
+                            <li><a href="../services/long-term-rentals.html">Long Term Rentals</a></li>
+                            <li><a href="../services/property-maintenance.html">Property Maintenance</a></li>
+                            <li><a href="../services/real-estate.html">Real Estate Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-areas">
+                        <h3>Areas We Serve</h3>
+                        <ul>
+                            <li><a href="../areas/south-lake-tahoe.html">South Lake Tahoe</a></li>
+                            <li><a href="../areas/tahoe-city.html">Tahoe City</a></li>
+                            <li><a href="../areas/kings-beach.html">Kings Beach</a></li>
+                            <li><a href="../areas/incline-village.html">Incline Village</a></li>
+                            <li><a href="../areas/truckee.html">Truckee</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="../owners.html">For Property Owners</a></li>
-                    <li><a href="../residents.html">For Residents</a></li>
-                    <li><a href="../rentals.html">Available Rentals</a></li>
-                    <li><a href="../pricing.html">Our Pricing</a></li>
-                    <li><a href="../about.html">About Us</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul class="footer-links">
-                    <li><a href="../services.html">Property Management</a></li>
-                    <li><a href="../guarantees.html">Our Guarantees</a></li>
-                    <li><a href="../application-criteria.html">Application Criteria</a></li>
-                    <li><a href="../real-estate.html">Real Estate</a></li>
-                    <li><a href="../agent-referrals.html">Agent Referrals</a></li>
-                    <li><a href="../resources.html">Resources</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3>Areas We Serve</h3>
-                <ul class="footer-links">
-                    <li><a href="../south-lake-tahoe-property-management.html">South Lake Tahoe</a></li>
-                    <li><a href="../incline-village-property-management.html">Incline Village</a></li>
-                    <li><a href="../tahoe-city-property-management.html">Tahoe City</a></li>
-                    <li><a href="../kings-beach-property-management.html">Kings Beach</a></li>
-                    <li><a href="../truckee-property-management.html">Truckee</a></li>
-                </ul>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; 2025 Tahoe Peak Property Management. All rights reserved.</p>
+            <div class="container">
+                <p>&copy; 2025 Tahoe Peak Property Management. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><img src="../images/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="social-link"><img src="../images/icons/twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="social-link"><img src="../images/icons/instagram.svg" alt="Instagram"></a>
+                    <a href="#" class="social-link"><img src="../images/icons/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/blog.js" defer></script>
 </body>
 </html> 
