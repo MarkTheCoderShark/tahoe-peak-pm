@@ -93,6 +93,10 @@
     padding: 0 1.5rem 1.5rem;
 }
 
+.faq-answer-content p {
+    color: #333333; /* Darker font color for better contrast */
+}
+
 .faq-item.active .faq-toggle {
     transform: rotate(180deg);
 }
