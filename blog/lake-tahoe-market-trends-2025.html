@@ -3,59 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lake Tahoe Real Estate Market Trends: What to Expect in 2025 - Tahoe Peak Management</title>
-    <meta name="description" content="Discover the latest Lake Tahoe real estate market trends for 2025. Learn about property values, rental demand, and investment opportunities in South Lake Tahoe, Incline Village, and surrounding areas.">
-    <meta name="keywords" content="Lake Tahoe real estate market 2025, property values Lake Tahoe, rental demand Lake Tahoe, investment opportunities Lake Tahoe">
+    <title>Lake Tahoe Real Estate Market Trends (2025) - Tahoe Peak Management</title>
     
-    <!-- CSS Files -->
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --background-color: #004B49;
+            --primary-color: #1F4D48;
+            --secondary-color: #FFB74D;
+            --accent-color: #FFB74D;
+            --text-color: #ffffff;
+            --text-dark: #333333;
+            --light-text: #ffffff;
+            --background-light: #f5f5f5;
+            --border-color: rgba(255, 255, 255, 0.15);
+            --light-background: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    </style>
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="../images/tahoe-peak-logo.svg">
+    <link rel="preload" href="../css/base.css" as="style">
+    
+    <!-- Deferred CSS -->
     <link rel="stylesheet" href="../css/base.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/header.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/footer.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/blog.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/blog-post.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/header.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/footer.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/animations.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/mobile.css" media="print" onload="this.media='all'">
     
     <!-- Fallback for browsers that don't support onload -->
     <noscript>
         <link rel="stylesheet" href="../css/base.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/blog.css">
         <link rel="stylesheet" href="../css/blog-post.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/animations.css">
         <link rel="stylesheet" href="../css/mobile.css">
     </noscript>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Social Media Meta Tags -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025">
-    <meta property="og:title" content="Lake Tahoe Real Estate Market Trends: What to Expect in 2025">
-    <meta property="og:description" content="Discover the latest Lake Tahoe real estate market trends for 2025. Learn about property values, rental demand, and investment opportunities.">
-    <meta property="og:image" content="https://laketahoepmg.com/images/blog/lake-tahoe-market-trends-2025.jpg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025">
-    <meta property="twitter:title" content="Lake Tahoe Real Estate Market Trends: What to Expect in 2025">
-    <meta property="twitter:description" content="Discover the latest Lake Tahoe real estate market trends for 2025. Learn about property values, rental demand, and investment opportunities.">
-    <meta property="twitter:image" content="https://laketahoepmg.com/images/blog/lake-tahoe-market-trends-2025.jpg">
-
-    <link rel="canonical" href="https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025">
+    <!-- Meta Tags -->
+    <meta name="description" content="Comprehensive analysis of Lake Tahoe real estate market trends for 2025. Expert insights on property values, investment opportunities, and market forecasts.">
+    <meta name="keywords" content="Lake Tahoe real estate trends, property market analysis, real estate investment, market forecast 2025, Tahoe property values">
     
-    <!-- Schema Markup -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025.html">
+    <meta property="og:title" content="Lake Tahoe Real Estate Market Trends (2025)">
+    <meta property="og:description" content="Expert analysis of Lake Tahoe real estate market trends. Get insights on property values and investment opportunities.">
+    <meta property="og:image" content="https://laketahoepmg.com/images/blog/market-trends-2025.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025.html">
+    <meta property="twitter:title" content="Lake Tahoe Real Estate Market Trends (2025)">
+    <meta property="twitter:description" content="Expert analysis of Lake Tahoe real estate market trends. Get insights on property values and investment opportunities.">
+    <meta property="twitter:image" content="https://laketahoepmg.com/images/blog/market-trends-2025.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025">
+
+    <!-- Article Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "Lake Tahoe Real Estate Market Trends: What to Expect in 2025",
-        "image": "https://laketahoepmg.com/images/blog/lake-tahoe-market-trends-2025.jpg",
-        "datePublished": "2025-01-15",
-        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://laketahoepmg.com/blog/lake-tahoe-market-trends-2025.html"
+        },
+        "headline": "Lake Tahoe Real Estate Market Trends (2025)",
+        "description": "Expert analysis of Lake Tahoe real estate market trends. Get insights on property values and investment opportunities.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://laketahoepmg.com/images/blog/market-trends-2025.jpg",
+            "height": "800",
+            "width": "1200"
+        },
+        "datePublished": "2025-03-15T09:00:00+08:00",
+        "dateModified": "2025-03-15T09:00:00+08:00",
         "author": {
             "@type": "Person",
             "name": "Mark S.",
@@ -64,42 +114,19 @@
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Lake Tahoe Property Management",
+            "name": "Tahoe Peak Management",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://laketahoepmg.com/images/tahoe-peak-logo.svg"
+                "url": "https://laketahoepmg.com/images/tahoe-peak-logo.svg",
+                "width": "140",
+                "height": "50"
             }
-        },
-        "description": "Discover the latest Lake Tahoe real estate market trends for 2025. Learn about property values, rental demand, and investment opportunities."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Lake Tahoe Property Management",
-        "image": "https://laketahoepmg.com/images/tahoe-peak-logo.svg",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Lake Tahoe",
-            "addressLocality": "Lake Tahoe",
-            "addressRegion": "CA",
-            "postalCode": "96150",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 39.0968,
-            "longitude": -120.0324
-        },
-        "url": "https://laketahoepmg.com",
-        "telephone": "+1-530-000-0000",
-        "areaServed": ["Lake Tahoe", "Tahoe City", "Kings Beach", "Incline Village", "Truckee", "Olympic Valley"]
+        }
     }
     </script>
 </head>
 <body>
-    <header class="site-header">
+    <header>
         <div class="header-top">
             <div class="header-top-content">
                 <div class="login-links">
@@ -146,14 +173,23 @@
         </div>
     </header>
 
-    <main class="blog-post">
-        <article>
-            <header class="post-header">
-                <time datetime="2025-03-15">March 15, 2025</time>
-                <span class="category">Market Analysis</span>
-                <h1>Lake Tahoe Real Estate Market Trends: What to Expect in 2025</h1>
-                <span class="author">Mark S. Property Management Expert</span>
-            </header>
+    <main class="blog-post-main">
+        <article class="blog-post-content">
+            <div class="post-header">
+                <div class="container">
+                    <div class="post-meta">
+                        <span class="post-date">March 15, 2025</span>
+                        <span class="post-category">Market Analysis</span>
+                    </div>
+                    <h1>Lake Tahoe Real Estate Market Trends (2025)</h1>
+                    <div class="post-author">
+                        <div class="author-info">
+                            <span class="author-name">Mark S.</span>
+                            <span class="author-title">Property Management Expert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="post-content">
                 <p>As we begin 2025, the Lake Tahoe real estate market is showing signs of continued evolution and adaptation to changing market conditions. This comprehensive analysis explores the emerging trends and what they mean for property owners and investors in the Lake Tahoe region.</p>
