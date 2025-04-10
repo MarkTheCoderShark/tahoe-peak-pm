@@ -1,6 +1,6 @@
 /* Owners Hero Section */
 .owners-hero {
-    background: linear-gradient(rgba(31, 77, 72, 0.8), rgba(31, 77, 72, 0.8)), url('../images/tahoe-lake-winter.png');
+    background: linear-gradient(rgba(0, 0, 51, 0.7), rgba(0, 0, 51, 0.8)), url('../images/tahoe-lake-winter.png');
     background-size: cover;
     background-position: center;
     padding: 8rem 2rem;
@@ -35,12 +35,14 @@
 .owners-hero-content {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .owners-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    color: var(--accent-color);
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -48,6 +50,7 @@
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    color: #d3d3d3;
 }
 
 /* Benefits Section */
@@ -245,10 +248,9 @@
 .cta-section {
     padding: 6rem 0;
     text-align: center;
-    background: linear-gradient(rgba(31, 77, 72, 0.9), rgba(31, 77, 72, 0.9)), url('../images/tahoe-lake-winter.png');
+    background: linear-gradient(rgba(0, 0, 51, 0.7), rgba(0, 0, 51, 0.8)), url('../images/tahoe-lake-winter.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .cta-section h2 {
