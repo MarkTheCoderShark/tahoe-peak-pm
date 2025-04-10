@@ -91,6 +91,29 @@
     letter-spacing: 1px;
 }
 
+.hero-buttons .cta-button {
+    min-width: 250px;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.hero-buttons .cta-button:hover {
+    background-color: #e69516;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
 .hero-buttons .btn-primary {
     background-color: #1E90FF;
     color: #ffffff;
@@ -155,11 +178,22 @@
     .hero-buttons {
         flex-direction: column;
         gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
     
     .hero-buttons .btn {
         width: 100%;
         min-width: 220px;
+    }
+    
+    .hero-buttons .cta-button {
+        width: 100%;
+        min-width: 220px;
+        margin-top: 1.5rem;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -170,5 +204,9 @@
     
     .hero-content p {
         font-size: 1.1rem;
+    }
+    
+    .hero-buttons .cta-button {
+        font-size: 0.9rem;
     }
 }
