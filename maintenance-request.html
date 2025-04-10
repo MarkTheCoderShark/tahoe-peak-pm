@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Request | Tahoe Peak Property Management</title>
+    <meta name="description" content="Submit a maintenance request for your Lake Tahoe rental property. Our team will respond promptly to address your property maintenance needs.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Page-specific styles */
+        .maintenance-hero {
+            background: url('images/tahoe-lake-winter.png');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+        
+        .maintenance-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            background-color: rgba(13, 59, 125, 0.4);
+            border-radius: 10px;
+            backdrop-filter: blur(3px);
+            padding: 2rem 3rem;
+        }
+        
+        .maintenance-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+        
+        .maintenance-hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        
+        .maintenance-form-section {
+            padding: 6rem 0;
+            background-color: var(--background-color);
+        }
+        
+        .maintenance-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .urgency-options {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .urgency-option {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .urgency-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .urgency-option.selected {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .urgency-option input {
+            display: none;
+        }
+        
+        .additional-info {
+            margin-top: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+        
+        .additional-info h3 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .info-card h4 {
+            color: var(--text-color);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .info-card h4 svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent-color);
+        }
+        
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .info-card ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .info-card ul li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .maintenance-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .urgency-options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="login-links">
+                    <a href="#">OWNER LOGIN</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <img src="images/tahoe-peak-logo.svg" alt="Tahoe Peak Property Management">
+                </a>
+                <button class="mobile-menu-toggle">☰</button>
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle">☰</button>
+                    <ul>
+                        <li><a href="owners.html">OWNERS/INVESTORS</a></li>
+                        <li><a href="residents.html" class="active">RESIDENTS</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                        <li><a href="real-estate.html">REAL ESTATE</a></li>
+                        <li><a href="agent-referrals.html">AGENT REFERRALS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="/pricing.html">PRICING</a></li>
+                    </ul>
+                    <a href="tel:5309948882" class="phone-number">530.994.8882</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="maintenance-hero">
+            <div class="maintenance-hero-content">
+                <h1>Maintenance Request</h1>
+                <p>Submit a maintenance request for your Lake Tahoe rental property. Our team will respond promptly to address your needs.</p>
+            </div>
+        </section>
+
+        <section class="maintenance-form-section">
+            <div class="container">
+                <div class="maintenance-form-container">
+                    <h2 class="text-center mb-4">Submit Your Maintenance Request</h2>
+                    <form id="maintenanceForm" action="#" method="POST">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="property" class="form-label">Property Address</label>
+                                <input type="text" id="property" name="property" class="form-control" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label">Urgency Level</label>
+                                <div class="urgency-options">
+                                    <label class="urgency-option">
+                                        <input type="radio" name="urgency" value="low">
+                                        <span>Low Priority</span>
+                                    </label>
+                                    <label class="urgency-option">
+                                        <input type="radio" name="urgency" value="medium" checked>
+                                        <span>Medium Priority</span>
+                                    </label>
+                                    <label class="urgency-option">
+                                        <input type="radio" name="urgency" value="high">
+                                        <span>High Priority</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="issue-type" class="form-label">Type of Issue</label>
+                                <select id="issue-type" name="issue-type" class="form-control" required>
+                                    <option value="">-- Select Issue Type --</option>
+                                    <option value="plumbing">Plumbing</option>
+                                    <option value="electrical">Electrical</option>
+                                    <option value="hvac">Heating/Cooling</option>
+                                    <option value="appliance">Appliance</option>
+                                    <option value="structural">Structural</option>
+                                    <option value="pest">Pest Control</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="description" class="form-label">Detailed Description</label>
+                                <textarea id="description" name="description" class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="photos" class="form-label">Upload Photos (Optional)</label>
+                                <input type="file" id="photos" name="photos" class="form-control" multiple>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox" id="permission" name="permission" required>
+                                <label for="permission">I give permission for maintenance personnel to enter my unit in my absence if necessary.</label>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Submit Maintenance Request</button>
+                        </div>
+                    </form>
+
+                    <div class="additional-info">
+                        <h3>Important Information</h3>
+                        <p>Please note that our maintenance team will respond to your request based on the urgency level and type of issue. For emergencies that require immediate attention, please call our emergency line at <a href="tel:5309948882">530.994.8882</a>.</p>
+                        
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h4>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="12" y1="8" x2="12" y2="12"/>
+                                        <line x1="12" y1="16" x2="12" y2="16"/>
+                                    </svg>
+                                    Emergency Situations
+                                </h4>
+                                <ul>
+                                    <li>Fire or smoke</li>
+                                    <li>Major flooding or water leaks</li>
+                                    <li>Gas leaks or suspicious odors</li>
+                                    <li>No heat during winter months</li>
+                                    <li>No functioning toilet in the unit</li>
+                                    <li>Security or safety issues</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h4>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 16v-4"/>
+                                        <path d="M12 8h.01"/>
+                                    </svg>
+                                    What to Expect
+                                </h4>
+                                <ul>
+                                    <li>Confirmation email upon submission</li>
+                                    <li>Response within 24-48 hours for non-emergencies</li>
+                                    <li>Scheduling of maintenance visit</li>
+                                    <li>Follow-up after completion</li>
+                                    <li>Option to provide feedback</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Need Immediate Assistance?</h2>
+                <p>For urgent maintenance issues that require immediate attention, please call our 24/7 emergency line</p>
+                <div class="cta-buttons">
+                    <a href="tel:5309948882" class="btn btn-primary">Call Emergency Line: 530.994.8882</a>
+                    <a href="resources.html" class="btn btn-secondary">View Resident Resources</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="footer-contact">
+                    <a href="tel:5309948882">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        530.994.8882
+                    </a>
+                    <a href="mailto:laketahoepmg@gmail.com">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        laketahoepmg@gmail.com
+                    </a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="owners.html">For Property Owners</a></li>
+                    <li><a href="residents.html">For Residents</a></li>
+                    <li><a href="rentals.html">Available Rentals</a></li>
+                    <li><a href="pricing.html">Our Pricing</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Property Management</a></li>
+                    <li><a href="guarantees.html">Our Guarantees</a></li>
+                    <li><a href="application-criteria.html">Application Criteria</a></li>
+                    <li><a href="real-estate.html">Real Estate</a></li>
+                    <li><a href="agent-referrals.html">Agent Referrals</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Areas We Serve</h3>
+                <ul class="footer-links">
+                    <li><a href="south-lake-tahoe-property-management.html">South Lake Tahoe</a></li>
+                    <li><a href="incline-village-property-management.html">Incline Village</a></li>
+                    <li><a href="tahoe-city-property-management.html">Tahoe City</a></li>
+                    <li><a href="kings-beach-property-management.html">Kings Beach</a></li>
+                    <li><a href="truckee-property-management.html">Truckee</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tahoe Peak Property Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Script for handling urgency option selection
+        document.addEventListener('DOMContentLoaded', function() {
+            const urgencyOptions = document.querySelectorAll('.urgency-option');
+            
+            urgencyOptions.forEach(option => {
+                const radio = option.querySelector('input[type="radio"]');
+                
+                // Set initial state
+                if (radio.checked) {
+                    option.classList.add('selected');
+                }
+                
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    urgencyOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    option.classList.add('selected');
+                    
+                    // Check the radio button
+                    radio.checked = true;
+                });
+            });
+            
+            // Form submission handler
+            document.getElementById('maintenanceForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // In a real application, you would handle the form submission here
+                // For now, we'll just show a success message
+                alert('Your maintenance request has been submitted. Our team will contact you shortly.');
+                this.reset();
+                
+                // Reset urgency selection
+                urgencyOptions.forEach(opt => opt.classList.remove('selected'));
+                document.querySelector('.urgency-option:nth-child(2)').classList.add('selected');
+                document.querySelector('input[value="medium"]').checked = true;
+            });
+        });
+    </script>
+</body>
+</html> 

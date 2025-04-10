@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Portal | Tahoe Peak Property Management</title>
+    <meta name="description" content="Access your Tahoe Peak Property Management resident portal. Make rent payments, submit maintenance requests, and manage your rental property account.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Page-specific styles */
+        .portal-hero {
+            background: url('images/tahoe-lake-winter.png');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+        
+        .portal-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            background-color: rgba(13, 59, 125, 0.4);
+            border-radius: 10px;
+            backdrop-filter: blur(3px);
+            padding: 2rem 3rem;
+        }
+        
+        .portal-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+        
+        .portal-hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        
+        .coming-soon-badge {
+            display: inline-block;
+            background-color: rgba(74, 144, 226, 0.9);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .portal-info-section {
+            padding: 6rem 0;
+            background-color: var(--background-color);
+        }
+        
+        .portal-info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .portal-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .portal-info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .portal-info-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent-color);
+        }
+        
+        .portal-info-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 2rem;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .portal-info-card:hover .portal-info-icon {
+            transform: scale(1.1);
+        }
+        
+        .portal-info-card h3 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .portal-info-card p {
+            color: var(--text-color);
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .notification-form-section {
+            padding: 6rem 0;
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+        
+        .notification-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .notification-form-container h2 {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .notification-form-container p {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .notification-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .notification-form input[type="email"] {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .notification-form input[type="email"]:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+        }
+        
+        .features-section {
+            padding: 6rem 0;
+            background-color: var(--background-color);
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            color: var(--accent-color);
+            flex-shrink: 0;
+        }
+        
+        .feature-content h4 {
+            color: var(--text-color);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .feature-content p {
+            color: var(--text-color);
+            opacity: 0.9;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 992px) {
+            .portal-info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .portal-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .portal-info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .notification-form {
+                flex-direction: column;
+            }
+            
+            .notification-form button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="login-links">
+                    <a href="#">OWNER LOGIN</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <img src="images/tahoe-peak-logo.svg" alt="Tahoe Peak Property Management">
+                </a>
+                <button class="mobile-menu-toggle">☰</button>
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle">☰</button>
+                    <ul>
+                        <li><a href="owners.html">OWNERS/INVESTORS</a></li>
+                        <li><a href="residents.html" class="active">RESIDENTS</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                        <li><a href="real-estate.html">REAL ESTATE</a></li>
+                        <li><a href="agent-referrals.html">AGENT REFERRALS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="/pricing.html">PRICING</a></li>
+                    </ul>
+                    <a href="tel:5309948882" class="phone-number">530.994.8882</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="portal-hero">
+            <div class="portal-hero-content">
+                <div class="coming-soon-badge">Coming Soon</div>
+                <h1>Resident Portal</h1>
+                <p>Our resident portal is currently under development and will be launching soon. In the meantime, you can still submit maintenance requests and contact us directly.</p>
+                <div class="cta-buttons">
+                    <a href="maintenance-request.html" class="btn btn-primary">Submit Maintenance Request</a>
+                    <a href="tel:5309948882" class="btn btn-secondary">Call Us: 530.994.8882</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="portal-info-section">
+            <div class="portal-info-container">
+                <div class="section-title">
+                    <h2>Portal Features Coming Soon</h2>
+                    <p>Our new resident portal will provide convenient access to manage all aspects of your rental experience</p>
+                </div>
+                <div class="portal-info-grid">
+                    <div class="portal-info-card">
+                        <div class="portal-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                                <line x1="1" y1="10" x2="23" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3>Online Payments</h3>
+                        <p>Pay your rent and other fees securely online through multiple payment methods, including credit cards and bank transfers. Set up automatic recurring payments to never miss a due date.</p>
+                    </div>
+                    <div class="portal-info-card">
+                        <div class="portal-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Maintenance Requests</h3>
+                        <p>Submit and track maintenance requests directly through the portal. Upload photos, provide detailed descriptions, and receive real-time updates on the status of your maintenance tickets.</p>
+                    </div>
+                    <div class="portal-info-card">
+                        <div class="portal-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <path d="M14 2v6h6"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <line x1="10" y1="9" x2="8" y2="9"/>
+                            </svg>
+                        </div>
+                        <h3>Document Center</h3>
+                        <p>Access your lease, property documents, and important notices securely online. View your payment history, maintenance records, and other important account information at any time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="features-container">
+                <div class="section-title">
+                    <h2>Additional Portal Benefits</h2>
+                    <p>Our resident portal is designed to enhance your living experience with convenience and efficiency</p>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Convenient 24/7 Access</h4>
+                            <p>Access your resident account anytime, anywhere, from any device. No more calling during business hours or waiting for responses.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Enhanced Security</h4>
+                            <p>Rest easy knowing your personal information and payment details are protected with industry-standard encryption and security measures.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Automatic Reminders</h4>
+                            <p>Never miss an important date with automatic reminders for rent payments, lease renewals, and scheduled maintenance visits.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Community Updates</h4>
+                            <p>Stay informed about community events, important notifications, and local news relevant to your Lake Tahoe property.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="notification-form-section">
+            <div class="notification-form-container">
+                <h2>Get Notified When the Portal Launches</h2>
+                <p>Sign up to receive an email notification when our resident portal is ready. Be among the first to access and benefit from this convenient service.</p>
+                <form class="notification-form" id="notificationForm">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn btn-primary">Notify Me</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Need Assistance?</h2>
+                <p>Our team is available to help with any questions or concerns you may have</p>
+                <div class="cta-buttons">
+                    <a href="mailto:laketahoepmg@gmail.com" class="btn btn-primary">Email Us</a>
+                    <a href="tel:5309948882" class="btn btn-secondary">Call: 530.994.8882</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="footer-contact">
+                    <a href="tel:5309948882">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        530.994.8882
+                    </a>
+                    <a href="mailto:laketahoepmg@gmail.com">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        laketahoepmg@gmail.com
+                    </a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="owners.html">For Property Owners</a></li>
+                    <li><a href="residents.html">For Residents</a></li>
+                    <li><a href="rentals.html">Available Rentals</a></li>
+                    <li><a href="pricing.html">Our Pricing</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Property Management</a></li>
+                    <li><a href="guarantees.html">Our Guarantees</a></li>
+                    <li><a href="application-criteria.html">Application Criteria</a></li>
+                    <li><a href="real-estate.html">Real Estate</a></li>
+                    <li><a href="agent-referrals.html">Agent Referrals</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Areas We Serve</h3>
+                <ul class="footer-links">
+                    <li><a href="south-lake-tahoe-property-management.html">South Lake Tahoe</a></li>
+                    <li><a href="incline-village-property-management.html">Incline Village</a></li>
+                    <li><a href="tahoe-city-property-management.html">Tahoe City</a></li>
+                    <li><a href="kings-beach-property-management.html">Kings Beach</a></li>
+                    <li><a href="truckee-property-management.html">Truckee</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tahoe Peak Property Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Notification form submission handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const notificationForm = document.getElementById('notificationForm');
+            
+            if (notificationForm) {
+                notificationForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    // In a real application, you would handle the form submission here
+                    // For now, we'll just show a success message
+                    alert('Thank you! We will notify you when the resident portal launches.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
