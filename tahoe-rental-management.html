@@ -636,9 +636,32 @@
                     // Update icon
                     if (parent.classList.contains('active')) {
                         icon.textContent = '-';
+                        icon.style.transform = 'rotate(180deg)';
                     } else {
                         icon.textContent = '+';
+                        icon.style.transform = 'rotate(0deg)';
                     }
+                    
+                    // Add animation effect
+                    if (parent.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = '0px';
+                    }
+                });
+            });
+            
+            // Add hover effect to area cards
+            const areaCards = document.querySelectorAll('.area-card');
+            areaCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.2)';
                 });
             });
         });
