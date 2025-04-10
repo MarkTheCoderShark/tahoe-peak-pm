@@ -348,8 +348,8 @@ function initFaqAccordion() {
     }
 }
 
-// Load rental analysis functionality
-const rentalAnalysisScript = document.createElement('script');
-rentalAnalysisScript.src = 'js/rental-analysis.js';
-document.body.appendChild(rentalAnalysisScript);
-document.body.appendChild(rentalAnalysisScript); 
+// Remove the duplicate loading of rental analysis script since it's already included in the HTML
+// const rentalAnalysisScript = document.createElement('script');
+// rentalAnalysisScript.src = 'js/rental-analysis.js';
+// document.body.appendChild(rentalAnalysisScript);
+// document.body.appendChild(rentalAnalysisScript); 

@@ -405,4 +405,9 @@
     color: #666;
     font-size: 1.1rem;
     line-height: 1.6;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
 } 
