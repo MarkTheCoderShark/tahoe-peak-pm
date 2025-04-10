@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('rental-analysis-form');
     const closeButton = popupOverlay.querySelector('.close-popup');
     
-    // Add success message
+    // Create the success message element but don't add it to the DOM yet
     const successMessage = document.createElement('div');
     successMessage.className = 'success-message';
     successMessage.innerHTML = `
         <h3>Thank You!</h3>
         <p>We've received your request for a free rental analysis. We'll contact you shortly to discuss your property.</p>
     `;
-    popupOverlay.querySelector('.popup-content').appendChild(successMessage);
+    // Don't append it yet to prevent it from showing prematurely
     
     // Add event listeners
     form.addEventListener('submit', handleSubmit);
@@ -45,6 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => {
             if (response.ok) {
+                // Only now append and show the success message
+                if (!popupOverlay.querySelector('.success-message')) {
+                    popupOverlay.querySelector('.popup-content').appendChild(successMessage);
+                }
+                
                 // Show success message
                 form.style.display = 'none';
                 successMessage.classList.add('active');
@@ -54,6 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     form.reset();
                     form.style.display = 'block';
                     successMessage.classList.remove('active');
+                    // Remove success message from DOM when done
+                    if (popupOverlay.querySelector('.success-message')) {
+                        popupOverlay.querySelector('.success-message').remove();
+                    }
                     closePopup();
                 }, 3000);
             } else {
@@ -70,6 +79,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function openPopup() {
         popupOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+        
+        // Make sure the form is visible and success message is removed
+        form.style.display = 'block';
+        if (popupOverlay.querySelector('.success-message')) {
+            popupOverlay.querySelector('.success-message').remove();
+        }
     }
     
     // Close popup
@@ -78,6 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
         form.reset();
         form.style.display = 'block';
-        successMessage.classList.remove('active');
+        
+        // Remove success message when closing
+        if (popupOverlay.querySelector('.success-message')) {
+            popupOverlay.querySelector('.success-message').remove();
+        }
     }
 }); 

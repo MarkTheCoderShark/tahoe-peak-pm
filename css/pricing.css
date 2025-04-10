@@ -379,4 +379,30 @@
     .popup-content h2 {
         font-size: 1.4rem;
     }
+}
+
+/* Success Message Styles */
+.success-message {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.success-message.active {
+    display: block;
+    opacity: 1;
+}
+
+.success-message h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
 } 
