@@ -57,9 +57,9 @@
 }
 
 .hero-content-text {
-    background-color: rgba(13, 59, 125, 0);
+    background-color: rgba(13, 59, 125, 0.4);
     border-radius: 10px;
-    backdrop-filter: none;
+    backdrop-filter: blur(3px);
     padding: 2rem 3rem;
     margin-bottom: 2rem;
     max-width: 900px;
