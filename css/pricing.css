@@ -1,6 +1,6 @@
 /* Pricing Hero Section */
 .pricing-hero {
-    background: linear-gradient(rgba(0, 0, 51, 0.7), rgba(0, 0, 51, 0.8)), url('../images/tahoe-lake-winter.png');
+    background:  url('../images/tahoe-lake-winter.png');
     background-size: cover;
     background-position: center;
     padding: 6rem 2rem;
@@ -13,14 +13,18 @@
     margin: 0 auto;
 }
 
-.pricing-hero h1 {
+&
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+} {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
     color: #ffffff;
 }
 
-.pricing-hero p {
+&
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+} {
     font-size: 1.2rem;
     opacity: 0.9;
     color: #ffffff;
@@ -223,7 +227,9 @@
 }
 
 @media (max-width: 768px) {
-    .pricing-hero h1 {
+    &
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+} {
         font-size: 2.5rem;
     }
 
