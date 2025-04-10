@@ -111,6 +111,39 @@ p {
     transform: translateY(-2px);
 }
 
+/* Link Styles */
+.highlight-link {
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.highlight-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.highlight-link a:hover {
+    color: var(--light-text);
+}
+
+.highlight-link .fas {
+    font-size: 0.9em;
+    transition: transform 0.2s ease;
+}
+
+.highlight-link a:hover .fas {
+    transform: translateX(4px);
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
 /* Section Styles */
 section {
     padding: 4rem 0;
