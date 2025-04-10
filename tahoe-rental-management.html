@@ -5,22 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tahoe Rental Management | Expert Property Services in Lake Tahoe</title>
     <meta name="description" content="Professional Tahoe rental management services. Trusted by property owners for comprehensive Lake Tahoe property management solutions. 24/7 local support and expertise.">
-    <meta name="keywords" content="tahoe rental management, lake tahoe property management, property management tahoe, vacation rental management tahoe">
+    <meta name="keywords" content="tahoe rental management, lake tahoe property management, property management tahoe, vacation rental management tahoe, south lake tahoe property management, incline village property management">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Tahoe Rental Management | Expert Property Services">
     <meta property="og:description" content="Professional Tahoe rental management services. Local expertise and comprehensive property management solutions.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourwebsite.com/tahoe-rental-management">
+    <meta property="og:url" content="https://laketahoepmg.com/tahoe-rental-management">
+    <meta property="og:image" content="https://laketahoepmg.com/images/tahoe-lake-winter.png">
     
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --background-color: #1a4b8c;
+            --primary-color: #0d3b7d;
+            --secondary-color: #4a90e2;
+            --accent-color: #4a90e2;
+            --text-color: #ffffff;
+            --text-dark: #333333;
+            --light-text: #ffffff;
+            --background-light: #f5f5f5;
+            --border-color: rgba(255, 255, 255, 0.2);
+            --light-background: rgba(255, 255, 255, 0.12);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    </style>
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="images/tahoe-peak-logo.svg">
+    <link rel="preload" as="image" href="images/tahoe-lake-winter.png">
+    <link rel="preload" href="css/base.css" as="style">
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="css/base.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/header.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/footer.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/hero.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/services.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/testimonials.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/owners.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/mobile.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/hero.css">
+        <link rel="stylesheet" href="css/services.css">
+        <link rel="stylesheet" href="css/testimonials.css">
+        <link rel="stylesheet" href="css/owners.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link rel="stylesheet" href="css/mobile.css">
+    </noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
-      "name": "Tahoe Management",
+      "name": "Tahoe Peak Management",
+      "image": "https://laketahoepmg.com/images/tahoe-peak-logo.svg",
       "description": "Professional rental and property management services in Lake Tahoe",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Lake Tahoe Blvd",
+        "addressLocality": "South Lake Tahoe",
+        "addressRegion": "CA",
+        "postalCode": "96150",
+        "addressCountry": "US"
+      },
+      "telephone": "+15309948882",
+      "email": "laketahoepmg@gmail.com",
+      "url": "https://laketahoepmg.com/tahoe-rental-management",
       "areaServed": {
         "@type": "Place",
         "name": "Lake Tahoe"
@@ -33,14 +119,24 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Vacation Rental Management"
+              "name": "Vacation Rental Management",
+              "description": "Complete vacation rental management services including marketing, guest screening, and 24/7 support."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Long-term Property Management"
+              "name": "Long-term Property Management",
+              "description": "Comprehensive property management services for long-term rentals."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Property Maintenance",
+              "description": "24/7 property maintenance services including preventive maintenance and emergency repairs."
             }
           }
         ]
@@ -50,81 +146,388 @@
 </head>
 <body>
     <header>
-        <!-- Include your standard navigation here -->
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="login-links">
+                    <a href="#">OWNER LOGIN</a>
+                    <span>|</span>
+                    <a href="#">RESIDENT LOGIN</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <img src="images/tahoe-peak-logo.svg" 
+                         alt="Lake Tahoe Property Management - Tahoe Peak Management Logo" 
+                         width="140" 
+                         height="50"
+                         loading="eager">
+                </a>
+                <button class="mobile-menu-toggle">☰</button>
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle">☰</button>
+                    <ul>
+                        <li><a href="owners.html">OWNERS/INVESTORS</a></li>
+                        <li><a href="residents.html">RESIDENTS</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                        <li><a href="real-estate.html">REAL ESTATE</a></li>
+                        <li><a href="agent-referrals.html">AGENT REFERRALS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="/pricing.html">PRICING</a></li>
+                    </ul>
+                    <a href="tel:5309948882" class="phone-number">530.994.8882</a>
+                </nav>
+            </div>
+        </div>
+        <div class="zero-fees">
+            <div class="zero-fees-content">
+                <span>No Hidden Fees - Free Rental Analysis</span>
+                <div class="cta-buttons">
+                    <a href="/pricing.html" class="btn btn-secondary">EXPLORE OUR PRICING</a>
+                    <a href="/contact.html" class="btn btn-primary">FREE CONSULTATION</a>
+                </div>
+            </div>
+        </div>
     </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Rental Management</li>
+        </ol>
+    </nav>
+
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://laketahoepmg.com"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Rental Management",
+            "item": "https://laketahoepmg.com/tahoe-rental-management"
+        }]
+    }
+    </script>
 
     <main>
         <section class="hero-section">
-            <div class="container">
-                <h1>Tahoe Rental Management</h1>
-                <h2>Expert Property Management Services in Lake Tahoe</h2>
-                <p class="lead">Trusted by property owners across Lake Tahoe for comprehensive rental management solutions.</p>
-                <a href="#contact" class="cta-button">Get Your Free Property Analysis</a>
+            <div class="post-featured-image">
+                <img src="images/tahoe-lake-winter.png" 
+                     alt="Lake Tahoe Rental Management - Scenic Lake Tahoe View"
+                     width="1200" 
+                     height="600"
+                     loading="eager">
+            </div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1>TAHOE RENTAL<br>MANAGEMENT</h1>
+                    <p>Expert property management services tailored for Lake Tahoe's unique market</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-primary">GET FREE PROPERTY ANALYSIS</a>
+                        <a href="pricing.html" class="btn btn-secondary">VIEW OUR PRICING</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="services-overview">
+        <section class="services-section">
             <div class="container">
                 <h2>Comprehensive Rental Management Services</h2>
-                <div class="service-grid">
+                <p class="section-description">Our full-service property management solutions address every aspect of your Lake Tahoe investment property.</p>
+                
+                <div class="services-grid">
                     <div class="service-card">
-                        <h3>Vacation Rental Management</h3>
-                        <p>Maximize your property's potential with our premium vacation rental services.</p>
-                        <ul>
-                            <li>Dynamic pricing optimization</li>
-                            <li>Professional photography</li>
-                            <li>24/7 guest support</li>
-                            <li>Premium listing management</li>
-                        </ul>
+                        <img src="images/services/vacation-rental.jpg" alt="Vacation Rental Management">
+                        <div class="service-content">
+                            <h3>Vacation Rental Management</h3>
+                            <p>Maximize your property's potential with our premium vacation rental services. We handle everything from marketing to guest management.</p>
+                            <ul>
+                                <li>Dynamic pricing optimization</li>
+                                <li>Professional photography</li>
+                                <li>24/7 guest support</li>
+                                <li>Premium listing management</li>
+                                <li>Quality cleaning services</li>
+                                <li>Guest screening procedures</li>
+                            </ul>
+                        </div>
                     </div>
+                    
                     <div class="service-card">
-                        <h3>Long-term Rental Management</h3>
-                        <p>Reliable, hands-off property management for long-term rentals.</p>
-                        <ul>
-                            <li>Tenant screening</li>
-                            <li>Rent collection</li>
-                            <li>Property maintenance</li>
-                            <li>Financial reporting</li>
-                        </ul>
+                        <img src="images/services/long-term-rental.jpg" alt="Long-term Rental Management">
+                        <div class="service-content">
+                            <h3>Long-term Rental Management</h3>
+                            <p>Reliable, hands-off property management for long-term rentals. Generate consistent income without the day-to-day hassles of landlording.</p>
+                            <ul>
+                                <li>Tenant screening and placement</li>
+                                <li>Rent collection and disbursement</li>
+                                <li>Property maintenance coordination</li>
+                                <li>Detailed financial reporting</li>
+                                <li>Lease preparation and enforcement</li>
+                                <li>Regular property inspections</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="images/services/maintenance.jpg" alt="Property Maintenance">
+                        <div class="service-content">
+                            <h3>Property Maintenance</h3>
+                            <p>Proactive maintenance services tailored to Lake Tahoe's unique climate and environmental considerations.</p>
+                            <ul>
+                                <li>24/7 emergency response</li>
+                                <li>Seasonal property preparation</li>
+                                <li>Vendor relationship management</li>
+                                <li>Regular inspection schedules</li>
+                                <li>Winterization procedures</li>
+                                <li>Snow removal coordination</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="why-choose-us">
+        <section class="benefits-section">
             <div class="container">
                 <h2>Why Choose Our Tahoe Property Management Services?</h2>
+                <p class="section-description">Our specialized approach to Lake Tahoe property management delivers results for owners.</p>
+                
                 <div class="benefits-grid">
-                    <div class="benefit">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                                <path d="M9 22V12h6v10"/>
+                            </svg>
+                        </div>
                         <h3>Local Expertise</h3>
-                        <p>Deep understanding of Lake Tahoe's unique rental market and regulations.</p>
+                        <p>Deep understanding of Lake Tahoe's unique rental market, regulations, and seasonal considerations. Our team lives and works locally.</p>
                     </div>
-                    <div class="benefit">
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
                         <h3>24/7 Support</h3>
-                        <p>Round-the-clock assistance for both property owners and guests.</p>
+                        <p>Round-the-clock assistance for both property owners and guests. Our team is always available to address emergencies or urgent needs.</p>
                     </div>
-                    <div class="benefit">
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M8 21h8"/>
+                                <path d="M12 17v4"/>
+                            </svg>
+                        </div>
                         <h3>Technology-Driven</h3>
-                        <p>Advanced property management software for transparent operations.</p>
+                        <p>Advanced property management software for transparent operations, giving you real-time access to your property's performance.</p>
                     </div>
-                    <div class="benefit">
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <path d="M22 4L12 14.01l-3-3"/>
+                            </svg>
+                        </div>
                         <h3>Proven Results</h3>
-                        <p>Track record of maximizing returns for property owners.</p>
+                        <p>Track record of maximizing returns for property owners through strategic pricing, effective marketing, and efficient operations.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18 17V9"/>
+                                <path d="M13 17V5"/>
+                                <path d="M8 17v-3"/>
+                            </svg>
+                        </div>
+                        <h3>Financial Transparency</h3>
+                        <p>Detailed financial reporting and online owner portal access. Know exactly how your property is performing at all times.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Quality Guest Experience</h3>
+                        <p>We focus on delivering exceptional guest experiences, which leads to higher ratings, repeat bookings, and increased revenue.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="areas-served">
+        <section class="testimonials-section">
+            <div class="container">
+                <h2>What Our Property Owners Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Tahoe Peak Management has transformed our vacation rental experience. Their local expertise and attention to detail have increased our bookings by 30% in just six months."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Michael R.</h4>
+                            <p>South Lake Tahoe Property Owner</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"As an out-of-state owner, I needed a property manager I could trust completely. The team provides detailed reports and handles everything professionally. I can finally relax knowing my property is in good hands."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Jennifer L.</h4>
+                            <p>Incline Village Property Owner</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Their 24/7 support has been invaluable. When a pipe burst during a winter storm, they had a plumber there within an hour. Their preventive maintenance program has saved us thousands in potential damages."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>David T.</h4>
+                            <p>Kings Beach Property Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="areas-section">
             <div class="container">
                 <h2>Areas We Serve in Lake Tahoe</h2>
+                <p class="section-description">We provide comprehensive property management services throughout the Lake Tahoe region.</p>
+                
                 <div class="areas-grid">
-                    <a href="/north-lake-tahoe.html" class="area-card">North Lake Tahoe</a>
-                    <a href="/south-lake-tahoe.html" class="area-card">South Lake Tahoe</a>
-                    <a href="/incline-village.html" class="area-card">Incline Village</a>
-                    <a href="/kings-beach.html" class="area-card">Kings Beach</a>
-                    <a href="/tahoe-city.html" class="area-card">Tahoe City</a>
-                    <a href="/truckee.html" class="area-card">Truckee</a>
+                    <a href="north-lake-tahoe.html" class="area-card">
+                        <div class="area-image">
+                            <img src="images/locations/north-lake-tahoe.jpg" alt="North Lake Tahoe">
+                        </div>
+                        <h3>North Lake Tahoe</h3>
+                    </a>
+                    
+                    <a href="south-lake-tahoe.html" class="area-card">
+                        <div class="area-image">
+                            <img src="images/locations/south-lake-tahoe.jpg" alt="South Lake Tahoe">
+                        </div>
+                        <h3>South Lake Tahoe</h3>
+                    </a>
+                    
+                    <a href="incline-village.html" class="area-card">
+                        <div class="area-image">
+                            <img src="images/locations/incline-village.jpg" alt="Incline Village">
+                        </div>
+                        <h3>Incline Village</h3>
+                    </a>
+                    
+                    <a href="kings-beach.html" class="area-card">
+                        <div class="area-image">
+                            <img src="images/locations/kings-beach.jpg" alt="Kings Beach">
+                        </div>
+                        <h3>Kings Beach</h3>
+                    </a>
+                    
+                    <a href="tahoe-city.html" class="area-card">
+                        <div class="area-image">
+                            <img src="images/locations/tahoe-city.jpg" alt="Tahoe City">
+                        </div>
+                        <h3>Tahoe City</h3>
+                    </a>
+                    
+                    <a href="truckee.html" class="area-card">
+                        <div class="area-image">
+                            <img src="images/locations/truckee.jpg" alt="Truckee">
+                        </div>
+                        <h3>Truckee</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What services do you include in your management fee?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our management fee includes comprehensive services such as marketing, guest screening, 24/7 guest support, maintenance coordination, cleaning supervision, financial reporting, and more. We offer transparent pricing with no hidden fees.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you handle property maintenance and emergencies?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide 24/7 emergency response and have established relationships with trusted local vendors. We handle routine maintenance, emergency repairs, and implement preventive maintenance programs tailored to Lake Tahoe's unique climate.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you maximize my property's rental income?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We use dynamic pricing algorithms that adjust rates based on seasonal demand, local events, and market conditions. Our professional photography, optimized listings, and marketing strategies ensure maximum visibility on rental platforms.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I still use my property myself?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely. We offer flexible owner usage policies and an easy-to-use owner portal where you can block dates for personal use. We'll ensure your property is prepared for your arrival and cleaned after your departure.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What communication can I expect as an owner?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide monthly financial statements, occupancy reports, and maintenance updates. Your dedicated property manager is available via phone or email for any questions, and our owner portal gives you 24/7 access to your property's performance data.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you handle the unique challenges of Lake Tahoe properties?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our team specializes in Lake Tahoe property management and understands the unique challenges like snow removal, winterization, local regulations, and seasonal market fluctuations. We implement proactive measures to protect your investment year-round.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -132,14 +535,113 @@
         <section class="cta-section">
             <div class="container">
                 <h2>Ready to Optimize Your Rental Property?</h2>
-                <p>Get in touch for a free property analysis and consultation.</p>
-                <a href="/contact.html" class="cta-button">Contact Us Today</a>
+                <p>Get in touch for a free property analysis and consultation with our Lake Tahoe property management experts.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">SCHEDULE A CONSULTATION</a>
+                    <a href="pricing.html" class="btn btn-secondary">VIEW OUR PRICING</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <!-- Include your standard footer here -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="footer-contact">
+                    <a href="tel:5309948882">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        530.994.8882
+                    </a>
+                    <a href="mailto:laketahoepmg@gmail.com">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        laketahoepmg@gmail.com
+                    </a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="owners.html">For Property Owners</a></li>
+                    <li><a href="residents.html">For Residents</a></li>
+                    <li><a href="rentals.html">Available Rentals</a></li>
+                    <li><a href="pricing.html">Our Pricing</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Property Management</a></li>
+                    <li><a href="guarantees.html">Our Guarantees</a></li>
+                    <li><a href="application-criteria.html">Application Criteria</a></li>
+                    <li><a href="real-estate.html">Real Estate</a></li>
+                    <li><a href="agent-referrals.html">Agent Referrals</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Areas We Serve</h3>
+                <ul class="footer-links">
+                    <li><a href="south-lake-tahoe-property-management.html">South Lake Tahoe</a></li>
+                    <li><a href="incline-village-property-management.html">Incline Village</a></li>
+                    <li><a href="tahoe-city-property-management.html">Tahoe City</a></li>
+                    <li><a href="kings-beach-property-management.html">Kings Beach</a></li>
+                    <li><a href="truckee-property-management.html">Truckee</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tahoe Peak Property Management. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        // Toggle FAQ items
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-question');
+            
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const parent = this.parentElement;
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon');
+                    
+                    // Toggle this FAQ item
+                    parent.classList.toggle('active');
+                    
+                    // Update icon
+                    if (parent.classList.contains('active')) {
+                        icon.textContent = '-';
+                    } else {
+                        icon.textContent = '+';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
