@@ -129,7 +129,7 @@
 
 /* Contact Hero Section */
 .contact-hero {
-    background: linear-gradient(rgba(31, 77, 72, 0.8), rgba(31, 77, 72, 0.8)), url('../images/tahoe-lake-winter.png');
+    background: linear-gradient(rgba(13, 59, 125, 0.85), rgba(26, 75, 140, 0.85)), url('../images/tahoe-lake-winter.png');
     background-size: cover;
     background-position: center;
     padding: 6rem 2rem;
@@ -145,13 +145,15 @@
 .contact-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--accent-color);
+    color: var(--light-text);
     font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .contact-hero p {
     font-size: 1.2rem;
     opacity: 0.9;
+    color: var(--light-text);
 }
 
 /* Contact Info Section */
@@ -281,8 +283,8 @@
 }
 
 .submit-btn {
-    background-color: var(--accent-color);
-    color: var(--background-color);
+    background-color: var(--secondary-color);
+    color: white;
     border: none;
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -293,10 +295,36 @@
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .submit-btn:hover {
-    background-color: var(--text-color);
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Radio buttons styling */
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-option input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+.radio-option label {
+    margin: 0;
+    cursor: pointer;
 }
 
 /* Map Section */
@@ -331,6 +359,10 @@
         font-size: 2.5rem;
     }
 
+    .contact-hero p {
+        font-size: 1.1rem;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -345,23 +377,32 @@
     .contact-form h2 {
         font-size: 1.75rem;
     }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .form-success {
-    background-color: rgba(40, 167, 69, 0.1);
-    border: 1px solid #28a745;
-    color: #28a745;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
     text-align: center;
-    font-weight: 500;
+    border: 1px solid var(--accent-color);
 }
 
-.form-success.hidden {
-    display: none;
+.form-success h3 {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.form-success p {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
 } 
