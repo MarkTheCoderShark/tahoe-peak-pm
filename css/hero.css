@@ -77,6 +77,13 @@
 
 .hero-buttons {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero-buttons .primary-buttons {
+    display: flex;
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
@@ -92,7 +99,7 @@
 }
 
 .hero-buttons .cta-button {
-    min-width: 250px;
+    min-width: 280px;
     padding: 1.2rem 2.5rem;
     font-size: 1.1rem;
     font-weight: 600;
@@ -103,9 +110,9 @@
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
+    margin-top: 0.5rem;
 }
 
 .hero-buttons .cta-button:hover {
@@ -176,11 +183,15 @@
     }
     
     .hero-buttons {
-        flex-direction: column;
-        gap: 1rem;
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
+    }
+    
+    .hero-buttons .primary-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
     }
     
     .hero-buttons .btn {
@@ -191,7 +202,6 @@
     .hero-buttons .cta-button {
         width: 100%;
         min-width: 220px;
-        margin-top: 1.5rem;
         padding: 1rem 1.5rem;
         font-size: 1rem;
     }
