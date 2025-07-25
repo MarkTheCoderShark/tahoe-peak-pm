@@ -66,38 +66,570 @@
     }
     </script>
     
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --background-color: #1a4b8c;
+            --primary-color: #0d3b7d;
+            --secondary-color: #4a90e2;
+            --accent-color: #4a90e2;
+            --text-color: #ffffff;
+            --text-dark: #333333;
+            --light-text: #ffffff;
+            --background-light: #f5f5f5;
+            --border-color: rgba(255, 255, 255, 0.2);
+            --light-background: rgba(255, 255, 255, 0.12);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-top {
+            background-color: var(--primary-color);
+            padding: 0.4rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            transition: all 0.3s ease-in-out;
+            max-height: 50px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-top-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+        }
+
+        .login-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-left: auto;
+        }
+
+        .login-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 3px;
+            transition: var(--transition);
+            background-color: rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+        }
+
+        .login-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            transform: translateY(-1px);
+        }
+
+        .login-links span {
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 300;
+            font-size: 0.8rem;
+            margin: 0 0.25rem;
+        }
+
+        .header-main {
+            background-color: var(--primary-color);
+            padding: 0.25rem 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease-in-out;
+        }
+
+        .main-nav a:hover::after,
+        .main-nav a.active::after {
+            width: 100%;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: var(--accent-color);
+        }
+
+        .phone-number {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .phone-number:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-1px);
+        }
+
+        .zero-fees {
+            background-color: var(--secondary-color);
+            padding: 0.75rem 0;
+            transition: all 0.3s ease-in-out;
+            max-height: 60px;
+            overflow: hidden;
+        }
+
+        .zero-fees.hidden {
+            max-height: 0;
+            padding: 0;
+            opacity: 0;
+            margin: 0;
+            visibility: hidden;
+        }
+
+        .zero-fees-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .zero-fees-content span {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cta-buttons a {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+        }
+
+        .btn-primary:hover {
+            background-color: #6ba5e9;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .post-featured-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .post-featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-content-text h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .hero-content-text p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .primary-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-color);
+            color: var(--background-color);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+            background-color: var(--background-color);
+        }
+
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .content-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Seasonal Maintenance Cards */
+        .seasonal-maintenance {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .season-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .season-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .season-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .season-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .season-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .season-card li:last-child {
+            border-bottom: none;
+        }
+
+        .season-card p {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .season-card a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .season-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            main {
+                padding-top: 120px;
+            }
+
+            .hero-section {
+                height: 70vh;
+                min-height: 500px;
+            }
+
+            .hero-content-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content-text p {
+                font-size: 1.1rem;
+            }
+
+            .seasonal-maintenance {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .primary-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .zero-fees-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
+    <header>
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="login-links">
+                    <a href="#">OWNER LOGIN</a>
+                    <span>|</span>
+                    <a href="#">RESIDENT LOGIN</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="header-content">
                 <a href="/" class="logo">
-                    <img src="images/logo.png" alt="Tahoe Peak Property Management Logo">
+                    <img src="images/tahoe-peak-logo.svg" 
+                         alt="Lake Tahoe Property Management - Tahoe Peak Management Logo" 
+                         width="140" 
+                         height="50"
+                         loading="eager">
                 </a>
-                <ul class="nav-links">
-                    <li><a href="owners.html">For Owners</a></li>
-                    <li><a href="residents.html">For Residents</a></li>
-                    <li><a href="rentals.html">Search Rentals</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="real-estate.html">Real Estate</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html" class="btn btn-primary">Contact Us</a></li>
-                </ul>
-            </nav>
+                <button class="mobile-menu-toggle">☰</button>
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle">☰</button>
+                    <ul>
+                        <li><a href="owners.html">OWNERS/INVESTORS</a></li>
+                        <li><a href="residents.html">RESIDENTS</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                        <li><a href="real-estate.html">REAL ESTATE</a></li>
+                        <li><a href="agent-referrals.html">AGENT REFERRALS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                    </ul>
+                    <a href="tel:5309948882" class="phone-number">530.994.8882</a>
+                </nav>
+            </div>
+        </div>
+        <div class="zero-fees">
+            <div class="zero-fees-content">
+                <span>No Hidden Fees - Free Rental Analysis</span>
+                <div class="cta-buttons">
+                    <a href="/pricing.html" class="btn btn-secondary">EXPLORE OUR PRICING</a>
+                    <a href="/contact.html" class="btn btn-primary">FREE CONSULTATION</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Lake Tahoe Property Maintenance Guide</h1>
-            <p>Essential tips and services for maintaining your Lake Tahoe property year-round</p>
-            <a href="contact.html" class="btn btn-primary">Get Maintenance Help</a>
+    <section class="hero-section">
+        <div class="post-featured-image">
+            <img src="images/tahoe-lake-winter.png" 
+                 alt="Lake Tahoe Property Maintenance Guide - Scenic Lake Tahoe View"
+                 width="1200" 
+                 height="600"
+                 loading="eager">
+        </div>
+        <div class="hero-content">
+            <div class="hero-content-text">
+                <h1>LAKE TAHOE PROPERTY<br>MAINTENANCE GUIDE</h1>
+                <p>Essential tips and services for maintaining your Lake Tahoe property year-round</p>
+            </div>
+            <div class="hero-buttons">
+                <div class="primary-buttons">
+                    <a href="contact.html" class="btn btn-primary">GET MAINTENANCE HELP</a>
+                    <a href="services.html" class="btn btn-secondary">OUR SERVICES</a>
+                </div>
+            </div>
         </div>
     </section>
 
